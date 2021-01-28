@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ChinaTelecom Login UI pre-defined ids -->
+    <item name="ct_account_nav_return" type="id" />
+    <item name="ct_account_app_logo" type="id" />
+    <item name="ct_account_insensitive_phone" type="id" />
+    <item name="ct_account_brand_view" type="id" />
+    <item name="ct_account_login_btn" type="id" />
+    <item name="ct_account_login_loading" type="id" />
+    <item name="ct_account_login_text" type="id" />
+    <item name="ct_account_other_login_way" type="id" />
+    <item name="ct_auth_privacy_checkbox" type="id" />
+    <item name="ct_auth_privacy_text" type="id" />
+    <item name="ct_account_dialog_layout" type="id" />
+    <item name="ct_account_dialog_privacy" type="id" />
+    <item name="ct_account_dialog_cancel" type="id" />
+    <item name="ct_account_dialog_confirm" type="id" />
+    <item name="ct_account_webview_return" type="id" />
+    <item name="ct_account_progressbar_gradient" type="id" />
+    <item name="ct_account_webview" type="id" />
+</resources>

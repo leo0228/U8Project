@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/lion_common_gray_while"
+              android:orientation="vertical"
+    android:paddingLeft="12dip"
+    android:paddingRight="12dip"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/lion_icon_notice"
+        android:drawablePadding="10dip"
+        android:paddingBottom="9dip"
+        android:paddingTop="9dip"
+        android:text="注销账号后，该账号的所有记录（包括但不限于游戏记录、充值记录、游戏/贴子点评等相关信息）将被清空且无法登录。"
+        android:textColor="@color/lion_common_basic_red"
+        android:textSize="13.3dip"
+        />
+
+<include
+    layout="@layout/lion_layout_line"
+    />
+
+    <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:id="@+id/lion_activity_cancel_account_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dip"
+                android:textColor="@color/lion_common_black"
+                android:textSize="15dip"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="若此账号并非您想注销的账号，请重新登录再申请注销。"
+                android:textColor="@color/lion_common_basic_red"
+                android:textSize="13dip"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dip"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择注销原因："
+                    android:textColor="@color/lion_common_black"
+                    android:textSize="15dip"
+                    />
+
+                <TextView
+                    android:id="@+id/lion_activity_cancel_account_choice_apply_reason"
+                    style="@style/lion_input"
+                    android:drawableRight="@drawable/lion_arrow_circle_down"
+                    android:hint="请选择注销原因"
+                    android:paddingRight="10dip"
+                    />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/lion_activity_cancel_account_apply_reason"
+                style="@style/lion_input"
+                android:layout_marginTop="17dip"
+                android:hint="请填入您申请的原因"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dip"
+                android:text="为了核对您账号的真实性，请回答以下问题"
+                android:textColor="@color/lion_common_black"
+                android:textSize="15dip"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dip"
+                android:text="1.账号注册的途径"
+                android:textColor="@color/lion_common_black"
+                android:textSize="15dip"
+                />
+
+            <RadioGroup
+                android:id="@+id/lion_activity_cancel_account_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dip"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:id="@+id/lion_activity_cancel_account_from_cc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/lion_common_check_selector"
+                    android:checked="true"
+                    android:paddingLeft="11dip"
+                    android:text="虫虫助手注册"
+                    android:textSize="15dip"
+                    />
+
+                <RadioButton
+                    android:id="@+id/lion_activity_cancel_account_from_game"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="52dip"
+                    android:button="@drawable/lion_common_check_selector"
+                    android:paddingLeft="11dip"
+                    android:text="游戏内注册"
+                    android:textSize="15dip"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dip"
+                android:text="2.您最近三笔游戏消费记录（若无则不填写）"
+                android:textColor="@color/lion_common_black"
+                android:textSize="15dip"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="填入在带有虫虫助手角标游戏中的消费记录"
+                android:textColor="@color/lion_common_text_gray"
+                android:textSize="13dip"
+                />
+
+            <com.lion.ccpay.widget.GameFeeView
+                android:id="@+id/lion_activity_cancel_account_fee_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dip"
+                />
+
+            <com.lion.ccpay.widget.GameFeeView
+                android:id="@+id/lion_activity_cancel_account_fee_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dip"
+                />
+
+            <com.lion.ccpay.widget.GameFeeView
+                android:id="@+id/lion_activity_cancel_account_fee_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dip"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dip"
+                android:text="3.请上传您在游戏中的账号信息界面"
+                android:textColor="@color/lion_common_black"
+                android:textSize="15dip"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="带有虫虫助手角标游戏中的账号信息界面"
+                android:textColor="@color/lion_common_text_gray"
+                android:textSize="13dip"
+                />
+
+            <LinearLayout
+                android:id="@+id/lion_activity_cancel_account_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dip"
+                android:orientation="horizontal"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dip"
+                >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="（图片大小不超过5M）"
+                    android:textColor="@color/lion_common_text_gray"
+                    android:textSize="13dip"
+                    />
+
+                <TextView
+                    android:id="@+id/lion_activity_cancel_account_example"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看示例"
+                    android:textColor="@color/lion_common_blue"
+                    android:textSize="13dip"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dip"
+                android:text="4.您账号绑定的手机号（若无则不填写）"
+                android:textColor="@color/lion_common_black"
+                android:textSize="15dip"
+                />
+
+            <EditText
+                android:id="@+id/lion_activity_cancel_account_binding_phone"
+                style="@style/lion_input"
+                android:layout_marginTop="17dip"
+                android:hint="请填入您已绑过的手机号"
+                android:inputType="phone"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dip"
+                android:text="5.审核结果将通过短信告知，请填入您的联系方式"
+                android:textColor="@color/lion_common_black"
+                android:textSize="15dip"
+                />
+
+            <EditText
+                android:id="@+id/lion_activity_cancel_account_sms_phone"
+                style="@style/lion_input"
+                android:layout_marginTop="17dip"
+                android:hint="接受消息的手机号"
+                android:inputType="phone"
+                />
+
+            <Button
+                android:id="@+id/lion_activity_cancel_account_apply"
+                style="@style/lion_text_red_button"
+                android:layout_width="237dip"
+                android:layout_height="37dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="34dip"
+                android:text="申请注销"
+                />
+
+            <TextView
+                android:id="@+id/lion_activity_cancel_account_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/lion_shape_gap_background"
+                android:paddingBottom="11dip"
+                android:paddingLeft="7dip"
+                android:paddingRight="7dip"
+                android:paddingTop="11dip"
+                android:textColor="@color/lion_common_text_gray"
+                android:textSize="13dip"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

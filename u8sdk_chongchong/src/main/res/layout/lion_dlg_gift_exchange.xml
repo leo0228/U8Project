@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lion_common_dialog_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/lion_dlg_margin">
+
+    <TextView
+        style="@style/lion_style_dlg_title"
+        android:text="@string/lion_dlg_warm_prompt" />
+
+    <TextView
+        android:id="@+id/lion_dlg_gift_exchange_gift_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="18dip"
+        android:layout_marginRight="20dip"
+        android:textColor="@color/lion_color_333333"
+        android:textSize="14dip" />
+
+    <TextView
+        android:id="@+id/lion_dlg_gift_exchange_gift_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginRight="20dip"
+        android:textColor="@color/lion_color_666666"
+        android:textSize="14dip" />
+
+    <TextView
+        android:id="@+id/lion_dlg_gift_exchange_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginRight="20dip"
+        android:textColor="@color/lion_color_666666"
+        android:textSize="14dip" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginBottom="25dip"
+        android:text="注：已兑换礼包可到【我的礼包】查看"
+        android:textColor="@color/lion_color_666666"
+        android:textSize="11dip" />
+
+    <include layout="@layout/lion_dlg_two_btn" />
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/lion_common_white"
+    >
+
+    <TextView
+        style="@style/lion_style_dlg_title"
+        android:text="截图示例"
+        android:background="@null"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="22dip"
+        android:layout_marginLeft="22dip"
+        >
+        <include layout="@layout/lion_layout_line"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dip"
+            android:gravity="center"
+            android:textSize="14dip"
+            android:textColor="@color/lion_common_black"
+            android:text="游戏截图中需带有游戏中角色信息，可点击游戏中头像进行查看。且截图中需带有虫虫的悬浮窗~"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="9dip"
+            android:layout_marginBottom="16dip"
+            android:src="@drawable/lion_icon_apply_delete_example"
+            />
+        <include layout="@layout/lion_layout_line"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/lion_dlg_close"
+        style="@style/lion_style_dlg_single"
+        android:layout_width="match_parent"
+        android:text="了解了"
+        android:background="@color/lion_common_white"
+        />
+</LinearLayout>

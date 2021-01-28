@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lion_common_dialog_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/lion_dlg_margin">
+
+    <TextView
+        style="@style/lion_style_dlg_title"
+        android:text="@string/lion_dlg_game_bt_rebate_user_id_title" />
+
+    <LinearLayout
+        style="@style/lion_style_dlg_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lion_common_margin"
+            android:gravity="center"
+            android:text="@string/lion_dlg_game_bt_rebate_user_id_notice_1" />
+
+        <com.lion.ccpay.view.RatioImageView
+            android:id="@+id/lion_game_bt_rebate_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lion_common_margin"
+            android:background="@drawable/lion_game_bt_rebate_icon_1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lion_common_margin"
+            android:gravity="center"
+            android:text="@string/lion_dlg_game_bt_rebate_user_id_notice_2" />
+
+        <com.lion.ccpay.view.RatioImageView
+            android:id="@+id/lion_game_bt_rebate_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lion_common_margin"
+            android:layout_marginBottom="@dimen/lion_common_margin"
+            android:background="@drawable/lion_game_bt_rebate_icon_2" />
+
+    </LinearLayout>
+
+    <include layout="@layout/lion_dlg_single_btn" />
+</LinearLayout>

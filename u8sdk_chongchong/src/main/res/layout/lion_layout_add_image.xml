@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="72dip"
+    >
+    <ImageView
+        android:id="@+id/lion_layout_add_image_img"
+        android:layout_width="66dip"
+        android:layout_height="66dip"
+        android:layout_margin="3dip"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/lion_layout_add_image_delete"
+        android:layout_width="17dip"
+        android:layout_height="17dip"
+        android:layout_alignRight="@id/lion_layout_add_image_img"
+        android:layout_marginRight="-3dip"
+        android:src="@drawable/lion_icon_del"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/lion_layout_add_image_default"
+        android:layout_width="66dip"
+        android:layout_height="66dip"
+        android:layout_margin="3dip"
+        android:src="@drawable/lion_common_post_card_icon"
+        />
+</RelativeLayout>

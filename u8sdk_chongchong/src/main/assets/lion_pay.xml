@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<goods>
+	    <!-- productId:游戏中商品固定ID -->
+	    <!-- wareid:在虫虫后台中配置的计费点的商品ID -->
+	    <!-- openPrice:为true则说明该条商品支持开放价格，否则不支持 -->
+	    <good productId="11" wareid="121649" openPrice="false"></good>
+	    <good productId="12" wareid="121650" openPrice="false"></good>
+	    <good productId="13" wareid="121651" openPrice="false"></good>
+	    <good productId="14" wareid="121652" openPrice="false"></good>
+	    <good productId="15" wareid="121653" openPrice="false"></good>
+	    <good productId="16" wareid="121654" openPrice="false"></good>
+	    <good productId="17" wareid="121655" openPrice="false"></good>
+	    <good productId="524" wareid="121656" openPrice="false"></good>
+	    <good productId="525" wareid="121657" openPrice="false"></good>
+	    <good productId="526" wareid="121658" openPrice="false"></good>
+	    <good productId="512" wareid="121659" openPrice="false"></good>
+	    <good productId="521" wareid="121660" openPrice="false"></good>
+	    <good productId="513" wareid="121896" openPrice="false"></good>
+	    <good productId="514" wareid="121661" openPrice="false"></good>
+	    <good productId="515" wareid="121662" openPrice="false"></good>  
+	    <good productId="517" wareid="121663" openPrice="false"></good>  
+	    <good productId="518" wareid="121664" openPrice="false"></good>  
+	    <good productId="520" wareid="121665" openPrice="false"></good>  
+	    <good productId="522" wareid="121666" openPrice="false"></good>  
+	    <good productId="523" wareid="121667" openPrice="false"></good>  
+	    <good productId="527" wareid="122217" openPrice="false"></good>  
+	    <good productId="528" wareid="122218" openPrice="false"></good>  
+	    <good productId="529" wareid="122219" openPrice="false"></good>  
+	    <good productId="504" wareid="123243" openPrice="false"></good>
+	    <good productId="505" wareid="123244" openPrice="false"></good>
+	    <good productId="536" wareid="123245" openPrice="false"></good>
+	    <good productId="537" wareid="123246" openPrice="false"></good>
+	</goods>

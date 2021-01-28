@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@color/huosdk_float_bg"
+    android:paddingBottom="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="翻一翻可以隐藏/显示小图标"
+        android:textColor="@color/huo_sdk_white"
+        android:padding="10dp"
+        />
+    <ImageView
+        android:id="@+id/huo_sdk_iv_hide_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/huo_sdk_float_hide_anim"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+        <Button
+            android:id="@+id/huo_sdk_btn_cancel"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="取消"
+            android:textColor="@color/huo_sdk_white"
+            android:background="#66000000"
+            android:layout_marginRight="20dp"
+            />
+        <Button
+            android:id="@+id/huo_sdk_btn_confirm"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="隐藏"
+            android:textColor="@color/huo_sdk_white"
+            android:background="@color/huo_sdk_orange"
+            />
+    </LinearLayout>
+</LinearLayout>

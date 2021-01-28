@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/m4399_ope_usercenter_nav_bar_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp">
+
+        <ImageView
+            android:id="@id/ct_account_webview_return"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/m4399_ope_nav_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/ct_account_title_privacy_activity"
+            android:textColor="@color/m4399_ope_usercenter_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@id/ct_account_progressbar_gradient"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/ct_account_progressbar_gradient" />
+
+    <!-- WebView 用于展示《服务与隐私协议》的内容-->
+    <WebView
+        android:id="@id/ct_account_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+</LinearLayout>

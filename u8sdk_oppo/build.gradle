@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':u8sdk2')
+    implementation project(':prompt')
+    implementation(name:'gamesdk-20200610',ext:'aar')
+    implementation(name:'mobad_normal_pub_365_2020_07_30',ext:'aar')
+
+    implementation 'com.android.support:appcompat-v7:26.0.2'
+    implementation 'com.squareup.wire:wire-runtime:2.2.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.18'
+
+    implementation files('libs/SaaS_GameAnalytics_Android_SDK_V4.0.61.jar')
+}

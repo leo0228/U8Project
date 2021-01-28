@@ -1,0 +1,57 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.u8.sdk">
+
+    <uses-permission android:name="vivo.game.permission.OPEN_JUMP_INTENTS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!--此权限一定要加，否则下载类广告不会进入安装流程，影响后向体验-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- 如果接入了视频相关的广告, 请务必添加否则黑屏 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application>
+        <activity
+            android:name="com.vivo.unionsdk.ui.UnionActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="union.vivo.com"
+                    android:path="/openjump"
+                    android:scheme="vivounion" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="vivo_union_sdk"
+            android:value="4.2.4.0" />
+
+        <receiver android:name="com.u8.sdk.PushMessageReceiverImpl">
+            <intent-filter>
+                <action android:name="com.vivo.pushclient.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.vivo.push.sdk.service.CommandClientService"
+            android:exported="true" />
+        <activity
+            android:name="com.vivo.push.sdk.LinkProxyClientActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+
+</manifest>

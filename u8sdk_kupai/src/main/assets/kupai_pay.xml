@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<goods>
+	    <!-- productId:游戏中商品固定ID -->
+	    <!-- wareid:在酷派后台中配置的计费点的商品ID -->
+	    <!-- openPrice:为true则说明该条商品支持开放价格，否则不支持 -->
+	    <good productId="11" wareid="1" openPrice="false"></good>
+	    <good productId="12" wareid="2" openPrice="false"></good>
+	    <good productId="13" wareid="3" openPrice="false"></good>
+	    <good productId="14" wareid="4" openPrice="false"></good>
+	    <good productId="15" wareid="5" openPrice="false"></good>
+	    <good productId="16" wareid="6" openPrice="false"></good>
+	    <good productId="17" wareid="7" openPrice="false"></good>
+	    <good productId="524" wareid="8" openPrice="false"></good>
+	    <good productId="525" wareid="9" openPrice="false"></good>
+	    <good productId="526" wareid="10" openPrice="false"></good>
+	    <good productId="512" wareid="11" openPrice="false"></good>
+	    <good productId="521" wareid="12" openPrice="false"></good>
+	    <good productId="513" wareid="13" openPrice="false"></good>
+	    <good productId="514" wareid="14" openPrice="false"></good>
+	    <good productId="515" wareid="15" openPrice="false"></good>  
+	    <good productId="517" wareid="16" openPrice="false"></good>  
+	    <good productId="518" wareid="17" openPrice="false"></good>  
+	    <good productId="520" wareid="18" openPrice="false"></good>  
+	    <good productId="522" wareid="19" openPrice="false"></good>  
+	    <good productId="523" wareid="20" openPrice="false"></good>  
+	    <good productId="527" wareid="21" openPrice="false"></good>  
+	    <good productId="528" wareid="22" openPrice="false"></good>  
+	    <good productId="529" wareid="23" openPrice="false"></good>  
+	    <good productId="504" wareid="24" openPrice="false"></good>  
+	    <good productId="505" wareid="25" openPrice="false"></good>  
+	    <good productId="536" wareid="26" openPrice="false"></good>  
+	    <good productId="537" wareid="27" openPrice="false"></good>
+	    <good productId="543" wareid="28" openPrice="false"></good>
+	</goods>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 必须显示服务与隐私协议 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@id/ct_auth_privacy_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:button="@drawable/m4399_ope_quick_auth_check_selector" />
+
+        <TextView
+            android:id="@id/ct_auth_privacy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:tag="#666666"
+            android:text="@string/al_formatter_privacy_prompt"
+            android:textColor="@color/m4399_ope_dialog_text_grey"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m4399_ope_quick_auth_and"
+            android:textColor="@color/m4399_ope_dialog_text_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m4399_ope_quick_auth_agreement"
+            android:textColor="@color/m4399_ope_bind_label_gray"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

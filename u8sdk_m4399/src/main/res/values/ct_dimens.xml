@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ct_activity_title_height">54dp</dimen>
+    <dimen name="ct_app_logon_size">80dp</dimen>
+    <dimen name="ct_app_logon_y_offset">60dp</dimen>
+</resources>

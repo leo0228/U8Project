@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pay_game_update_shape"
+    android:paddingBottom="15dp">
+
+    <ImageView
+        android:layout_width="4dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/icon_short_line_header" />
+
+    <TextView
+        android:id="@+id/tv_paycenter_update_dialog_title_downh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="18dp"
+        android:text="拨打客服"
+        android:textColor="#bbc0c6"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_container_downh"
+        android:layout_width="match_parent"
+        android:layout_height="65dip"
+        android:layout_below="@id/tv_paycenter_update_dialog_title_downh"
+        android:layout_marginLeft="22dip"
+        android:layout_marginRight="22dip"
+        android:layout_marginTop="12dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_paycenter_update_dialog_remond_downh"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:text="tip"
+            android:textColor="#606062"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/la_update_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/paycenter_down_tip_downh"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:text="下载更新"
+                android:textSize="16sp"
+                 />
+
+            <com.mumayi.paymentmain.view.ProgressBarText
+                android:id="@+id/pb_update_download_downh"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dip"
+                android:minHeight="1dp"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/pay_down_load_progress"
+                android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+                android:maxHeight="1dp"
+                android:layout_marginBottom="12dip"
+                android:layout_marginTop="12dip"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_container_downh"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_update_cancel_downh"
+            android:layout_width="0dip"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@drawable/pay_btn_binphone_cancel"
+            android:gravity="center"
+            android:text="完善信息"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_update_submit_downh"
+            android:layout_width="0dip"
+            android:layout_height="42dp"
+            android:layout_marginLeft="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/pay_btn_paycenter_login_style"
+            android:gravity="center"
+            android:text="完善信息"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

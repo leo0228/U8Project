@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/lion_common_dialog_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/lion_dlg_margin">
+
+        <TextView
+            android:id="@+id/lion_dlg_inspire_coupon_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textColor="@color/lion_color_333333"
+            android:textSize="15dp"
+            tools:text="恭喜您，成为本期活动随机抽奖幸运儿，获得19元代金券一张，满100元使用。有效期至2019.11.14 10:00:00" />
+
+        <include layout="@layout/lion_dlg_two_btn" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/lion_icon_cash_coupon" />
+</FrameLayout>

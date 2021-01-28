@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:background="@drawable/huo_sdk_shape_circle_rect_white"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="温馨提示"
+        android:textColor="@color/huo_sdk_black2a"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="您尚未安装支付安全插件，安装成功后，再次点击支付即可。"
+        android:textSize="14sp"
+        android:textColor="@color/huo_sdk_black2a"
+        android:padding="10dp"
+
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/huo_sdk_btn_install"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="确定安装"
+            android:background="#00b400"
+            android:textColor="@color/huo_sdk_white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+</LinearLayout>

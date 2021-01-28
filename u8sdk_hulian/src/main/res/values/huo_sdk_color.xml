@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="huo_sdk_login_bg_translucence_black">#b0000000</color>
+    <color name="huo_sdk_gray_d8">#d8d8d8</color>
+    <color name="huo_sdk_blues">#4c6791</color>
+    <color name="huo_sdk_text_blacks">#767575</color>
+    <color name="huo_sdk_grayc3">#C3C3C3</color>
+    <color name="huo_sdk_black2a">#2A2A2A</color>
+    <color name="huo_sdk_orange">#FF8400</color>
+    <color name="huo_sdk_gray7f">#7F7C7C</color>
+    <color name="huo_sdk_graycc">#cccccc</color>
+    <color name="huosdk_float_bg">#99000000</color>
+    <color name="huo_sdk_white">#ffffff</color>
+</resources>

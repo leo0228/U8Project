@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/bdp_paycenter_layout_goodsinfo_landscape" />
+
+    <include layout="@layout/bdp_paycenter_layout_accountinfo_nofix_landscape" />
+    <!-- ↓↓↓ 合并支付  ↓↓↓ -->
+
+    <LinearLayout
+        android:id="@+id/bdp_merge_pay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/bdp_add_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bdp_paycenter_add_amount_pay"
+            android:textColor="@color/bdp_color_999999"
+            android:textSize="@dimen/bdp_paycenter_text_size_14_sp" />
+    </LinearLayout>
+    <!-- ↑↑↑ 合并支付 ↑↑↑ -->
+
+    <FrameLayout
+        android:id="@+id/bdp_paycenter_layout_activity_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+</LinearLayout>

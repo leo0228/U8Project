@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lion_activity_welfare"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lion_common_basic_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lion_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="7.5dip"
+        android:background="@drawable/lion_common_frame_two_nor"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lion_tab_rebate"
+            style="@style/lion_fragment_text_tab"
+            android:text="@string/lion_text_rebate"
+            android:visibility="gone"/>
+
+        <View
+            android:id="@+id/lion_tab_rebate_line"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="7.5dip"
+            android:layout_marginBottom="7.5dip"
+            android:background="@color/lion_common_line"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/lion_tab_gift"
+            style="@style/lion_fragment_text_tab"
+            android:text="@string/lion_text_gift" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="7.5dip"
+            android:layout_marginBottom="7.5dip"
+            android:background="@color/lion_common_line" />
+
+        <TextView
+            android:id="@+id/lion_tab_community"
+            style="@style/lion_fragment_text_tab"
+            android:text="@string/lion_text_community_activity" />
+    </LinearLayout>
+
+    <include layout="@layout/lion_layout_viewpager" />
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.u8.sdk" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD"/>
+    <uses-permission android:name="android.permission.NFC"/>
+
+    <uses-feature android:name="android.hardware.nfc.hce"/>
+
+    <application>
+
+        <!-- 三星标识符-->
+        <meta-data
+            android:name="SDK_VERSION"
+            android:value="SAMSUNG_S_Coin"/>
+        <!-- 支付SDK界面 -->
+        <!-- 显示网页界面 -->
+        <activity
+            android:name="com.samsung.sdk.main.WebActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.samsung.ui.activity.PersonCenterActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"/>
+        <activity
+            android:name="com.samsung.sdk.main.SamsungAccountActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.samsung.name.auth.NameAuthActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:windowSoftInputMode="adjustPan"/>
+        <!--实名认证-->
+        <activity
+            android:name="com.samsung.name.auth.CameraActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"/>
+        <!-- 收银台-普通 -->
+        <activity
+            android:name="com.samsung.ui.activity.PayHubActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"/>
+
+        <!-- 收银台-三星币 -->
+        <activity
+            android:name="com.samsung.ui.activity.IAppPayHubActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+
+        <!-- 充值界面 -->
+        <activity
+            android:name="com.samsung.ui.activity.ChargeActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection">
+        </activity>
+        <!-- 游戏卡和话费卡界面 -->
+        <activity
+            android:name="com.samsung.pay.channel.gamepay.GamepayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"/>
+
+        <!--现金券-->
+        <activity
+            android:name="com.samsung.ui.activity.CashCouponActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!--银联支付结果页-->
+        <activity
+            android:name="com.samsung.pay.channel.uppay.unionpay.UpPayResultActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- alipay sdk begin (新的支付宝) -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+        <!-- alipay sdk end -->
+
+        <!--银联、三星pay  start-->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false"/>
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <!--银联、三星pay  end-->
+
+    </application>
+</manifest>

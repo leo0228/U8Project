@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lion.ccpay.widget.GiftInfoItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lion_layout_gift_item"
+    android:layout_width="match_parent"
+    android:layout_height="86dp"
+    android:background="@drawable/lion_common_white_2_gray_selector"
+    android:gravity="center"
+    android:minHeight="86dp"
+    android:padding="@dimen/lion_common_margin">
+
+    <com.lion.ccpay.view.RatioColorFilterImageView
+        android:id="@+id/lion_layout_gift_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/lion_layout_gift_item_content"
+        android:layout_width="0.0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1.0"
+        android:gravity="center|left"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+
+        <TextView
+            android:id="@+id/lion_layout_gift_name"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="礼包礼包"
+            android:textColor="@color/lion_color_333333"
+            android:textSize="14.0dp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/lion_layout_gift_margin_2"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lion_layout_gift_code"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:text="礼包礼包"
+            android:textColor="@color/lion_color_F7BC43"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_get_gift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center|left"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <com.lion.ccpay.widget.CustomProgressView
+                android:id="@+id/lion_layout_gift_number_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="40"
+                android:progressDrawable="@drawable/lion_common_progress_gift" />
+
+            <TextView
+                android:id="@+id/lion_layout_gift_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="礼包礼包"
+                android:textColor="@color/lion_color_F7BC43"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lion_layout_gift_content"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="礼包礼包"
+            android:textColor="@color/lion_color_666666"
+            android:textSize="12.0dp" />
+    </LinearLayout>
+
+    <com.lion.ccpay.widget.GiftOperationBtn
+        android:id="@+id/lion_layout_gift_operation"
+        style="@style/lion_style_text_red_button"
+        android:text="@string/lion_text_btn_booked" />
+</com.lion.ccpay.widget.GiftInfoItemLayout>

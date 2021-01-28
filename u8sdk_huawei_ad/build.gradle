@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':u8sdk2')
+    implementation project(':prompt')
+
+    implementation 'com.huawei.hms:base:5.0.5.300'
+    implementation 'com.huawei.hms:hwid:5.1.0.301'
+    implementation 'com.huawei.hms:game:5.0.4.302'
+
+//    implementation 'com.huawei.hms:ads-lite:13.4.37.300'
+//    implementation 'com.huawei.hms:ads-consent:3.4.37.300'
+
+    implementation(name: 'ads-base-inner-13.4.33.300', ext: 'aar')
+    implementation(name: 'ads-reward-inner-13.4.33.300', ext: 'aar')
+
+    implementation files('libs/SaaS_GameAnalytics_Android_SDK_V4.0.61.jar')
+}

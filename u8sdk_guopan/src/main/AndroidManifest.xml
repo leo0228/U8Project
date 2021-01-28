@@ -1,0 +1,89 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.u8.sdk">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.webkit.permission.PLUGIN" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 读取短信验证码 可选 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!-- 录像需要的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 照相的权限 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <!-- bugly需要的权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application>
+
+        <!-- 果盘sdk -->
+        <!-- 兼容横竖屏，可自行设置android:screenOrientation来改变横竖屏 -->
+        <activity
+            android:name="com.flamingo.sdk.view.GPSplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- 果盘sdk -->
+        <!--- 果盘SDK需要的代理Activity、Service，无需设置其方向，会根据游戏自适应 -->
+        <activity
+            android:name="com.flamingo.sdk.view.PluginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <!-- 最新版本的sdk这个service的声明换了，注意替换 -->
+        <service android:name="com.flamingo.sdk.plugin.proxy.ProxyService" />
+
+        <!-- 如果是eclipse记得将${applicationId}替换为游戏的包名 最新版本的sdk这个provider的声明换了，注意替换 -->
+        <provider
+            android:name="com.flamingo.sdk.plugin.proxy.StubContentProvider"
+            android:authorities="applicationId.StubContentProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+        <!--- 果盘SDK end -->
+
+        <!-- 百度插件部分 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="DhNxS47YIr3CNdocGoAcy1ts" />
+
+        <!-- 当游戏也需要到bugly的时候，请把这个值置为OFF，避免冲突 -->
+        <meta-data
+            android:name="GP_SDK_BUGLY_SWITCH"
+            android:value="ON" />
+    </application>
+</manifest>

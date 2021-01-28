@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.moyoiad.goc.vivo"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':u8sdk2')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+
+    implementation(name:'android_gif_drawable_1.2.6', ext:'aar')
+    implementation(name:'extend_ad_sdk', ext:'aar')
+    implementation(name:'GDTSDK.unionNormal.4.211.1081', ext:'aar')
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+//    implementation(name:'mobad_normal_pub_365_2020_07_30', ext:'aar')
+//    implementation 'com.squareup.wire:wire-runtime:2.2.0'
+//    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.18'
+}

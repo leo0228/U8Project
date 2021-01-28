@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.u8.sdk" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <application>
+        <!-- 插件的代理器，使用框架必须声明 -->
+        <activity
+            android:name="com.muzhiwan.plugin.LActivityProxy"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <service android:name="com.muzhiwan.plugin.service.LProxyService" />
+
+        <meta-data android:name="mzw_cps" android:value="mzw" />
+        <meta-data android:name="mzw_channel" android:value="mzw" />
+        <meta-data android:name="DEBUG" android:value="false" />
+        <meta-data android:name="mzw_sdk" android:value="3615" />
+        <meta-data android:name="MZWAPPKEY" android:value="9d0289b8971d03f6a248d2aefb435b8b" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+</manifest>
+

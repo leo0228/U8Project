@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lion_common_dialog_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/lion_dlg_margin">
+
+    <TextView
+        style="@style/lion_style_dlg_title"
+        android:text="@string/lion_text_gift_booking_success" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dip"
+        android:paddingLeft="@dimen/lion_common_margin"
+        android:paddingRight="@dimen/lion_common_margin"
+        android:text="预定后可提前30分钟进行领取，请留意系统通知~"
+        android:textColor="@color/lion_color_333333"
+        android:textSize="14dip" />
+
+    <TextView
+        android:id="@+id/lion_dlg_gift_booking_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="@dimen/lion_common_margin"
+        android:paddingRight="@dimen/lion_common_margin"
+        android:text="开始时间：%s"
+        android:textColor="@color/lion_color_333333"
+        android:textSize="14dip" />
+
+    <include layout="@layout/lion_dlg_single_btn" />
+</LinearLayout>

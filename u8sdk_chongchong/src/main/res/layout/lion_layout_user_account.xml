@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lion_common_frame_bottom_nor"
+    android:paddingTop="7.5dp"
+    android:paddingBottom="7.5dp">
+
+    <TextView
+        android:id="@+id/lion_layout_user_account_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:paddingLeft="7.5dp"
+        android:paddingRight="7.5dip"
+        android:singleLine="true"
+        android:textColor="@color/lion_common_text_gray"
+        android:textSize="14dp"
+        tools:text="11111111111" />
+
+    <TextView
+        android:id="@+id/lion_layout_user_account_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lion_layout_user_account_value"
+        android:layout_marginTop="4dp"
+        android:gravity="center|left"
+        android:paddingLeft="7.5dp"
+        android:paddingRight="7.5dip"
+        android:singleLine="true"
+        android:textColor="@color/lion_color_999999"
+        android:textSize="12dp"
+        tools:text="最近登录：少女三国志" />
+
+    <ImageView
+        android:id="@+id/lion_layout_user_account_del"
+        android:layout_width="38.0dip"
+        android:layout_height="38.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@drawable/lion_nav_del" />
+
+</RelativeLayout>

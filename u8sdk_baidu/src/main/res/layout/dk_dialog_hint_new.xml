@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:background="@drawable/dk_dialog_round_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/dk_dialog_round_bg_new" >
+
+        <ImageView
+            android:id="@+id/bd_iv_back_close"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dk_update_dialog_close_icon"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/dk_update_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/dk_updateapk_hint_content"
+            android:textColor="@color/dk_color_ffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/dk_update_apkdes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/dk_content"
+            android:layout_below="@+id/dk_update_title"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/dk_updateapk_hint_subtext"
+            android:textColor="@color/dk_color_ffffff"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/dk_update_img"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignTop="@id/dk_content"
+            android:layout_below="@+id/dk_update_title"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:src="@drawable/dk_update_giveup_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/bd_tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bdp_btn_pink_selector"
+            android:gravity="center"
+            android:text="@string/dk_cancel"
+            android:textColor="@color/dk_color_ffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/bd_tv_confim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/bdp_btn_pink_selector"
+            android:gravity="center"
+            android:text="@string/dk_confirm"
+            android:textColor="@color/dk_color_ffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

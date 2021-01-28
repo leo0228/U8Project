@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sv_view"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:scrollbarStyle="outsideOverlay">
+    <!-- 按钮 -->
+
+    <LinearLayout
+        android:id="@+id/linButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linAccountPass"
+        android:layout_marginTop="22dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0%"
+                android:textColor="@color/bdp_color_fa395f"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bdp_login_wk_download_hint"
+                android:textColor="@color/bdp_color_999999"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_anim"
+                android:layout_width="80dp"
+                android:layout_centerInParent="true"
+                android:layout_height="80dp"
+                android:background="@drawable/bdp_anim_download_wk" />
+
+            <ImageView
+                android:id="@+id/iv_wk_ic"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="29dp"
+                android:src="@drawable/bdp_icon_wanke_download" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

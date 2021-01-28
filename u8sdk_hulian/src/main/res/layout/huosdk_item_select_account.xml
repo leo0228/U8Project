@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    >
+    <TextView
+        android:id="@+id/tv_account_num_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账号1:"
+        android:textColor="@color/huo_sdk_text_blacks"
+        />
+    <TextView
+        android:id="@+id/tv_login_account"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="143242342"
+        android:textColor="@color/huo_sdk_black2a"
+        android:layout_marginLeft="8dp"
+        />
+    <CheckBox
+        android:id="@+id/cb_select_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/huo_sdk_checkbox_gouxuan"
+        />
+</LinearLayout>

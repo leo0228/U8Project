@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="huo_sdk_btn_user">用户</string>
+    <string name="huo_sdk_btn_gift">礼包</string>
+    <string name="huo_sdk_btn_server">客服</string>
+    <string name="huo_sdk_btn_bbs">论坛</string>
+    <string name="huo_sdk_btn_identify">实名认证</string>
+</resources>

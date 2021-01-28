@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_notice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/layout_notice_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lion_common_white_2_gray_selector"
+        android:drawableLeft="@drawable/lion_game_detail_google_notice"
+        android:drawablePadding="13dp"
+        android:gravity="center|left"
+        android:minHeight="50dp"
+        android:paddingLeft="@dimen/lion_common_margin"
+        android:paddingTop="7.5dp"
+        android:paddingRight="@dimen/lion_common_margin"
+        android:paddingBottom="7.5dp"
+        android:textColor="@color/lion_common_basic_red"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:src="@color/lion_common_line" />
+
+</LinearLayout>

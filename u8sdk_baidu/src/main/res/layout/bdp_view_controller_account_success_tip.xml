@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="15dip"
+              android:background="@drawable/bdp_bg_white_round"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="45dip"
+            android:layout_height="48dip"
+            android:visibility="invisible"
+            />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            />
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:textColor="@color/bdp_color_color_ff333333"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            />
+        <!-- 关闭按钮 -->
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:contentDescription="@string/bdp_image"
+            android:scaleType="centerInside"
+            android:src="@drawable/bdp_icon_close_selector"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/bdp_account_lin_account_pass"
+        android:visibility="gone"
+        />
+
+    <!-- 子视图 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dip"
+        android:padding="10dip"
+        android:scrollbarStyle="outsideOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lin_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="11dip"
+                    android:contentDescription="@string/bdp_image"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/bdp_icon_smile"
+                    />
+
+                <!-- 提示 -->
+                <TextView
+                    android:id="@+id/txtTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="1111111"
+                    android:textColor="@color/bdp_color_color_ff333333"
+                    android:textSize="13sp"
+                    />
+            </LinearLayout>
+            <!-- 账号 -->
+            <TextView
+                android:id="@+id/txtAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lin_account"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dip"
+                android:text="1111111"
+                android:textColor="@color/bdp_blue"
+                android:textSize="13sp"
+                />
+
+            <!-- 备注 -->
+            <TextView
+                android:id="@+id/txtRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtAccount"
+                android:layout_marginBottom="10dip"
+                android:lineSpacingExtra="5dp"
+                android:text="1111111"
+                android:textColor="@color/bdp_light_gray"
+                android:textSize="13sp"
+                />
+            <!-- 确定按钮 -->
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:layout_below="@id/txtRemark"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/bdp_btn_blue_selector"
+                android:text="@string/bdp_ok"
+                android:textColor="@color/bdp_white"
+                android:textSize="15sp"
+                />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

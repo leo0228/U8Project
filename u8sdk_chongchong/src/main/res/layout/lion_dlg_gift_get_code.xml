@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lion_common_dialog_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/lion_dlg_margin">
+
+    <TextView
+        style="@style/lion_style_dlg_title"
+        android:text="@string/lion_text_gift_take_fail" />
+
+    <LinearLayout
+        style="@style/lion_style_dlg_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lion_dlg_gift_get_code_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textColor="@color/lion_color_333333"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/lion_dlg_gift_get_code_code"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="#f4f4f4"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip"
+            android:text="@string/lion_text_gift_code"
+            android:textColor="@color/lion_common_basic_red"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/lion_dlg_two_btn" />
+</LinearLayout>

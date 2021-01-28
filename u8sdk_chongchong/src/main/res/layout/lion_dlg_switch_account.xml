@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/lion_dlg_margin">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/lion_style_dlg_title"
+            android:text="@string/lion_dlg_warm_prompt" />
+
+        <ImageView
+            android:id="@+id/lion_dlg_switch_account_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:paddingRight="7.5dp"
+            android:src="@drawable/lion_icon_off" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lion_common_dialog_content_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lion_dlg_account_already_recharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lion_common_basic_red"
+            android:textSize="14.0dp"
+            tools:text="原账号CC125221有过充值记录" />
+
+        <TextView
+            android:id="@+id/lion_dlg_account_unbind_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/lion_dlg_switch_account_unbind_notice"
+            android:textColor="@color/lion_common_text_gray"
+            android:textSize="14.0dp" />
+
+        <TextView
+            android:id="@+id/lion_dlg_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lion_common_white" />
+
+        <include layout="@layout/lion_dlg_input_security_code" />
+
+        <include layout="@layout/lion_dlg_two_btn" />
+    </LinearLayout>
+
+</LinearLayout>

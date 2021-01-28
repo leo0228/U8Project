@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/ct_account_dialog_layout"
+    android:layout_width="@dimen/m4399_ope_verify_dialog_width_dimen"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ct_account_dialog_conner_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@id/ct_account_dialog_privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="25dp"
+        android:lineSpacingExtra="9dp"
+        android:tag="#54ba3d"
+        android:text="@string/al_two_formatter_privacy_prompt"
+        android:textColor="@color/m4399_rec_color_black_333333"
+        android:textSize="16sp" />
+
+    <View style="@style/m4399PerfectLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m4399_ope_verify_dialog_buttons_height_dimen">
+
+        <Button
+            android:id="@id/ct_account_dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ct_account_dialog_cancel_selector"
+            android:gravity="center"
+            android:text="@string/ct_account_action_return"
+            android:textColor="@drawable/m4399_ope_verify_confirm_btn_selector"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/m4399_ope_perfect_line" />
+
+        <Button
+            android:id="@id/ct_account_dialog_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ct_account_dialog_confirm_selector"
+            android:gravity="center"
+            android:text="@string/ct_account_action_confirm"
+            android:textColor="@drawable/m4399_ope_verify_confirm_btn_selector"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</LinearLayout>

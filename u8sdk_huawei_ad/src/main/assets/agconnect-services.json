@@ -1,0 +1,14 @@
+{
+	"client":{
+		"appType":"1",
+		"cp_id":"890086000102118442",
+		"product_id":"736430079244734023",
+		"client_id":"513604231362512064",
+		"client_secret":"6DE0BFAB5A04897E41C99AED9A5539025AFB98DAE6BD1954D19912E3E42B4196",
+		"project_id":"736430079244734023",
+		"app_id":"103451653",
+		"api_key":"CgB6e3x9Ao61Gpv3ICMk4Z7gtuXISpGbXGPp+YqLhsiaVVh8+CicXYZPtq1mHJsuk2yD9agbH0OG8CvhVwyjZTRj",
+		"package_name":"com.moyoiad.goc.huawei"
+	},
+	"configuration_version":"1.0"
+}

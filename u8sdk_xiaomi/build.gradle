@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+//compileOnly表示只参与编译，不参与打包
+repositories{
+    flatDir{
+        dirs 'mylibs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':u8sdk2')
+    implementation project(':prompt')
+
+    implementation(name: 'mimo-ad-sdk', ext: 'aar')
+    //compileOnly表示只参与编译，不参与打包
+    compileOnly files('mylibs\\support-compat-27.1.1.jar')
+
+    implementation files('libs/SaaS_GameAnalytics_Android_SDK_V4.0.61.jar')
+}

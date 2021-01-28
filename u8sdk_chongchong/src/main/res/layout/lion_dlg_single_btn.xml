@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lion_dlg_close"
+    style="@style/lion_style_dlg_single"
+    android:layout_width="match_parent"
+    android:text="@string/lion_dlg_cancel" />

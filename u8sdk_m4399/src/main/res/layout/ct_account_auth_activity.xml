@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 头部导航栏布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/m4399_ope_usercenter_nav_bar_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp">
+
+        <ImageView
+            android:id="@id/ct_account_nav_return"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/m4399_ope_nav_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/m4399_ope_quick_auth_title"
+            android:textColor="@color/m4399_ope_usercenter_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/ct_account_brand_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:text="@string/ct_account_brand_text"
+        android:textColor="@color/m4399_ope_dialog_text_grey"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@id/ct_account_app_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@id/ct_account_insensitive_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/m4399_rec_color_black_333333"
+        android:textSize="33sp" />
+
+    <LinearLayout
+        android:id="@id/ct_account_login_btn"
+        android:layout_width="336dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/m4399_ope_quick_auth_btn_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@id/ct_account_login_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/ct_account_login_loading_icon"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@id/ct_account_login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/ct_account_label_login_one_tap"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_other_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m4399_ope_quick_auth_other_phone"
+            android:textColor="@color/m4399_rec_color_yellow"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/m4399_ope_perfect_line" />
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_account_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m4399_ope_quick_auth_title"
+            android:textColor="@color/m4399_rec_color_yellow"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/ct_account_other_login_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <!-- 必须显示服务与隐私协议 -->
+    <include layout="@layout/m4399_ope_activity_quick_auth_bottom"/>
+</LinearLayout>

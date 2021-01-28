@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<goods>
+	    <!-- productId:游戏中商品固定ID -->
+	    <!-- wareid:在应用汇后台中配置的计费点的商品ID -->
+	    <!-- openPrice:为true则说明该条商品支持开放价格，否则不支持 -->
+	    <good productId="11" wareid="6530" openPrice="false"></good><!-- 50金块 -->
+	    <good productId="12" wareid="6531" openPrice="false"></good><!-- 150金块 -->
+	    <good productId="13" wareid="6532" openPrice="false"></good><!-- 250金块 -->
+	    <good productId="14" wareid="6533" openPrice="false"></good><!-- 490金块 -->
+	    <good productId="15" wareid="6534" openPrice="false"></good><!-- 1070金块 -->
+	    <good productId="16" wareid="6535" openPrice="false"></good><!-- 2750金块 -->
+	    <good productId="17" wareid="6536" openPrice="false"></good><!-- 5500金块 -->
+	    
+	    <good productId="521" wareid="6541" openPrice="false"></good><!-- 新入将军礼包 -->	 
+	    <good productId="512" wareid="6540" openPrice="false"></good><!-- 新玩家成长礼包14天 -->
+	    <good productId="513" wareid="6542" openPrice="false"></good><!-- 竞技场达成商品 -->
+	    <good productId="514" wareid="6543" openPrice="false"></good><!-- 清恋特工队服装S礼包 -->
+	    <good productId="515" wareid="6544" openPrice="false"></good><!-- 黄龙团服装S礼包 -->  
+	    <good productId="517" wareid="6545" openPrice="false"></good><!-- 装备升级材料礼包 -->  
+	    <good productId="518" wareid="6546" openPrice="false"></good><!-- 狩猎成长礼包30次 -->  
+	    <good productId="520" wareid="6547" openPrice="false"></good><!-- 百战百胜将军礼包 -->  
+	    <good productId="522" wareid="6548" openPrice="false"></good><!-- 国王的恩赐I礼包 -->  
+	    <good productId="523" wareid="6549" openPrice="false"></good><!-- 国王的恩赐II礼包 -->  
+	    <good productId="524" wareid="6537" openPrice="false"></good><!-- 袭击的爪黄飞电S礼包 -->
+	    <good productId="525" wareid="6538" openPrice="false"></good><!-- 活性的爪黄飞电S礼包 -->
+	    <good productId="526" wareid="6539" openPrice="false"></good><!-- 生命的爪黄飞电S礼包 -->
+	    <good productId="527" wareid="6550" openPrice="false"></good><!-- 立即打开竞技场箱子 -->
+	    <good productId="528" wareid="6551" openPrice="false"></good><!-- 新勇士升级礼包 -->
+	    
+	    <good productId="503" wareid="6552" openPrice="false"></good><!-- 王室近卫兵服装S礼包 -->    
+	    <good productId="504" wareid="6553" openPrice="false"></good><!-- 皇室亲卫队服装S礼包 -->  
+	    <good productId="505" wareid="6554" openPrice="false"></good><!-- 珈蓝服装S礼包 -->  
+	    
+	    <good productId="536" wareid="6555" openPrice="false"></good><!-- 周卡 -->
+	    <good productId="537" wareid="6556" openPrice="false"></good><!-- 月卡 -->
+	    <good productId="543" wareid="6557" openPrice="false"></good><!-- 每日特惠礼包 -->
+	   
+	</goods>

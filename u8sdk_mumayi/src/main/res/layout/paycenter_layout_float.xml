@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ra_ucenter_float"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true">
+
+
+    <LinearLayout
+        android:id="@+id/ra_ucenter_float_long"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/pay_ucenter_float_out_long_bg"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/ra_ucenter_float_ucenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="60dip">
+
+            <ImageView
+                android:id="@+id/iv_ucenter_float_ucenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pay_float_ucenter_image_style"
+                android:layout_marginTop="5dip" />
+
+            <TextView
+                android:id="@+id/tv_ucenter_float_ucenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_ucenter_float_ucenter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dip"
+                android:text="个人中心"
+                android:textColor="#35393d"
+                android:textSize="10dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ra_ucenter_float_change_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="17dip">
+
+            <ImageView
+                android:id="@+id/iv_ucenter_float_change_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pay_float_change_account_image_style"
+                android:layout_marginTop="5dip" />
+
+            <TextView
+                android:id="@+id/tv_ucenter_float_change_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_ucenter_float_change_account"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dip"
+                android:text="切换账号"
+                android:textColor="#35393d"
+                android:textSize="10dip" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/ra_ucenter_float_luntan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="17dip"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_ucenter_float_luntan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pay_float_forum_image_style"
+                android:layout_marginTop="5dip" />
+
+            <TextView
+                android:id="@+id/tv_ucenter_float_luntan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_ucenter_float_luntan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dip"
+                android:text="游戏论坛"
+                android:textColor="#35393d"
+                android:textSize="10dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ra_ucenter_float_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/pay_ucenter_float_out_bg"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:id="@+id/ra_ucenter_float_inner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pay_ucenter_float_inner_bg"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_ucenter_float_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pay_ucetner_float_logo"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

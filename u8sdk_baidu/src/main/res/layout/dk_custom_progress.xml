@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dk_loading_bj"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/dk_loadingImageView"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/dk_bg_progress_loading" />
+
+    <TextView
+        android:id="@+id/dk_tv_loading_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/dk_message_footer_loading"
+        android:textColor="#999999"
+        android:textSize="12sp" />
+
+</LinearLayout>

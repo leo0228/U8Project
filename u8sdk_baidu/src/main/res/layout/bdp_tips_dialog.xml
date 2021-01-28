@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="278dp"
+    android:layout_height="165dp"
+    android:background="@drawable/bdp_bg_white_round"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/bdpContentText"
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/bdp_color_white__without_corners_selector"
+            android:gravity="center"
+            android:text="@string/bdp_paycenter_alipay_cancel"
+            android:textColor="#cfcfcf"
+            android:textSize="@dimen/bdp_paycenter_text_size_16_sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="#c6c6c6" />
+
+        <TextView
+            android:id="@+id/bdpOk"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:background="@drawable/bdp_color_white__without_corners_selector"
+            android:gravity="center"
+            android:text="@string/bdp_pay"
+            android:textColor="#e5006a"
+            android:textSize="@dimen/bdp_paycenter_text_size_16_sp" />
+    </LinearLayout>
+
+</LinearLayout>

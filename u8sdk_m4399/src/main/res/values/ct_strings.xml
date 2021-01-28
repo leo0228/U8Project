@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ct_account_auth_custom_privacy_text">《自定义服务协议》</string>
+    <string name="ct_account_auth_privacy_text">《天翼账号服务与隐私协议》</string>
+    <string name="ct_account_brand_text">天翼账号提供认证服务</string>
+
+        <!-- Mobile Network Service provider configuration-->
+    <string name="m4399_login_sp_mobile">移动</string>
+    <string name="m4399_login_privacy_protocol_mobile">https://wap.cmpassport.com/resources/html/contract.html</string>
+    <string name="m4399_login_sp_unicom">联通</string>
+    <string name="m4399_login_privacy_protocol_unicom">https://opencloud.wostore.cn/authz/resource/html/disclaimer.html?fromsdk=true</string>
+    <string name="m4399_login_sp_telecom">电信</string>
+    <string name="m4399_login_privacy_protocol_telecom">https://e.189.cn/sdk/agreement/detail.do?hidetop=true</string>
+    <string name="m4399_login_privacy_protocol_4399">http://ptlogin.4399.com/www_resource/protocol.html</string>
+
+    <!-- ChinaTelecom login strings -->
+    <string name="ct_account_title_login_activity">免密登录</string>
+    <string name="ct_account_label_login_one_tap">本机号码一键登录</string>
+    <string name="ct_account_label_other_channel">其他登录方式</string>
+    <string name="ct_account_fmt_link_privacy_span">《%s账号服务与隐私协议》</string>
+    <string name="ct_account_default_app_name">本应用</string>
+    <string name="ct_account_action_return">返回</string>
+    <string name="ct_account_action_confirm">确认登录</string>
+    <string name="ct_account_title_privacy_activity">服务与隐私协议</string>
+    <string name="ct_account_error_not_pre_login">未调用预登录接口</string>
+    <string name="ct_account_label_desensitise_phone_no_default">以本机号码登录</string>
+
+    <!-- 4399 Login without password -->
+    <string name="m4399_login_error_not_inited">SDK 未初始化或初始化失败</string>
+    <string name="m4399_login_error_over_limit">未检测到移动网络，或当前手机网络不支持一键登录</string>
+    <string name="m4399_login_error_config_miss">应用配置不全</string>
+    <string name="m4399_login_error_object_dead">内部状态异常</string>
+    <string name="m4399_login_error_invalid_negotiation">多账号协商协议未实现</string>
+    <string name="m4399_login_volley_auth_failure_error">访问未授权</string>
+    <string name="m4399_login_volley_client_error">客户端错误</string>
+    <string name="m4399_login_volley_network_error">网络错误</string>
+    <string name="m4399_login_volley_no_connection_error">无网络连接</string>
+    <string name="m4399_login_volley_parse_error">数据解析错误</string>
+    <string name="m4399_login_volley_server_error">服务端错误</string>
+    <string name="m4399_login_volley_timeout_error">请求超时</string>
+
+    <!-- Unicom -->
+    <string name="m4399_login_error_no_login_listener">页面过期，请重试</string>
+    <string name="m4399_login_error_normal">免密登录失败，请重试</string>
+    <string name="unicom_message_80200">关闭界面，取消登录</string>
+    <string name="unicom_message_80201">切换其他登录方式</string>
+    <string name="unicom_label_service_provider">联通账号提供认证服务</string>
+    <string name="unicom_link_privacy_name">《联通账号服务与隐私协议》</string>
+
+    <string name="al_formatter_privacy_prompt">登录即同意%s</string>
+    <string name="al_two_formatter_privacy_prompt">登录即同意%1$s和%2$s</string>
+
+</resources>

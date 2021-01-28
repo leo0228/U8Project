@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bdp_paycenter_layout_dialog_support_bank"
+    android:layout_width="wrap_content"
+    android:layout_height="165dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="278dp"
+        android:layout_height="165dp"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/bdp_paycenter_layout_balance_tips"
+            android:layout_width="match_parent"
+            android:layout_height="107dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:gravity="center"
+            android:text="@string/bdp_paycenter_tip_balance_can_not_pay"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#cccccc" />
+
+        <TextView
+            android:id="@+id/bdp_paycenter_btn_dialog_close"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:gravity="center"
+            android:background="@drawable/bdp_color_white__without_corners_selector"
+            android:text="@string/bdp_paycenter_credit_dialog_close"
+            android:textColor="#ffea0063"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

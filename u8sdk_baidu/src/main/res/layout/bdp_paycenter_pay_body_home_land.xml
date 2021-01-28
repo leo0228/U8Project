@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp" >
+
+        <!-- The left area -->
+
+        <RelativeLayout
+            android:layout_width="244dp"
+            android:layout_height="fill_parent"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:id="@+id/bdp_paycenter_layout_list_parent"
+                style="@style/bdp_paycenter_payment_scrollview_style"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="8dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/bdp_paycenter_layout_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/bdp_paycenter_layout_notice_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- The bottom logo area -->
+<!-- 
+                    <RelativeLayout
+                        android:id="@+id/bdp_paycenter_layout_baidu_logo_parent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        android:gravity="center|bottom"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+                    </RelativeLayout> -->
+                    <!-- The bottom logo area end -->
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+        <!-- The left area end -->
+
+		<View 
+		    android:layout_height="match_parent"
+		    android:layout_width="1px"
+		    android:background="#d8d8d8"/>
+        <!-- The right area -->
+
+        <ScrollView
+            android:id="@+id/bdp_paycenter_sv_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadeScrollbars="false"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbarThumbVertical="@drawable/bdp_paycenter_scrollbar_gray" >
+
+            <LinearLayout
+                android:id="@+id/bdp_paycenter_layout_paycontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+        <!-- The right area end -->
+    </LinearLayout>
+
+</RelativeLayout>

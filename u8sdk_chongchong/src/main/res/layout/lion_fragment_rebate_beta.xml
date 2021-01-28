@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lion.ccpay.widget.scrollview.CustomHorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <com.lion.ccpay.widget.GameDetailBetaLayout
+        android:id="@+id/lion_fragment_rebate_beta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="14.0dp" />
+</com.lion.ccpay.widget.scrollview.CustomHorizontalScrollView>

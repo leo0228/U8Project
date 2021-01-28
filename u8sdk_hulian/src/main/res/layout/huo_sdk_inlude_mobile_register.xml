@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/huo_sdk_rl_mRegister"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/huo_sdk_activity_horizontal_margin"
+    android:layout_marginRight="@dimen/huo_sdk_activity_horizontal_margin"
+    android:background="@drawable/huo_sdk_sdk_bg_edit_two"
+    android:paddingBottom="10dip"
+    android:paddingLeft="18dip"
+    android:paddingRight="18dip"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/huo_sdk_ll_mRegisterLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/huo_sdk_iv_mRegisterLogo"
+            android:layout_width="0.0px"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.0"
+            android:src="@drawable/huo_sdk_ic_logo" />
+
+        <TextView
+            android:layout_width="1dip"
+            android:layout_height="40dp"
+            android:background="@color/huo_sdk_gray_d8" />
+
+        <TextView
+            android:id="@+id/huo_sdk_tv_title"
+            android:layout_width="0.0px"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="تېلېفوندا تىزىملىتىش"
+            android:textColor="@color/huo_sdk_blues"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/huo_sdk_ll_mRegisterInput"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/huo_sdk_sdk_bg_edit_two"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/huo_sdk_rl_mRegisterAccount"
+            android:layout_width="fill_parent"
+            android:layout_height="35dip">
+
+            <TextView
+                android:id="@+id/huo_sdk_union_tv_line1"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/huo_sdk_iv_mobile"
+                android:background="#d8d8d8" />
+
+            <EditText
+                android:id="@+id/huo_sdk_et_mRegisterAccount"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_toLeftOf="@+id/huo_sdk_union_tv_line1"
+                android:background="@null"
+                android:hint="تېلېفون نومۇرىڭىزنى كىرگۈزۈڭ"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="30dip"
+                android:paddingRight="5dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textColorHint="#c8c8c8"
+                android:textSize="14dip"
+                android:maxLength="16"
+                android:ellipsize="end"/>
+
+            <ImageView
+                android:id="@+id/huo_sdk_iv_mobile"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/huo_sdk_ic_login_mobile" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/huo_sdk_gray_d8" />
+
+        <RelativeLayout
+            android:id="@+id/huo_rl_mRegisterPwd"
+            android:layout_width="fill_parent"
+            android:layout_height="35dip">
+
+            <ImageView
+                android:id="@+id/huo_sdk_iv_pwd"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/huo_sdk_pwd_log" />
+
+            <TextView
+                android:id="@+id/huo_sdk_tv_line2"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/huo_sdk_iv_pwd"
+                android:background="@color/huo_sdk_gray_d8" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/huo_sdk_img_show_pwd"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/huo_sdk_sdk_yanjing" />
+            <EditText
+                android:id="@+id/huo_sdk_et_mRegisterPwd"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_toRightOf="@id/huo_sdk_img_show_pwd"
+                android:layout_toLeftOf="@+id/huo_sdk_tv_line2"
+                android:background="@null"
+                android:hint="مەخپىي نومۇرنى كىرگۈزۈڭ"
+                android:gravity="right|center_vertical"
+                android:inputType="textPassword"
+                android:paddingLeft="30dip"
+                android:paddingRight="5dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textColorHint="#c8c8c8"
+                android:textSize="14dip"
+                android:maxLength="16"
+                android:ellipsize="end"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/huo_sdk_gray_d8" />
+
+        <RelativeLayout
+            android:id="@+id/huo_sdk_rl_mRegisterCode"
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:layout_marginRight="1dp">
+
+            <ImageView
+                android:id="@+id/huo_sdk_iv_code"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/huo_sdk_code_log" />
+
+            <TextView
+                android:id="@+id/huo_sdk_tv_line3"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/huo_sdk_iv_code"
+                android:background="@color/huo_sdk_gray_d8" />
+
+            <EditText
+                android:id="@+id/huo_sdk_et_mRegisterCode"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_toLeftOf="@+id/huo_sdk_tv_line3"
+                android:background="@null"
+                android:hint="تەستىق نومۇرىنى كىرگۈزۈڭ"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="100dip"
+                android:layout_marginRight="5dip"
+                android:maxLength="6"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="#818181"
+                android:textColorHint="#c8c8c8"
+                android:textSize="14dip"
+                android:ellipsize="end"/>
+
+            <Button
+                android:id="@+id/huo_sdk_btn_mRegisterSendCode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/huo_sdk_sdk_btn_stroke"
+                android:gravity="center"
+                android:text="تەستىق نومۇرىغا ئېرىشىش"
+                android:textColor="@color/huo_sdk_text_blacks"
+                android:textSize="10dip" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/huo_sdk_gray_d8" />
+        <RelativeLayout
+            android:id="@+id/huo_sdk_rl_mInvitationCode"
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:layout_marginRight="1dp"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/huo_sdk_iv_invitationCode"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/huo_sdk_user_touxian_two" />
+            <TextView
+                android:id="@+id/huo_sdk_tv_line4"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/huo_sdk_iv_invitationCode"
+                android:background="@color/huo_sdk_gray_d8" />
+
+            <EditText
+                android:id="@+id/huo_sdk_et_mInvitationCode"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_toRightOf="@+id/huo_sdk_tv_line4"
+                android:background="@null"
+                android:hint="请输入介绍人/邀请码"
+                android:paddingLeft="5dip"
+                android:layout_marginRight="100dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="#818181"
+                android:textColorHint="#c8c8c8"
+                android:textSize="14dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/huo_sdk_btn_mRegisterSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="38dip"
+        android:layout_below="@id/huo_sdk_ll_mRegisterInput"
+
+        android:layout_marginTop="12dp"
+        android:background="@drawable/huo_sdk_sdk_login_in"
+        android:gravity="center"
+        android:text="تىزىملىتىشنى تاماملاش"
+        android:textColor="@android:color/white"
+        android:textSize="16dip" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center|left"
+        android:layout_marginTop="10dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/huo_sdk_ll_mRegisterUserNameRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/huo_sdk_tv_userlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="ئابونىت تىزىملىتىش"
+                android:textColor="@color/huo_sdk_text_blacks"
+                android:textSize="14dip" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/huo_sdk_user_touxian_two" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/huo_sdk_ll_mRegisterFastRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/huo_sdk_ll_mRegisterUserNameRegister">
+            <TextView
+                android:id="@+id/huo_sdk_tv_fastRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="سىناپ ئويناش"
+                android:textColor="@color/huo_sdk_text_blacks"
+                android:textSize="14dip" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/huo_sdk_user_register_demo" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/huo_sdk_ll_mRegisterGotoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="right"
+        >
+        <TextView
+            android:id="@+id/huo_sdk_tv_mRegisterGotoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="قايتىش"
+            android:textColor="@color/huo_sdk_text_blacks"
+            android:textSize="14dip"
+            />
+
+        <ImageView
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:src="@drawable/huo_sdk_login_arrows_right" />
+    </LinearLayout>
+</LinearLayout>

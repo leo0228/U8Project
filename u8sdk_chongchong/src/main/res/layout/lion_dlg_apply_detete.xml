@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/lion_common_white"
+    >
+    <TextView
+        style="@style/lion_style_dlg_title"
+        android:text="虫虫提示"
+        android:background="@null"
+        />
+    <include layout="@layout/lion_layout_line"/>
+
+    <TextView
+        android:id="@+id/lion_dlg_apply_delete_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:textSize="15dip"
+        android:textColor="@color/lion_common_black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dip"
+        android:gravity="center"
+        android:textSize="15dip"
+        android:textColor="@color/lion_common_basic_red"
+        android:text="注销提交审核后，将先冻结账户15天（15天确认期，防止非法分子假冒他人账户注销），15天审核通过后进行删号操作。"
+        />
+
+    <include layout="@layout/lion_layout_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lion_dlg_close"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dip"
+            android:gravity="center"
+            android:textColor="@color/lion_common_black"
+            android:text="确认注销"
+            />
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:background="@color/lion_common_line"
+            />
+        <TextView
+            android:id="@+id/lion_dlg_sure"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dip"
+            android:gravity="center"
+            android:textColor="@color/lion_common_text_gray"
+            android:text="容我想想"
+            />
+    </LinearLayout>
+</LinearLayout>

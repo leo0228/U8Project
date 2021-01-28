@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lion.ccpay.widget.floating.FWLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lion_layout_floating_icon_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="@color/lion_common_white">
+
+    <com.lion.ccpay.widget.StrokeTextView
+        android:id="@+id/lion_layout_floating_remain_game_time"
+        android:layout_width="125dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/lion_common_floating_remain_time_bg"
+        android:gravity="center"
+        android:textColor="@color/lion_common_color_FF2D2D"
+        android:textSize="11dp"
+        android:textStyle="bold"
+        tools:text="在线剩余时长：05:00" />
+
+</com.lion.ccpay.widget.floating.FWLayout>

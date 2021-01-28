@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lion_common_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/lion_layout_notice" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/lion_common_margin"
+            android:paddingRight="@dimen/lion_common_margin">
+
+            <LinearLayout style="@style/lion_style_game_bt_rebate_layout">
+
+                <TextView
+                    style="@style/lion_style_game_bt_rebate_title"
+                    android:text="@string/lion_text_game_bt_rebate_game_name" />
+
+                <TextView
+                    android:id="@+id/fragment_game_bt_rebate_game_name"
+                    style="@style/lion_style_game_bt_rebate_input"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+            <include layout="@layout/lion_layout_line" />
+
+            <LinearLayout style="@style/lion_style_game_bt_rebate_layout">
+
+                <TextView
+                    style="@style/lion_style_game_bt_rebate_title"
+                    android:text="@string/lion_text_game_bt_rebate_user_name" />
+
+                <EditText
+                    android:id="@+id/fragment_game_bt_rebate_user_name"
+                    style="@style/lion_style_game_bt_rebate_input"
+                    android:hint="@string/lion_text_game_bt_rebate_hint_1" />
+            </LinearLayout>
+
+            <include layout="@layout/lion_layout_line" />
+
+            <LinearLayout
+                android:id="@+id/fragment_game_bt_rebate_user_id_layout"
+                style="@style/lion_style_game_bt_rebate_layout">
+
+                <TextView
+                    style="@style/lion_style_game_bt_rebate_title"
+                    android:text="@string/lion_text_game_bt_rebate_user_id" />
+
+                <EditText
+                    android:id="@+id/fragment_game_bt_rebate_user_id"
+                    style="@style/lion_style_game_bt_rebate_input"
+                    android:hint="@string/lion_text_game_bt_rebate_hint_2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment_game_bt_rebate_user_id_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/lion_shape_gray_circle_frame"
+                android:drawableLeft="@drawable/lion_game_bt_rebate_question"
+                android:drawablePadding="5dp"
+                android:paddingLeft="@dimen/lion_common_margin"
+                android:paddingTop="8dp"
+                android:paddingRight="@dimen/lion_common_margin"
+                android:paddingBottom="8dp"
+                android:text="@string/lion_text_game_bt_rebate_user_id_see"
+                android:textColor="@color/lion_common_basic_red" />
+
+            <FrameLayout
+                android:id="@+id/fragment_game_bt_rebate_user_id_layout_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/lion_layout_line" />
+            </FrameLayout>
+
+            <LinearLayout style="@style/lion_style_game_bt_rebate_layout">
+
+                <TextView
+                    style="@style/lion_style_game_bt_rebate_title"
+                    android:text="@string/lion_text_game_bt_rebate_server" />
+
+                <EditText
+                    android:id="@+id/fragment_game_bt_rebate_server"
+                    style="@style/lion_style_game_bt_rebate_input"
+                    android:hint="@string/lion_text_game_bt_rebate_hint_3" />
+            </LinearLayout>
+
+            <include layout="@layout/lion_layout_line" />
+
+            <LinearLayout
+                style="@style/lion_style_game_bt_rebate_layout"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/lion_style_game_bt_rebate_title"
+                    android:text="@string/lion_text_game_bt_rebate_game_account" />
+
+                <EditText
+                    android:id="@+id/fragment_game_bt_rebate_cc_account"
+                    style="@style/lion_style_game_bt_rebate_input"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <include layout="@layout/lion_layout_line" />
+
+            <LinearLayout
+                android:id="@+id/fragment_game_bt_rebate_cc_phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp">
+
+                <TextView
+                    style="@style/lion_style_game_bt_rebate_title"
+                    android:text="@string/lion_text_game_bt_rebate_user_phone" />
+
+                <EditText
+                    android:id="@+id/fragment_game_bt_rebate_cc_phone"
+                    style="@style/lion_style_game_bt_rebate_input"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/lion_text_game_bt_rebate_notice_1"
+                android:textColor="@color/lion_common_basic_red"
+                android:textSize="12dp" />
+
+            <include layout="@layout/lion_layout_line" />
+
+            <LinearLayout style="@style/lion_style_game_bt_rebate_layout">
+
+                <TextView
+                    style="@style/lion_style_game_bt_rebate_title"
+                    android:text="@string/lion_text_game_bt_rebate_time" />
+
+                <TextView
+                    android:id="@+id/fragment_game_bt_rebate_time"
+                    style="@style/lion_style_game_bt_rebate_input" />
+            </LinearLayout>
+
+            <include layout="@layout/lion_layout_line" />
+
+            <LinearLayout style="@style/lion_style_game_bt_rebate_layout">
+
+                <TextView
+                    style="@style/lion_style_game_bt_rebate_title"
+                    android:text="@string/lion_text_game_bt_rebate_contact_type" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/fragment_game_bt_rebate_contact_qq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/lion_common_circle_frame_gray_light_2_red_selector"
+                        android:drawableLeft="@drawable/lion_common_radio_selector"
+                        android:drawablePadding="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="@dimen/lion_common_margin"
+                        android:paddingBottom="7dp"
+                        android:text="@string/lion_text_game_bt_rebate_contact_qq"
+                        android:textColor="@color/lion_color_text_gray_light_2_red_selector"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/fragment_game_bt_rebate_contact_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/lion_common_circle_frame_gray_light_2_red_selector"
+                        android:drawableLeft="@drawable/lion_common_radio_selector"
+                        android:drawablePadding="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="@dimen/lion_common_margin"
+                        android:paddingBottom="7dp"
+                        android:text="@string/lion_text_game_bt_rebate_contact_phone"
+                        android:textColor="@color/lion_color_text_gray_light_2_red_selector"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/lion_layout_line" />
+
+            <LinearLayout style="@style/lion_style_game_bt_rebate_layout">
+
+                <TextView
+                    style="@style/lion_style_game_bt_rebate_title"
+                    android:text="@string/lion_text_game_bt_rebate_contact" />
+
+                <EditText
+                    android:id="@+id/fragment_game_bt_rebate_contact"
+                    style="@style/lion_style_game_bt_rebate_input"
+                    android:hint="@string/lion_text_game_bt_rebate_hint_6"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+            <include layout="@layout/lion_layout_line" />
+
+            <TextView
+                android:id="@+id/fragment_game_bt_rebate_submit"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="62dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="62dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/lion_common_circle_red_selector"
+                android:gravity="center"
+                android:text="@string/lion_text_game_bt_rebate_submit"
+                android:textColor="@color/lion_common_white"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

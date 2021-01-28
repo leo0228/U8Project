@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_weight="1" >
+
+    <RelativeLayout
+        android:id="@+id/bdp_rl_paymod_bg"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@drawable/bdp_bg_pay_mod_round" >
+
+        <ImageView
+            android:id="@+id/bdp_iv_payment_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/bdp_ic_more_normal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/bdp_iv_payment_icon"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/bdp_tv_payment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/bdp_paycenter_ku_bi_exchange"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/bdp_paycenter_iv_payment_ic_mark"
+                android:layout_width="38dp"
+                android:layout_height="14dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bdp_bg_pay_icon_mark_discount"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bdp_iv_paymod_icon_select"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/bdp_ic_check_selecte" />
+
+</RelativeLayout>

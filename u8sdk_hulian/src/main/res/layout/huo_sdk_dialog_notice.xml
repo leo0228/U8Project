@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/huo_sdk_shape_circle_rect_white"
+    android:orientation="vertical"
+    tools:ignore="UselessParent">
+
+    <TextView
+        android:id="@+id/huo_sdk_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="公告"
+        android:textColor="@color/huo_sdk_orange"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="@color/huo_sdk_graycc" />
+
+    <TextView
+        android:id="@+id/huo_sdk_time_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/huo_sdk_gray7f"
+        android:textSize="10sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/huo_sdk_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoLink="web"
+            android:gravity="center|top|left"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="12sp" />
+    </ScrollView>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="@color/huo_sdk_graycc" />
+
+    <LinearLayout
+        android:id="@+id/huo_sdk_layout_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/huo_sdk_confirm_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我知道了"
+            android:textColor="@color/huo_sdk_orange" />
+    </LinearLayout>
+</LinearLayout>

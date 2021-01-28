@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lion_fragment_rebate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lion_common_white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lion_common_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/lion_fragment_rebate_beta_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/lion_fragment_rebate_beta" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/lion_fragment_rebate_crack_notice_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lion_fragment_rebate_beta_layout"
+                android:layout_marginTop="14dp"
+                android:drawableLeft="@drawable/lion_icon_rebate_notice_flag"
+                android:drawablePadding="10dp"
+                android:paddingLeft="18dp"
+                android:text="@string/lion_text_warm_prompt"
+                android:textColor="@color/lion_color_333333"
+                android:textSize="15dp" />
+
+            <!--温馨提示-->
+            <TextView
+                android:id="@+id/lion_fragment_rebate_crack_notice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lion_fragment_rebate_crack_notice_title"
+                android:layout_marginLeft="@dimen/lion_common_margin"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="@dimen/lion_common_margin"
+                android:ellipsize="end"
+                android:lineSpacingExtra="9dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="72dp"
+                android:textColor="@color/lion_color_666666"
+                android:textSize="12dp"
+                tools:text="★充值比例1:300，首充双倍；次充98元（包括98）以上返30%；" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/lion_shape_gradient_transparent_white_0_to_100"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/lion_fragment_rebate_apply_btn"
+            style="@style/lion_style_dlg_btn_right"
+            android:layout_width="match_parent"
+            android:background="@drawable/lion_selector_rebate_apply_btn"
+            android:text="@string/lion_text_self_apply_rebate"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</FrameLayout>
+

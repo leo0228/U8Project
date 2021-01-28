@@ -1,0 +1,11 @@
+<resources>
+    <string name="dcn_version_name">V4.6.2.190610</string>
+    <string name="dcn_frame_version_name">1.0.1</string>
+    <string name="dcn_init_msg">正在初始化</string>
+    <string name="dcn_full_version">SDK %1$s(API V%2$s)</string>
+    <string name="dcn_update_plugin_failed">更新资源失败,请重试</string>
+    <string name="dcn_update_plugin_md5_failed">文件MD5不匹配,请重试</string>
+    <string name="dcn_update_plugin_sign_failed">文件签名不匹配,请重试</string>
+    <string name="dcn_update_plugin_progress">正在更新资源,请稍候…:%1$.1f%%</string>
+    <string name="dcn_update_plugin_finish">更新完成，正在进入游戏…</string>
+</resources>

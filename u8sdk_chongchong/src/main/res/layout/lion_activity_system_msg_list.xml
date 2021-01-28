@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lion_common_basic_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="7.5dip"
+        android:background="@drawable/lion_common_frame_two_nor"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/lion_tab_system"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/lion_common_transparent_selector"
+                    android:drawableBottom="@drawable/lion_common_line_transparent_2_red_selector"
+                    android:gravity="center"
+                    android:text="@string/lion_text_system_msg"
+                    android:textColor="@color/lion_common_text_black_2_red_selector"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/lion_tab_system_msg_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:src="@drawable/lion_icon_msg_tip"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="7.5dip"
+            android:layout_marginBottom="7.5dip"
+            android:background="@color/lion_common_line" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/lion_tab_feedback"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/lion_common_transparent_selector"
+                    android:drawableBottom="@drawable/lion_common_line_transparent_2_red_selector"
+                    android:gravity="center"
+                    android:text="@string/lion_text_feedback_msg"
+                    android:textColor="@color/lion_common_text_black_2_red_selector"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/lion_tab_feedback_msg_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:src="@drawable/lion_icon_msg_tip"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/lion_layout_viewpager" />
+
+</LinearLayout>

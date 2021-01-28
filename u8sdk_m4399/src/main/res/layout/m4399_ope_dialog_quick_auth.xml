@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/m4399_ope_dialog_width_big"
+    android:layout_height="258dp"
+    android:background="@drawable/m4399_ope_common_alert_dialog_bg">
+
+    <ImageView
+        android:id="@+id/m4399_ope_id_iv_close"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="18dp"
+        android:src="@drawable/m4399_rec_coupon_close" />
+
+    <LinearLayout
+        android:id="@+id/m4399_ope_id_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/m4399_ope_quick_auth_left_padding"
+        android:paddingRight="@dimen/m4399_ope_quick_auth_left_padding">
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/m4399_ope_bind_title_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/m4399_ope_dialog_text_grey"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/m4399_ope_id_view_line"
+        style="@style/m4399PerfectLine"
+        android:layout_below="@id/m4399_ope_id_ll"
+        android:layout_marginTop="15dp" />
+
+    <ListView
+        android:id="@+id/m4399_ope_id_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/m4399_ope_id_view_line"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:paddingLeft="@dimen/m4399_ope_quick_auth_left_padding"
+        android:scrollbars="none" />
+</RelativeLayout>

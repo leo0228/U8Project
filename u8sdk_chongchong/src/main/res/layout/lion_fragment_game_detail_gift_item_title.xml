@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_game_detail_gift_item_title"
+    android:layout_width="match_parent"
+    android:layout_height="18dp"
+    android:layout_marginTop="13dp">
+
+    <TextView
+        android:id="@+id/lion_fragment_game_detail_gift_item_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="13dp"
+        android:text="精品礼包"
+        android:textColor="@color/lion_color_333333"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lion_fragment_game_detail_gift_item_title_more"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/lion_common_transparent_selector"
+        android:gravity="center"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:text="查看全部礼包"
+        android:textColor="@color/lion_color_999999"
+        android:textSize="12dp" />
+</RelativeLayout>

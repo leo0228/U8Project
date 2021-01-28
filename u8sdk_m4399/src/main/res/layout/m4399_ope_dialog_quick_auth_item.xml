@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="all">
+
+    <ImageView
+        android:id="@+id/m4399_ope_id_img_avatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/m4399_ope_avatar_default" />
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/m4399_ope_quick_auth_avatar_bg" />
+
+    <TextView
+        android:id="@+id/m4399_ope_id_tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/m4399_ope_quick_auth_left_padding"
+        android:background="@drawable/m4399_ope_quick_auth_login_bg"
+        android:gravity="center"
+        android:text="@string/m4399_ope_quick_auth_login_text"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/m4399_ope_id_tv_before_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/m4399_ope_quick_auth_margin_right"
+        android:layout_toLeftOf="@id/m4399_ope_id_tv_login"
+        android:gravity="center"
+        android:text="@string/m4399_ope_quick_auth_before_login_text"
+        android:textColor="@color/m4399_rec_color_gray_bbbbbb"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/m4399_ope_id_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/m4399_ope_id_tv_before_login"
+        android:layout_toRightOf="@id/m4399_ope_id_img_avatar"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingRight="18dp"
+        android:textColor="@color/m4399_ope_bind_title_black"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/m4399_ope_id_view_line"
+        style="@style/m4399PerfectLine"
+        android:layout_below="@id/m4399_ope_id_img_avatar"
+        android:layout_toRightOf="@id/m4399_ope_id_img_avatar" />
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lion.ccpay.widget.TitleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/lion_common_white">
+
+    <TextView
+        android:id="@+id/lion_dlg_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/lion_text_anti_addict_system_real_name"
+        android:textColor="@color/lion_common_basic_red"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/lion_activity_user_auth_close"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dip"
+        android:scaleType="center"
+        android:src="@drawable/lion_icon_off" />
+</com.lion.ccpay.widget.TitleLayout>

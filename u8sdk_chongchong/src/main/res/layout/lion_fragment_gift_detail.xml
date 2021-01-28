@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lion_common_white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/lion_layout_gift_item" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/lion_common_margin"
+            android:layout_marginRight="@dimen/lion_common_margin"
+            android:background="@color/lion_common_line" />
+
+        <LinearLayout
+            style="@style/lion_common_padding"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/lion_common_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13.3dp"
+                android:text="礼包内容"
+                android:textColor="@color/lion_color_333333"
+                android:textSize="15.3dp" />
+
+            <TextView
+                android:id="@+id/lion_layout_gift_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/lion_color_666666"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="礼包兑换期限"
+                android:textColor="@color/lion_color_333333"
+                android:textSize="15.3dp" />
+
+            <TextView
+                android:id="@+id/lion_layout_gift_detail_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="3dp"
+                android:text="%s--%s"
+                android:textColor="@color/lion_color_666666"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="使用方法"
+                android:textColor="@color/lion_color_333333"
+                android:textSize="15.3dp" />
+
+            <TextView
+                android:id="@+id/lion_layout_gift_detail_use_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="3dp"
+                android:text="%s————%s"
+                android:textColor="@color/lion_color_666666"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

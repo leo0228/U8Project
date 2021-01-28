@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/m4399_ope_dialog_width_big"
+        android:layout_height="wrap_content"
+        android:background="@drawable/m4399_ope_announcement_dialog_shape_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/m4399_ope_id_base_dialog_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/m4399_ope_announcement_dialog_title"
+                android:textColor="@color/m4399_ope_announcement_dialog_top_title"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/m4399_ope_id_base_dialog_iv_close"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="19dp"
+                android:src="@drawable/m4399_rec_coupon_close" />
+
+        </RelativeLayout>
+
+        <cn.m4399.operate.control.initilize.MaxHeightScrollView
+            android:id="@+id/m4399_ope_id_scroll_tip_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginBottom="28dp"
+            android:fadeScrollbars="false"
+            android:fadingEdge="none"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbarSize="4dp"
+            android:scrollbarThumbVertical="@drawable/m4399_ope_announcement_layer_scrollbar_vertical_thumb"
+            android:scrollbarTrackVertical="@drawable/m4399_ope_announcement_layer_scrollbar_vertical_track">
+
+            <cn.m4399.operate.control.anti.view.CalculateBottomTextView
+                android:id="@+id/m4399_ope_id_tv_message"
+                android:layout_width="@dimen/m4399_ope_announcement_dialog_content_width_big"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="left"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/m4399_ope_announcement_dialog_content"
+                android:textColor="@color/m4399_ope_announcement_dialog_content"
+                android:textSize="14sp" />
+        </cn.m4399.operate.control.initilize.MaxHeightScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/m4399_ope_id_cb_select_not_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:button="@drawable/m4399_ope_checkbox_selector_not_tip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/m4399_ope_announcement_dialog_not_tip"
+            android:textColor="@color/m4399_ope_announcement_dialog_not_tip"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

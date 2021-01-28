@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="170dp"
+    android:background="@drawable/dk_dialog_round_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp" >
+
+        <ImageView
+            android:id="@+id/bd_iv_back_close"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/dk_btn_selector_notice_close" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/dk_user_back_exit_content"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#cccccc" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <RelativeLayout
+            android:id="@+id/bd_rl_hot"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/bd_tv_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:text="@string/dk_user_back_hot"
+                android:textColor="#e5006a"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bd_tv_hot_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="17dp"
+                android:layout_toRightOf="@+id/bd_tv_hot"
+                android:background="@drawable/dk_tv_hot_logo" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="#c6c6c6" />
+
+        <TextView
+            android:id="@+id/bd_tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="55dp"
+            android:gravity="center"
+            android:text="@string/dk_user_back_cancel"
+            android:textColor="#cfcfcf"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/bd_tv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:text="@string/dk_user_back_exit"
+            android:textColor="#cfcfcf"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

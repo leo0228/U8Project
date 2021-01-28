@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="240dp" >
+
+    <LinearLayout
+        android:id="@+id/dk_update_download_linlay"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/dk_dialog_round_bottom_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/dk_tv_update_oldversion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/dk_update_hint_version"
+                android:textColor="@color/dk_color_333333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dk_iv_update_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.5dp"
+                android:layout_toRightOf="@+id/dk_tv_update_oldversion"
+                android:text="@string/dk_update_to_icon"
+                android:textColor="@color/dk_color_333333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dk_tv_update_newversion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/dk_iv_update_center"
+                android:text="@string/dk_update_hint_version"
+                android:textColor="@color/dk_color_333333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dk_tv_update_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/dk_tv_update_newversion"
+                android:singleLine="true"
+                android:text="@string/dk_update_size_default"
+                android:textColor="@color/dk_color_333333"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/dk_update_progress_linlay"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/dk_txt_download_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/dk_update_progerss_default"
+                android:textColor="@color/dk_color_009cff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/dk_pb_mp"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="240dp"
+                android:layout_height="9dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/dk_update_progress_layuer_bg"
+                android:max="100"
+                android:progressDrawable="@drawable/dk_update_progress_layuer"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/dk_txt_download_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dk_update_size_default"
+                android:textColor="@color/dk_color_999999"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dk_install_immediately_linlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/dk_install_immediately"
+                android:layout_width="0dp"
+                android:layout_height="39dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bdp_btn_pink_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/dk_install_immediately"
+                    android:textColor="@color/bdp_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dk_update_button_linlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/btn_update_nomal_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="39dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bdp_btn_pink_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txt_update_nomal_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bdp_game_update_nomal_speed"
+                    android:textColor="@color/bdp_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_update_high_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="39dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bdp_btn_pink_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bdp_game_update_high_speed"
+                    android:textColor="@color/bdp_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dk_update_need_open_bdhelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bdp_game_need_open_bdhelp"
+                    android:textColor="#b4b4b4"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_open_bdhelp_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dip"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bdp_game_need_open_bdhelp"
+                    android:textColor="#b4b4b4"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dk_update_image"
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        android:layout_above="@+id/dk_update_download_linlay"
+        android:background="@drawable/dk_download_image_top" />
+
+    <ImageView
+        android:id="@+id/dk_update_close"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/dk_update_dialog_close_icon"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dk_update_close"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/dk_update_hint_game"
+        android:textColor="@color/dk_color_ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

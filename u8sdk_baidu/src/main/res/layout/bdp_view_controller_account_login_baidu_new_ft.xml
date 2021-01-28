@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bdp_bg_round_fcfcfc"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+      >
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/bdp_image"
+            android:src="@drawable/bdp_login_ic_back"
+             />
+        </FrameLayout>
+        <View
+            android:layout_width="0dip"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+        <!-- 百度登录 -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/img_top"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:contentDescription="@string/bdp_image"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/bdp_icon_baidu"-->
+            <!--android:visibility="visible" />-->
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/img_top"
+                android:text="@string/bdp_account_login"
+                android:textColor="#FF333333"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+        <!-- 关闭按钮 -->
+
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/bdp_image"
+            android:scaleType="centerInside"
+            android:src="@drawable/bdp_icon_close_selector"
+            />
+    </LinearLayout>
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dp"-->
+    <!--android:background="#FFD8D8D8" />-->
+    <!-- 子视图 -->
+
+    <LinearLayout
+        android:id="@+id/linView"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linOtherAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34dp"
+        android:layout_marginRight="34dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dip"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_login_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/bdp_color_bbbbbb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:includeFontPadding="false"
+                android:text="@string/bdp_account_login_hint"
+                android:textColor="@color/bdp_color_bbbbbb"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/bdp_color_bbbbbb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_other_login"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_below="@id/ll_login_hint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <!--
+            -->
+            <!--<TextView-->
+            <!--android:id="@+id/tv_change_login_type"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_marginLeft="10dip"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="@string/bdp_account_other_login"-->
+            <!--android:textColor="@color/bdp_color_color_666666"-->
+            <!--android:textSize="14sp" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_img_arrow"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:gravity="center_vertical" >-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/img_arrow"-->
+            <!--android:layout_width="7dp"-->
+            <!--android:layout_height="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:contentDescription="@string/bdp_image"-->
+            <!--android:src="@drawable/bdp_icon_login_arrow_right" />-->
+            <!--</LinearLayout>-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/img_bd_Login"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:contentDescription="@string/bdp_image"-->
+            <!--android:src="@drawable/bdp_icon_baidu"-->
+            <!--android:visibility="visible" />-->
+            <!--                android:layout_marginLeft="18dip"
+            -->
+            <!--<ImageView-->
+            <!--android:id="@+id/img_dk_Login"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginLeft="18dip"-->
+            <!--android:contentDescription="@string/bdp_image"-->
+            <!--android:src="@drawable/bdp_icon_duoku"-->
+            <!--android:visibility="gone"/>-->
+
+            <ImageView
+                android:id="@+id/img_91_Login"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="18dip"
+                android:contentDescription="@string/bdp_image"
+                android:src="@drawable/bdp_icon_91" />
+
+            <ImageView
+                android:id="@+id/img_wk_Login"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="18dip"
+                android:contentDescription="@string/bdp_image"
+                android:src="@drawable/bdp_icon_wanke" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/img_wx_Login"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginLeft="18dip"-->
+            <!--android:contentDescription="@string/bdp_image"-->
+            <!--android:src="@drawable/bdp_icon_weixin" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/img_qq_Login"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginLeft="18dip"-->
+            <!--android:contentDescription="@string/bdp_image"-->
+            <!--android:src="@drawable/bdp_icon_qq" />-->
+
+            <ImageView
+                android:id="@+id/img_phone_Login"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="18dip"
+                android:contentDescription="@string/bdp_image"
+                android:src="@drawable/bdp_icon_phone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_phone_login"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/bdp_phone_fast_login"
+            android:textColor="@color/bdp_color_306cff"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/ll_download"
+            android:layout_width="match_parent"
+            android:layout_height="37dip"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bdp_btn_wanke_bg_round_border_select"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/bdp_login_wanke_download"
+                android:textColor="@color/bdp_color_fe4871"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_downloading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/bdp_login_wanke_downloading"
+                android:textColor="@color/bdp_color_999999"
+                android:textSize="14sp"
+                android:visibility="gone"></TextView>
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

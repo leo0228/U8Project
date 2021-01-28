@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/huosdk_round_10_gray"
+    android:gravity="center"
+    android:layout_centerInParent="true"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:background="@drawable/huosdk_round_top_10_white"
+        android:gravity="center"
+        android:id="@+id/textView"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:text="ھېسابات نومۇرىنى تاللىغان "
+        android:textColor="@color/huo_sdk_black2a"
+        android:textSize="20sp" />
+    <ListView
+        android:id="@+id/huo_sdk_lv_account_list"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/huo_sdk_shape_circle_rect_white"
+        android:divider="@color/huo_sdk_gray_d8"
+        android:dividerHeight="0.5dp"
+        >
+
+    </ListView>
+    <Button
+        android:id="@+id/huo_sdk_btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/huo_sdk_sdk_login_in"
+        android:text="جەزىملەش"
+        android:textColor="@color/huo_sdk_white"
+        android:textSize="20sp"
+        />
+</LinearLayout>
+

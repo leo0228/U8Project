@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="huo_sdk_activity_horizontal_margin">20dp</dimen>
+
+    <dimen name="huo_sdk_float_view_height">60dp</dimen>
+    <dimen name="huo_sdk_float_btn_up_padding">8dp</dimen>
+    <dimen name="huo_sdk_float_version_padding_top_bottom">6dp</dimen>
+    <dimen name="huo_sdk_float_btn_height">32dp</dimen>
+    <dimen name="huo_sdk_float_marin_padding">14dp</dimen>
+    <dimen name="huo_sdk_text_list_font">14sp</dimen>
+    <dimen name="huo_sdk_text_list_control_font">18dp</dimen>
+    <dimen name="huo_sdk_float_max_font">16sp</dimen>
+    <dimen name="huo_sdk_float_normal_font">12sp</dimen>
+    <dimen name="huo_sdk_float_normal_two_font">14sp</dimen>
+    <dimen name="huo_sdk_float_min_font">9sp</dimen>
+    <dimen name="huo_sdk_float_list_line_height">48dp</dimen>
+</resources>

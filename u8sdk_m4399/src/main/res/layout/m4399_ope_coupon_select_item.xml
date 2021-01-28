@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/m4399_ope_verify_btn_bg">
+
+        <LinearLayout
+            android:id="@+id/m4399_ope_id_ll_money"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/m4399_ope_id_tv_coupon_quota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF2C2C"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/m4399_ope_id_tv_coupon_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/m4399_ope_yuan"
+                    android:textColor="#FF2C2C"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/m4399_ope_id_tv_coupon_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#aaaaaa"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/m4399_ope_id_view_line"
+            android:layout_width="0.5dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@id/m4399_ope_id_ll_money"
+            android:background="@color/m4399_ope_perfect_line" />
+
+        <ImageView
+            android:id="@+id/m4399_ope_id_img_select"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/m4399_rec_coupon_unchosed" />
+
+        <LinearLayout
+            android:id="@+id/m4399_ope_id_ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toLeftOf="@id/m4399_ope_id_img_select"
+            android:layout_toRightOf="@id/m4399_ope_id_view_line"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/m4399_ope_id_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/m4399_ope_id_tv_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#666666"
+                android:textSize="@dimen/m4399_ope_coupon_gray_tv_size" />
+
+            <TextView
+                android:id="@+id/m4399_ope_id_tv_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#666666"
+                android:textSize="@dimen/m4399_ope_coupon_gray_tv_size" />
+
+        </LinearLayout>
+
+        <cn.m4399.recharge.ui.widget.DashLineView
+            android:id="@+id/m4399_ope_id_view_dash_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/m4399_ope_id_ll_content" />
+
+        <ImageView
+            android:id="@+id/m4399_ope_id_img_un_use"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_below="@id/m4399_ope_id_view_dash_line"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/m4399_rec_order_failure" />
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_un_use"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_below="@id/m4399_ope_id_view_dash_line"
+            android:layout_toRightOf="@id/m4399_ope_id_img_un_use"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="@dimen/m4399_ope_coupon_gray_tv_size" />
+
+    </RelativeLayout>
+</LinearLayout>
