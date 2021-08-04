@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ids -->
+    <!-- Dialog spec -->
+    <item name="m4399_id_tv_dialog_title" type="id" />
+    <item name="m4399_id_stub_negative_container" type="id" />
+    <item name="m4399_id_tv_negative" type="id" />
+    <item name="m4399_id_stub_positive_container" type="id" />
+    <item name="m4399_id_tv_positive" type="id" />
+    <item name="m4399_id_stub_vertical_divider" type="id" />
+    <item name="m4399_id_iv_cpb" type="id" />
+    <!-- navigation -->
+    <item name="m4399_navigation_bar" type="id" />
+    <item name="m4399_nav_title" type="id" />
+    <item name="m4399_nav_return" type="id" />
+    <item name="m4399_nav_tools_container" type="id" />
+    <item name="m4399_nav_close" type="id" />
+    <!-- webview -->
+    <item name="m4399_smooth_progress_bar" type="id" />
+    <item name="m4399_item_view_container" type="id" />
+
+    <!-- padding and margin-->
+    <dimen name="m4399_spacing_8">8dp</dimen>
+    <dimen name="m4399_spacing_12">12dp</dimen>
+    <dimen name="m4399_spacing_14">14dp</dimen>
+    <dimen name="m4399_spacing_16">16dp</dimen>
+    <dimen name="m4399_spacing_18">18dp</dimen>
+    <!-- text size -->
+    <dimen name="m4399_font_12">12sp</dimen>
+    <dimen name="m4399_font_14">14sp</dimen>
+    <dimen name="m4399_font_16">16sp</dimen>
+    <dimen name="m4399_font_20">20sp</dimen>
+
+    <!-- dimens -->
+    <dimen name="m4399_nav_icon_width">42dp</dimen>
+    <dimen name="m4399_nav_icon_height">40dp</dimen>
+    <dimen name="m4399_activity_spacing_h">16dp</dimen>
+    <dimen name="m4399_activity_spacing_v">16dp</dimen>
+    <dimen name="m4399_activity_title_height">48dp</dimen>
+    <dimen name="m4399_activity_title_text_size">18sp</dimen>
+    <!--通用弹窗-->
+    <dimen name="m4399_dialog_radius">10dp</dimen>
+    <dimen name="m4399_dialog_max_content_height">160dp</dimen>
+    <dimen name="m4399_dialog_width_normal">304dp</dimen>
+    <dimen name="m4399_dialog_width_medium">404dp</dimen>
+    <dimen name="m4399_dialog_width_large">420dp</dimen>
+    <dimen name="m4399_dialog_spacing_h">24dp</dimen>
+    <dimen name="m4399_dialog_spacing_v">18dp</dimen>
+    <dimen name="m4399_dialog_action_btn_height">45dp</dimen>
+    <!-- 通用交互控件，如按钮，输入框 -->
+    <dimen name="m4399_radius_btn">4dp</dimen>
+
+    <!-- integers -->
+    <integer name="m4399_duration_page_anim">250</integer>
+
+    <!-- colors -->
+    <!-- 注意：设计定义色调的方式，与通用的Material术语并不完全一致 -->
+    <color name="m4399_color_primary">#54ba3d</color>
+    <color name="m4399_color_primary_dark">#4ca733</color>
+    <color name="m4399_color_accent">#ffa92d</color>
+    <color name="m4399_color_accent_dark">#ff9d11</color>
+    <color name="m4399_color_progress">#54ba3d</color>
+    <color name="m4399_color_line">#e5e5e5</color>
+    <color name="m4399_color_ripple_grey">#22000000</color>
+
+    <!-- arrays -->
+    <array name="m4399_webview_error_titles">
+        <item>找不到网页</item>
+        <item>Error 405</item>
+        <item>502 Bad Gateway</item>
+    </array>
+
+    <!-- strings -->
+    <string name="m4399_error_broken_state">页面已过期或数据丢失，请重新打开</string>
+    <!-- actions -->
+    <string name="m4399_action_return">返回</string>
+    <string name="m4399_action_cancel">取消</string>
+    <string name="m4399_action_close">关闭</string>
+    <string name="m4399_action_goon">继续</string>
+    <string name="m4399_action_confirm">确定</string>
+    <string name="m4399_action_done">完成</string>
+    <string name="m4399_action_retry">重试</string>
+    <!-- webview -->
+    <string name="m4399_webview_check_network">查看网络状态</string>
+    <string name="m4399_webview_retry_request">网络异常，请点击屏幕重试</string>
+    <string name="m4399_webview_ssl_error_title">网页SSL证书错误</string>
+    <string name="m4399_webview_ssl_error_message">当前网页SSL证书异常，是否继续打开？</string>
+    <string name="m4399_webview_show_file_chooser_failed">打开本地文件浏览器失败</string>
+    <!-- network -->
+    <string name="m4399_network_error_normal">请求异常，请检查网络后重试</string>
+    <string name="m4399_network_error_network">网络连接异常</string>
+    <string name="m4399_network_error_auth_failure">访问未授权</string>
+    <string name="m4399_network_error_client">客户端错误</string>
+    <string name="m4399_network_error_no_connection">无网络连接</string>
+    <string name="m4399_network_error_parse">数据解析错误</string>
+    <string name="m4399_network_error_server">服务端错误</string>
+    <string name="m4399_network_error_timeout">请求超时</string>
+    <!-- download -->
+    <string name="m4399_download_toast_pending">已经开始下载啦，请到下载管理查看进度</string>
+    <string name="m4399_download_toast_running">下载中，请到下载管理查看进度</string>
+    <string name="m4399_download_toast_install_already">应用已安装，可直接使用</string>
+    <string name="m4399_download_toast_open_file">请到通知栏或系统文件管理器打开文件</string>
+    <string name="m4399_download_toast_success">已成功下载，立刻为您安装</string>
+    <string name="m4399_download_message_download_dir">下载完成后请到系统文件管理下的安装包目录查找文件</string>
+    <string name="m4399_download_success_already">已存在下载好的文件</string>
+    <string name="m4399_download_error_head">下载失败，获取文件信息失败</string>
+    <string name="m4399_download_error_io">下载失败，数据读写异常</string>
+    <string name="m4399_download_error_md5">下载完成，文件校验失败</string>
+
+    <!-- styles -->
+    <style name="m4399" />
+    <!-- H1: 少数标题-->
+    <style name="m4399.Text.H1" parent="m4399">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- H1: 重要标题、tab-->
+    <style name="m4399.Text.H2" parent="m4399">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- H3: 用于一般标题：列表、对话框标题-->
+    <style name="m4399.Text.H3" parent="m4399">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">@dimen/m4399_font_16</item>
+    </style>
+
+    <!-- Prompt: 用于一般性提示 -->
+    <style name="m4399.Text.Prompt" parent="m4399">
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">@dimen/m4399_spacing_14</item>
+    </style>
+
+    <style name="m4399.Anim.Slide" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/m4399_ope_support_slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/m4399_ope_support_slide_out_right</item>
+    </style>
+
+    <style name="m4399.Theme.Dialog.Base" parent="android:Theme.Holo.Dialog">
+        <item name="android:background">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/m4399_ope_support_dialog_bg</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="m4399.Dialog.Title" parent="m4399.Text.H3">
+        <item name="android:id">@id/m4399_id_tv_dialog_title</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/m4399_dialog_spacing_h</item>
+        <item name="android:layout_marginRight">@dimen/m4399_dialog_spacing_h</item>
+        <item name="android:layout_marginTop">@dimen/m4399_dialog_spacing_v</item>
+    </style>
+
+    <style name="m4399.Dialog.Content" parent="m4399">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginLeft">26dp</item>
+        <item name="android:layout_marginRight">26dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="m4399.Nav.Icon" parent="m4399">
+        <item name="android:layout_width">@dimen/m4399_nav_icon_width</item>
+        <item name="android:layout_height">@dimen/m4399_nav_icon_height</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:background">@drawable/m4399_ope_support_nav_icon_bg</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:clickable">true</item>
+    </style>
+</resources>

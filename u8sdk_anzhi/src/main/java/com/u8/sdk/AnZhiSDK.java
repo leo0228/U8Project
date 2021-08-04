@@ -9,8 +9,9 @@ import com.anzhi.sdk.middle.manage.GameCallBack;
 import com.anzhi.sdk.middle.util.MD5;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
+import com.u8.common.PromptDialog;
 import com.u8.sdk.anzhi.Des3Util;
-import com.zjtx.prompt.PromptDialog;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;

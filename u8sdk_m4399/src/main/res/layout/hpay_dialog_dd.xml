@@ -43,7 +43,7 @@
         android:paddingBottom="@dimen/m4399_rec_gridview_vspacing"
         android:paddingLeft="@dimen/m4399_rec_paddingLeft"
         android:paddingRight="@dimen/m4399_rec_paddingLeft"
-        android:paddingTop="@dimen/m4399_rec_gridview_vspacing"></LinearLayout>
+        android:paddingTop="@dimen/m4399_rec_gridview_vspacing" />
 
     <LinearLayout
         android:layout_width="match_parent"

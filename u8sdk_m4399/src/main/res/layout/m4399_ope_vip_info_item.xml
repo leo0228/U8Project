@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/m4399.UserCenter.Entry">
+
+    <TextView
+        android:id="@+id/m4399_ope_id_vip_item_name"
+        style="@style/m4399.Text.H3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        tools:text="@string/m4399_ope_perfect_info_nickname" />
+
+    <cn.m4399.operate.aga.anti.view.ConstraintEditText
+        android:id="@+id/m4399_ope_id_vip_item_editor"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/m4399_ope_color_666666"
+        android:textColorHint="@color/m4399_ope_color_bbbbbb"
+        android:textSize="@dimen/m4399_font_16" />
+
+    <ImageView
+        android:id="@+id/m4399_ope_id_vip_item_cleaner"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/m4399_ope_close"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+</LinearLayout>
+
+
+

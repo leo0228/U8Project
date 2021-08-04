@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <cn.m4399.recharge.ui.widget.RechargeNavBarView
+    <cn.m4399.operate.recharge.ui.widget.RechargeNavBarView
         android:id="@+id/nav"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/m4399_rec_title_height" />
+        android:layout_height="@dimen/m4399_activity_title_height" />
 
 
     <LinearLayout
@@ -35,7 +35,7 @@
             android:lineSpacingExtra="2dp"
             android:lineSpacingMultiplier="1"
             android:text="@string/m4399_rec_pay_wait"
-            android:textColor="#fe9515"
+            android:textColor="@color/m4399_ope_color_primary"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -48,8 +48,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/m4399_rec_paddingLeft"
-                android:layout_marginRight="@dimen/m4399_rec_paddingLeft"
                 android:layout_marginTop="8dp"
+                android:layout_marginRight="@dimen/m4399_rec_paddingLeft"
                 android:gravity="center"
                 android:text="@string/m4399_rec_duanxin_timer_prefix"
                 android:textColor="#999999"

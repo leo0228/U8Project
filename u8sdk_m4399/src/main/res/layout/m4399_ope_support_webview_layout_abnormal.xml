@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/m4399_webview_error_view_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/m4399_webview_error_view_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ffe8c4"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/m4399_activity_spacing_h"
+        android:paddingRight="@dimen/m4399_activity_spacing_h">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/m4399_ope_support_network_abnormal_small"
+            tools:ignore="contentDescription" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/m4399_spacing_8"
+            android:layout_weight="1"
+            android:text="@string/m4399_webview_check_network"
+            android:textColor="#ffad2d"
+            android:textSize="@dimen/m4399_font_14"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/m4399_ope_support_right_arrow_yellow"
+            tools:ignore="contentDescription" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/m4399_ope_support_ripple_border_radius_grey"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="96dp"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/m4399_ope_support_network_abnormal_large"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/m4399_webview_retry_request"
+            android:textColor="#999999"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>
+

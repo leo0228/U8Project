@@ -5,12 +5,6 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        style="@style/m4399RecordEditorBtnStyle"
-        android:layout_marginBottom="6dp"
-        android:background="@android:color/transparent"
-        android:text="@string/m4399_rec_record_editor_operation" />
-
     <Button
         android:id="@+id/btn_paste"
         style="@style/m4399RecordEditorBtnStyle"

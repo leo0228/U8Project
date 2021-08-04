@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:gravity="center_vertical"
+    android:paddingLeft="15dp"
+    android:background="@drawable/dk_bg_floatview_message"
+    android:paddingRight="15dp">
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/dk_float_trumpet"
+        />
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:layout_gravity="center_vertical"
+        android:marqueeRepeatLimit="1"
+        android:layout_weight="1"
+        android:textSize="14sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="18dp"
+        android:textColor="@color/dk_gamesdk_white"/>
+    <TextView
+        android:id="@+id/tv_float_mes_details"
+        android:layout_width="45dp"
+        android:layout_height="21dp"
+        android:text="详情"
+        android:background="@drawable/dk_bg_floatview_message_btn"
+        android:gravity="center"
+        android:textColor="@color/dk_gamesdk_white"
+        android:textSize="14sp"/>
+</LinearLayout>

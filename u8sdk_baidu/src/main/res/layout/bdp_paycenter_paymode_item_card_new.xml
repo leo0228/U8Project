@@ -1,50 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:layout_weight="1" >
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/bdp_rl_paymod_bg"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:layout_gravity="center"
-        android:layout_margin="5dp"
-        android:background="@drawable/bdp_bg_pay_mod_round" >
+        android:layout_margin="4dp"
+        android:background="@drawable/bdp_bg_pay_mod_round">
 
         <ImageView
             android:id="@+id/bdp_iv_payment_icon"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:src="@drawable/bdp_ic_more_normal" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@+id/bdp_iv_payment_icon"
-            android:orientation="vertical" >
+            android:layout_toRightOf="@+id/bdp_iv_payment_icon">
 
-            <TextView
-                android:id="@+id/bdp_tv_payment_text"
+            <RelativeLayout
+                android:id="@+id/bdp_pay_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:text="@string/bdp_paycenter_ku_bi_exchange"
-                android:textColor="#333333"
-                android:textSize="12sp" />
+                android:gravity="center_vertical">
 
-            <ImageView
-                android:id="@+id/bdp_paycenter_iv_payment_ic_mark"
-                android:layout_width="38dp"
-                android:layout_height="14dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/bdp_bg_pay_icon_mark_discount"
+                <TextView
+                    android:id="@+id/bdp_tv_payment_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="@string/bdp_paycenter_ku_bi_exchange"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/bdp_paycenter_iv_payment_ic_mark"
+                    android:layout_width="30dp"
+                    android:layout_height="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/bdp_tv_payment_text"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bdp_bg_pay_icon_mark_discount"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bdp_paycenter_tv_specialofferdesc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bdp_pay_type"
+                android:layout_marginTop="3dp"
+                android:maxLines="1"
+                android:textColor="#ff0000"
+                android:textSize="10sp"
                 android:visibility="gone" />
-        </LinearLayout>
+        </RelativeLayout>
     </RelativeLayout>
 
     <ImageView

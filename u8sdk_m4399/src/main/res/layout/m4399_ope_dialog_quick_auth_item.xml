@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     tools:ignore="all">
 
-    <ImageView
+    <cn.m4399.operate.support.network.NetworkImageView
         android:id="@+id/m4399_ope_id_img_avatar"
         android:layout_width="36dp"
         android:layout_height="36dp"
@@ -36,7 +36,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/m4399_ope_id_tv_before_login"
+        android:id="@+id/m4399_ope_id_tv_latest_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_toLeftOf="@id/m4399_ope_id_tv_before_login"
+        android:layout_toLeftOf="@id/m4399_ope_id_tv_latest_label"
         android:layout_toRightOf="@id/m4399_ope_id_img_avatar"
         android:ellipsize="end"
         android:maxLines="1"

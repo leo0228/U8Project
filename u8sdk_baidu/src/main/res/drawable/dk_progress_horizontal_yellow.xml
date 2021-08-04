@@ -5,9 +5,9 @@
         <shape>
 <!--             <corners android:radius="4dip" /> -->
 
-            <padding
-                android:left="10px"
-                android:right="2px" />
+<!--            <padding-->
+<!--                android:left="10px"-->
+<!--                android:right="2px" />-->
             <gradient
                 android:angle="0"
                 android:centerColor="#eeeeee"

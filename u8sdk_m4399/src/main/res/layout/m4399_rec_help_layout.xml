@@ -5,10 +5,10 @@
     android:background="@color/m4399_rec_color_white"
     android:orientation="vertical">
 
-    <cn.m4399.recharge.ui.widget.RechargeNavBarView
+    <cn.m4399.operate.recharge.ui.widget.RechargeNavBarView
         android:id="@+id/nav"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/m4399_rec_title_height" />
+        android:layout_height="@dimen/m4399_activity_title_height" />
 
     <include layout="@layout/m4399_rec_help_contact" />
 
@@ -29,7 +29,6 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="0dp"
         android:scrollbars="none">
-
 
     </ListView>
 

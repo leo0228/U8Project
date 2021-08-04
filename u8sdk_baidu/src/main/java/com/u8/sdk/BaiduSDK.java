@@ -5,11 +5,11 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+
 import android.text.TextUtils;
 import android.util.Log;
-
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import com.baidu.gamesdk.ActivityAdPage;
 import com.baidu.gamesdk.ActivityAdPage.Listener;
 import com.baidu.gamesdk.ActivityAnalytics;
@@ -20,10 +20,11 @@ import com.baidu.gamesdk.IResponse;
 import com.baidu.gamesdk.OnGameExitListener;
 import com.baidu.gamesdk.ResultCode;
 import com.baidu.platformsdk.PayOrderInfo;
+import com.u8.common.PromptDialog;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
 import com.u8.sdk.baidu.Utils;
-import com.zjtx.prompt.PromptDialog;
+
 
 public class BaiduSDK {
 
@@ -71,14 +72,11 @@ public class BaiduSDK {
                 initSDK();
             }
         });
-
     }
 
     protected String[] needPermissions = {Manifest.permission.READ_PHONE_STATE};
 
     public void initSDK() {
-        // TODO::这里调用AAA的SDK初始化方法
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             int i = ContextCompat.checkSelfPermission(activity, needPermissions[0]);
             if (i != PackageManager.PERMISSION_GRANTED) {
@@ -101,10 +99,6 @@ public class BaiduSDK {
             public void onResume() {
                 mActivityAdPage.onResume();
                 mActivityAnalytics.onResume();
-                BDGameSDK.onResume(activity);
-
-//                // 显示悬浮窗
-//                BDGameSDK.showFloatView(activity);
             }
 
             @Override
@@ -116,16 +110,11 @@ public class BaiduSDK {
             public void onPause() {
                 mActivityAdPage.onPause();
                 mActivityAnalytics.onPause();
-                BDGameSDK.onPause(activity);
-
-//                // 关闭悬浮球
-//                BDGameSDK.closeFloatView(activity);
             }
 
             @Override
             public void onDestroy() {
                 mActivityAdPage.onDestroy();
-                BDGameSDK.destroy();
             }
 
         });
@@ -178,15 +167,14 @@ public class BaiduSDK {
                 switch (resultCode) {
                     case ResultCode.LOGIN_SUCCESS:
                         String token = BDGameSDK.getLoginAccessToken();
-//						String uid = BDGameSDK.getLoginUid();// 获取账号 uid
+//                        String uid = BDGameSDK.getLoginUid();// 获取账号 uid
                         U8SDK.getInstance().onResult(U8Code.CODE_LOGIN_SUCCESS, token);
                         U8SDK.getInstance().onLoginResult(token);
 
-                        // 显示悬浮窗
-                        BDGameSDK.showFloatView(activity);
-
                         setSuspendWindowChangeAccountListener();
                         setSessionInvalidListener();
+
+                        BDGameSDK.showFloatView(activity);
                         break;
                     case ResultCode.LOGIN_CANCEL:
                         U8SDK.getInstance().onResult(U8Code.CODE_LOGIN_FAIL, "baidu sdk login canceled");
@@ -198,7 +186,45 @@ public class BaiduSDK {
             }
         });
 
+    }
 
+    // 设置会话失效监听
+    private void setSessionInvalidListener() {
+        BDGameSDK.setSessionInvalidListener(new IResponse<Void>() {
+
+            @Override
+            public void onResponse(int resultCode, String resultDesc, Void extraData) {
+                // 会话失效，开发者需要重新登录或者重启游戏
+                if (resultCode == ResultCode.SESSION_INVALID) {
+                    login();
+                }
+            }
+        });
+    }
+
+    // 设置切换账号事件监听（个人中心界面切换账号）
+    private void setSuspendWindowChangeAccountListener() {
+        BDGameSDK.setSuspendWindowChangeAccountListener(activity, new IResponse<Void>() {
+
+            @Override
+            public void onResponse(int resultCode, String resultDesc, Void extraData) {
+                switch (resultCode) {
+                    case ResultCode.LOGIN_SUCCESS:
+                        // TODO 登录成功，不管之前是什么登录状态，游戏内部都要切换成新的用户
+                        U8SDK.getInstance().onSwitchAccount();
+                        String token = BDGameSDK.getLoginAccessToken();
+                        U8SDK.getInstance().onResult(U8Code.CODE_LOGIN_SUCCESS, token);
+                        break;
+                    case ResultCode.LOGIN_FAIL:
+                        U8SDK.getInstance().onResult(U8Code.CODE_LOGIN_FAIL, "baidu sdk login failed " + resultCode);
+                        break;
+                    case ResultCode.LOGIN_CANCEL:
+                        // TODO 取消，操作前后的登录状态没变化
+                        U8SDK.getInstance().onResult(U8Code.CODE_LOGIN_FAIL, "baidu sdk login canceled");
+                        break;
+                }
+            }
+        });
     }
 
     public void submitExtendData(UserExtraData extraData) {
@@ -224,7 +250,7 @@ public class BaiduSDK {
         profile.setProfileName(extraData.getRoleName());
     }
 
-    private void upgrade(UserExtraData extraData){
+    private void upgrade(UserExtraData extraData) {
         TDGAProfile profile = TDGAProfile.setProfile(extraData.getRoleID());
         //玩家升级时，做如下调用
         profile.setLevel(Integer.parseInt(extraData.getRoleLevel()));
@@ -307,44 +333,5 @@ public class BaiduSDK {
         payOrderInfo.setCpUid(uid);
 
         return payOrderInfo;
-    }
-
-    private void setSessionInvalidListener() {
-        BDGameSDK.setSessionInvalidListener(new IResponse<Void>() {
-
-            @Override
-            public void onResponse(int resultCode, String resultDesc, Void extraData) {
-                if (resultCode == ResultCode.SESSION_INVALID) {
-                    U8SDK.getInstance().onLogout();
-                }
-            }
-        });
-    }
-
-    // 设置切换账号事件监听（个人中心界面切换账号）
-    private void setSuspendWindowChangeAccountListener() {
-        BDGameSDK.setSuspendWindowChangeAccountListener(activity, new IResponse<Void>() {
-
-            @Override
-            public void onResponse(int resultCode, String resultDesc, Void extraData) {
-                switch (resultCode) {
-                    case ResultCode.LOGIN_SUCCESS:
-                        // TODO 登录成功，不管之前是什么登录状态，游戏内部都要切换成新的用户
-                        U8SDK.getInstance().onSwitchAccount();
-                        String token = BDGameSDK.getLoginAccessToken();
-                        U8SDK.getInstance().onResult(U8Code.CODE_LOGIN_SUCCESS, token);
-                        break;
-                    case ResultCode.LOGIN_FAIL:
-                        U8SDK.getInstance().onResult(U8Code.CODE_LOGIN_FAIL, "baidu sdk login failed " + resultCode);
-                        break;
-                    case ResultCode.LOGIN_CANCEL:
-                        // TODO 取消，操作前后的登录状态没变化
-                        U8SDK.getInstance().onResult(U8Code.CODE_LOGIN_FAIL, "baidu sdk login canceled");
-                        break;
-
-                }
-            }
-
-        });
     }
 }

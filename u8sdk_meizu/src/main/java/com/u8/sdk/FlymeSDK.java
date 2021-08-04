@@ -16,7 +16,7 @@ import com.meizu.gamesdk.online.core.MzGameCenterPlatform;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
 import com.u8.sdk.utils.EncryptUtils;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONObject;
 

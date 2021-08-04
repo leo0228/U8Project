@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="m4399.Operate.Anim.UserCenterDialog" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/m4399_ope_dialog_slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/m4399_ope_dialog_slide_out_bottom</item>
+    </style>
+</resources>

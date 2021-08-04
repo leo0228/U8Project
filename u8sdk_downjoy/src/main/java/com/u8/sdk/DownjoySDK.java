@@ -12,7 +12,7 @@ import com.downjoy.LogoutListener;
 import com.downjoy.ResultListener;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;

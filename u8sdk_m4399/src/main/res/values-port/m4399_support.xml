@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- dimens -->
+    <dimen name="m4399_activity_title_height">56dp</dimen>
+    <dimen name="m4399_dialog_max_content_height">200dp</dimen>
+    <dimen name="m4399_dialog_width_normal">280dp</dimen>
+    <dimen name="m4399_dialog_width_medium">304dp</dimen>
+    <dimen name="m4399_dialog_width_large">320dp</dimen>
+</resources>

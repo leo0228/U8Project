@@ -8,7 +8,7 @@ import com.mob4399.adunion.AdUnionVideo;
 import com.mob4399.adunion.listener.OnAuVideoAdListener;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONObject;
 
@@ -111,7 +111,7 @@ public class M4399SDK {
 
             @Override
             public void onDestroy() {
-                OperateCenter.getInstance().destroy();
+//                OperateCenter.getInstance().destroy();
             }
 
         });

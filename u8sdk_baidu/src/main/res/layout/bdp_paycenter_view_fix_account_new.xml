@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/sv_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/bdp_color_ffffff"
-                android:orientation="vertical">
+    android:id="@+id/sv_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bdp_color_ffffff"
+    android:orientation="vertical">
+
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/bdp_color_ffffff">
-    </View>
+        android:background="@color/bdp_color_ffffff"></View>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                 android:text="金币"
                 android:textColor="@color/bdp_black"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/bdp_paycenter_tv_pay_money"
@@ -45,7 +45,7 @@
                 android:text="90.0"
                 android:textColor="@color/bdp_color_009cff"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <!-- ↓↓↓ 百度币 ↓↓↓ -->
@@ -62,7 +62,7 @@
                 android:layout_width="10dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/bdp_paycenter_pay_ticket_left"/>
+                android:background="@drawable/bdp_paycenter_pay_ticket_left" />
 
             <CheckBox
                 android:id="@+id/bdp_baidu_bean_check"
@@ -70,14 +70,14 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/bdp_paycenter_checkbox"
-                android:button="@null"/>
+                android:button="@null" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/bdp_paycenter_view_dotted_line_portrait"
-                android:layerType="software"/>
+                android:layerType="software" />
 
             <LinearLayout
                 android:id="@+id/bdp_baidu_bean"
@@ -92,7 +92,7 @@
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:text="@string/bdp_paycenter_use_baidu_bean"
-                    android:textColor="@color/bdp_black"/>
+                    android:textColor="@color/bdp_black" />
 
                 <TextView
                     android:id="@+id/bdp_baidu_bean_content"
@@ -100,13 +100,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:text="@string/bdp_paycenter_pay_amount"
-                    android:textColor="@color/bdp_black"/>
+                    android:textColor="@color/bdp_black" />
 
                 <View
                     android:layout_width="10dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical|right"
-                    android:background="@drawable/bdp_paycenter_pay_ticket_right"/>
+                    android:background="@drawable/bdp_paycenter_pay_ticket_right" />
             </LinearLayout>
         </LinearLayout>
 
@@ -114,7 +114,7 @@
             android:id="@+id/bdp_baidu_bean_dotted_line"
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="#f5f5f5"/>
+            android:background="#f5f5f5" />
         <!-- ↑↑↑ 百度币 ↑↑↑ -->
 
 
@@ -132,7 +132,7 @@
                 android:layout_width="10dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/bdp_paycenter_pay_ticket_left"/>
+                android:background="@drawable/bdp_paycenter_pay_ticket_left" />
 
             <CheckBox
                 android:id="@+id/bdp_kudian_check"
@@ -140,14 +140,14 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/bdp_paycenter_checkbox"
-                android:button="@null"/>
+                android:button="@null" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/bdp_paycenter_view_dotted_line_portrait"
-                android:layerType="software"/>
+                android:layerType="software" />
 
             <RelativeLayout
                 android:id="@+id/bdp_kudian"
@@ -167,7 +167,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
-                        android:textColor="@color/bdp_black"/>
+                        android:textColor="@color/bdp_black" />
 
                     <TextView
                         android:id="@+id/bdp_kudian_expire"
@@ -177,7 +177,7 @@
                         android:layout_marginTop="4dp"
                         android:gravity="center_vertical"
                         android:textColor="#999999"
-                        android:textSize="11sp"/>
+                        android:textSize="11sp" />
                 </LinearLayout>
 
                 <ImageView
@@ -189,14 +189,14 @@
                     android:layout_marginRight="15dp"
                     android:background="@drawable/bdp_drop_down_selector"
                     android:contentDescription="@string/bdp_image"
-                    android:scaleType="centerInside"/>
+                    android:scaleType="centerInside" />
 
                 <View
                     android:layout_width="10dp"
                     android:layout_height="20dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/bdp_paycenter_pay_ticket_right"/>
+                    android:background="@drawable/bdp_paycenter_pay_ticket_right" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -204,7 +204,7 @@
             android:id="@+id/bdp_kudian_dotted_line"
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="#f5f5f5"/>
+            android:background="#f5f5f5" />
         <!-- ↑↑↑ 酷点 ↑↑↑ -->
 
 
@@ -213,7 +213,7 @@
         <LinearLayout
             android:id="@+id/bdp_voucher_layout"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:background="#ffffff"
             android:gravity="center_vertical">
 
@@ -222,7 +222,7 @@
                 android:layout_height="20dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/bdp_paycenter_pay_ticket_left"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <CheckBox
                 android:id="@+id/bdp_voucher_check"
@@ -231,7 +231,7 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/bdp_paycenter_checkbox"
                 android:button="@null"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <View
                 android:layout_width="1dp"
@@ -239,12 +239,12 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/bdp_paycenter_view_dotted_line_portrait"
                 android:layerType="software"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <RelativeLayout
                 android:id="@+id/bdp_voucher"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="15dp"
                 android:gravity="center_vertical">
 
@@ -252,11 +252,11 @@
                     android:layout_width="67dp"
                     android:layout_height="49dp"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="60dp"
                     android:layout_marginTop="7dp"
+                    android:layout_marginRight="60dp"
                     android:background="@drawable/bdp_paycenter_bg_voucher_logo"
                     android:scaleType="fitXY"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -270,7 +270,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
                         android:text="@string/bdp_paycenter_pay_voucher"
-                        android:textColor="#333333"/>
+                        android:textColor="#333333" />
 
                     <TextView
                         android:id="@+id/bdp_voucher_expire"
@@ -279,18 +279,36 @@
                         android:layout_marginTop="4dp"
                         android:gravity="center_vertical"
                         android:textColor="#999999"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/bdp_voucher_reduce"
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="30dp"
-                    android:text="@string/bdp_paycenter_pay_voucher_reduce"
-                    android:textColor="#333333"/>
+                    android:layout_marginRight="35dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/bdp_voucher_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="代金券名称"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/bdp_voucher_reduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bdp_voucher_title"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/bdp_paycenter_pay_voucher_reduce"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
 
                 <ImageView
                     android:id="@+id/bdp_voucher_drop"
@@ -301,7 +319,7 @@
                     android:layout_marginRight="15dp"
                     android:background="@drawable/bdp_drop_down_selector"
                     android:contentDescription="@string/bdp_image"
-                    android:scaleType="centerInside"/>
+                    android:scaleType="centerInside" />
 
                 <View
                     android:layout_width="10dp"
@@ -309,7 +327,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:background="@drawable/bdp_paycenter_pay_ticket_right"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -318,7 +336,7 @@
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:background="#f5f5f5"
-            android:visibility="gone"/>
+            android:visibility="gone" />
         <!-- ↑↑↑ 代金券 ↑↑↑ -->
 
 
@@ -339,7 +357,7 @@
                 android:gravity="right|center_vertical"
                 android:text="@string/bdp_paycenter_add_amount_pay"
                 android:textColor="@color/bdp_color_999999"
-                android:textSize="@dimen/bdp_paycenter_text_size_14_sp"/>
+                android:textSize="@dimen/bdp_paycenter_text_size_14_sp" />
         </LinearLayout>
         <!-- ↑↑↑ 合并支付 ↑↑↑ -->
         <!-- ↓↓↓ 非合并支付  ↓↓↓ -->
@@ -347,7 +365,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#f5f5f5"/>
+            android:background="#f5f5f5" />
 
         <LinearLayout
             android:id="@+id/bdp_pay_channel_layout"
@@ -369,37 +387,46 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="@string/bdp_paycenter_pay_mode_select"
-                    android:textColor="#333333"/>
+                    android:textColor="#333333" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/bdp_other_paymod_layout"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="2dp"
                 android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <include
                     android:id="@+id/bdp_paymod_first"
-                    layout="@layout/bdp_paycenter_paymode_item_card_new"/>
+                    layout="@layout/bdp_paycenter_paymode_item_card_new"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5" />
 
                 <include
                     android:id="@+id/bdp_paymod_second"
-                    layout="@layout/bdp_paycenter_paymode_item_card_new"/>
+                    layout="@layout/bdp_paycenter_paymode_item_card_new"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5" />
 
                 <include
                     android:id="@+id/bdp_paymod_more"
-                    layout="@layout/bdp_paycenter_paymode_item_card_new"/>
+                    layout="@layout/bdp_paycenter_paymode_item_card_new"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#f5f5f5"/>
+                android:background="#f5f5f5" />
         </LinearLayout>
 
         <Button
@@ -411,7 +438,7 @@
             android:background="@drawable/bdp_paycenter_btn_pay_confirm_selector"
             android:text="@string/bdp_paycenter_pay"
             android:textColor="@color/bdp_white"
-            android:textSize="@dimen/bdp_paycenter_text_size_14_sp"/>
+            android:textSize="@dimen/bdp_paycenter_text_size_14_sp" />
     </LinearLayout>
 
 </RelativeLayout>

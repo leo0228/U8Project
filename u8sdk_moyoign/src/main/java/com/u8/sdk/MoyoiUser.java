@@ -5,7 +5,7 @@ import com.u8.sdk.utils.Arrays;
 import android.app.Activity;
 
 public class MoyoiUser extends U8UserAdapter{
-	private String[] supportedMethods = {"login", "switchLogin", "logout","submitExtraData","postGiftCode"};
+	private String[] supportedMethods = {"login", "switchLogin", "logout","submitExtraData"};
 
 	public MoyoiUser(Activity context){
 	    MoyoiSDK.getInstance().initSDK(U8SDK.getInstance().getSDKParams());

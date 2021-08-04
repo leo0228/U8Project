@@ -7,10 +7,10 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <cn.m4399.recharge.ui.widget.RechargeNavBarView
+    <cn.m4399.operate.recharge.ui.widget.RechargeNavBarView
         android:id="@+id/m4399_ope_id_nav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="@dimen/m4399_activity_title_height" />
 
     <ImageView
         android:layout_width="60dp"
@@ -151,7 +151,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/m4399_ope_selector_btn_get_coupon"
         android:padding="8dp"
-        android:text="@string/m4399_ope_get_right_now"
+        android:text="@string/m4399_ope_coupon_receive"
         android:textColor="@android:color/white"
         android:textSize="14sp"
         android:visibility="gone" />

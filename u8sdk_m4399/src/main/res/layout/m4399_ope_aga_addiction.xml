@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/m4399_ope_dialog_width_big"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <cn.m4399.operate.aga.anti.AlignTextView
+        android:id="@+id/m4399_ope_id_tv_title_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="13dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <cn.m4399.operate.aga.anti.AlignTextView
+        android:id="@+id/m4399_ope_id_tv_sub_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/m4399_ope_shape_tv_prevent_addiction_bg"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/m4399_ope_id_ll_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/m4399_ope_rectangle_grey_ripple"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/m4399_ope_coupon_on_count"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/m4399_ope_coupon_go" />
+
+    </LinearLayout>
+
+    <include layout="@layout/m4399_ope_support_dialog_couple_actions" />
+
+</LinearLayout>

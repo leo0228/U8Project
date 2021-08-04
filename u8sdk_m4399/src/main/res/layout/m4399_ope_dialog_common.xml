@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:contentDescription="@string/m4399_default_content_description"
-            android:src="@drawable/m4399_ope_ic_title_logo"
+            android:src="@drawable/m4399_ope_img_default"
             android:visibility="visible" />
 
         <TextView

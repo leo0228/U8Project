@@ -17,10 +17,11 @@
 
         <RelativeLayout
             android:id="@+id/bdp_rr_voucher_info"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
             android:layout_height="fill_parent"
             android:layout_centerVertical="true"
             android:layout_margin="1dp"
+            android:gravity="center"
             android:background="@drawable/bdp_bg_round_voucher_half"
             android:orientation="horizontal" >
 
@@ -29,11 +30,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:gravity="right"
                 android:layout_marginLeft="10dp"
                 android:includeFontPadding="false"
                 android:text="10"
+                android:maxLines="1"
                 android:textColor="#ff9249"
-                android:textSize="@dimen/bdp_paycenter_text_size_36_sp" />
+                android:textSize="@dimen/bdp_paycenter_text_size_32_sp" />
 
             <TextView
                 android:id="@+id/bdp_pay_voucher_yuan"
@@ -43,26 +46,28 @@
                 android:layout_marginBottom="3dp"
                 android:layout_toRightOf="@+id/bdp_pay_voucher_name"
                 android:includeFontPadding="false"
-                android:paddingRight="10dp"
+                android:layout_marginRight="5dp"
                 android:text="@string/bdp_paycenter_yuan"
                 android:textColor="#ff9249"
-                android:textSize="@dimen/bdp_paycenter_text_size_20_sp"
+                android:layout_alignBaseline="@+id/bdp_pay_voucher_name"
+                android:textSize="@dimen/bdp_paycenter_text_size_14_sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/bdp_pay_voucher_diffConditionMoney"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="3dp"
-                android:background="@drawable/bdp_bg_voucher_diff_money"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:text="@string/bdp_paycenter_soon_expire"
-                android:textColor="@color/bdp_color_ffffff"
-                android:textSize="@dimen/bdp_paycenter_text_size_12_sp" />
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bdp_pay_voucher_diffConditionMoney"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            android:maxLines="1"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/bdp_bg_voucher_diff_money"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="@string/bdp_paycenter_soon_expire"
+            android:textColor="@color/bdp_color_ffffff"
+            android:textSize="@dimen/bdp_paycenter_text_size_12_sp" />
 
         <View
             android:id="@+id/bdp_view_line"

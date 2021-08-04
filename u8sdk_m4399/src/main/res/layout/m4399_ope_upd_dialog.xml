@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:layout_gravity="center">
+
+    <TextView
+        style="@style/m4399.Dialog.Title"
+        tools:text="@string/m4399_ope_upd_now" />
+
+    <TextView
+        android:id="@+id/m4399_ope_upd_tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m4399_dialog_spacing_h"
+        android:layout_marginTop="@dimen/m4399_dialog_spacing_v"
+        android:layout_marginRight="@dimen/m4399_dialog_spacing_h"
+        android:fadeScrollbars="true"
+        android:maxHeight="@dimen/m4399_dialog_max_content_height"
+        android:scrollbarSize="4dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/m4399_ope_upd_scroll_bar_bg"
+        android:scrollbars="vertical"
+        android:textColor="@color/m4399_ope_color_666666"
+        android:textSize="@dimen/m4399_font_14"
+        tools:text="1.新增“枫林幻境”副本：副本对所有三周目以上的玩家开放，并且三周目以上的玩家可以开启并配置第二编队。" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m4399_dialog_spacing_h"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="@dimen/m4399_dialog_spacing_h">
+
+        <LinearLayout
+            android:id="@+id/m4399_ope_upd_ll_container_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/m4399_ope_upd_tv_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/m4399_ope_upd_fmt_apk_size"
+                android:textColor="@color/m4399_ope_color_666666"
+                android:textSize="@dimen/m4399_font_12"
+                tools:text="100 KB/S" />
+
+            <TextView
+                android:id="@+id/m4399_ope_upd_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/m4399_ope_color_666666"
+                android:textSize="@dimen/m4399_font_12"
+                tools:text="更新日期：2020-2-20" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/m4399_ope_upd_ll_container_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/m4399_ope_upd_tv_speed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/m4399_color_primary"
+                    android:textSize="@dimen/m4399_font_12"
+                    tools:text="100 kb/s" />
+
+                <TextView
+                    android:id="@+id/m4399_ope_upd_tv_completed_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/m4399_color_primary"
+                    android:textSize="@dimen/m4399_font_12"
+                    tools:text="%12" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/m4399_ope_upd_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/m4399_ope_upd_prg_outside_bg"
+                android:max="100"
+                android:progressDrawable="@drawable/m4399_ope_upd_prg_inside_bg"
+                tools:progress="20" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <include layout="@layout/m4399_ope_support_dialog_couple_actions" />
+</LinearLayout>

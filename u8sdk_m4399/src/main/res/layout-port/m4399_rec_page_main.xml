@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <cn.m4399.recharge.ui.widget.RechargeNavBarView
+    <cn.m4399.operate.recharge.ui.widget.RechargeNavBarView
         android:id="@+id/nav"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/m4399_rec_title_height" />
+        android:layout_height="@dimen/m4399_activity_title_height" />
 
     <ScrollView
         android:id="@+id/scrollView1"

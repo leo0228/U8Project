@@ -23,7 +23,7 @@ import com.flamingo.sdk.access.IGPUserObsv;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
 import com.u8.sdk.log.Log;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONObject;
 

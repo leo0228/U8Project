@@ -9,9 +9,9 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="16dp"
         android:paddingLeft="20dp"
         android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:text="@string/m4399_rec_client_title"
         android:textColor="#333333"
         android:textSize="15sp" />
@@ -22,7 +22,7 @@
         android:layout_height="match_parent"
         android:gravity="center_vertical"
         android:text="@string/m4399_rec_hotline_4399_trans"
-        android:textColor="#fe9515"
+        android:textColor="@color/m4399_ope_color_primary"
         android:textSize="15sp" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_height="match_parent"
         android:gravity="center_vertical"
         android:text="@string/m4399_rec_hotline_qq"
-        android:textColor="#fe9515"
+        android:textColor="@color/m4399_ope_color_primary"
         android:textSize="15sp" />
 
 

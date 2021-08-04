@@ -78,7 +78,7 @@
             android:orientation="vertical"
             android:paddingRight="9dp" >
 
-            <com.duoku.platform.view.AnimationDrawableView
+            <ImageView
                 android:id="@+id/download_item_action_iv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,12 +88,12 @@
 
             <Button
                 android:id="@+id/btn_game_download_text"
-                android:layout_width="68dp"
-                android:layout_height="32dp"
+                android:layout_width="65dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:background="@drawable/dk_download_buttonshape"
-                android:gravity="center_vertical|center_horizontal"
-                android:textSize="15sp" />
+                android:gravity="center"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/download_item_action_tv"

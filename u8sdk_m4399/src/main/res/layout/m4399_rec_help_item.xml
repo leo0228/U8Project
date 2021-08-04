@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingTop="14dp"
-        android:textColor="#fe9515"
+        android:textColor="@color/m4399_ope_color_primary"
         android:textSize="15sp"
         tools:text="4399一卡通说明：" />
 
@@ -22,9 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:paddingBottom="14dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
+        android:paddingBottom="14dp"
         android:textColor="#666666"
         android:textSize="13sp"
         tools:text="4399游戏发行的实体充值卡（卡号16位，密码16位）" />

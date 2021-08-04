@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/m4399_ope_id_rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.m4399.operate.extension.index.CornerLinearLayout
+        android:id="@+id/m4399_ope_id_ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/m4399_ope_shape_dialog_personal_radius"
+        android:orientation="vertical">
+
+        <include layout="@layout/m4399_ope_extension_top_nav_outside" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f1f1f1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/m4399.UserCenter.Entry">
+
+                    <TextView
+                        style="@style/m4399.Text.H3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/m4399_ope_perfect_info_nickname"
+                        tools:text="@string/m4399_ope_share_qq" />
+
+
+                    <TextView
+                        android:id="@+id/m4399_ope_id_tv_vip_nick_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="@color/m4399_ope_color_666666"
+                        android:textSize="@dimen/m4399_font_16"
+                        tools:text="用户名（用户id）" />
+
+                </LinearLayout>
+
+                <include layout="@layout/m4399_ope_support_divider_h" />
+
+                <include
+                    android:id="@+id/m4399_ope_id_vip_real_name_container"
+                    layout="@layout/m4399_ope_vip_info_item" />
+
+                <include layout="@layout/m4399_ope_support_divider_h" />
+
+                <include
+                    android:id="@+id/m4399_ope_id_vip_birthday_container"
+                    layout="@layout/m4399_ope_vip_info_item" />
+
+                <include
+                    layout="@layout/m4399_ope_support_divider_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m4399_spacing_8" />
+
+                <include
+                    android:id="@+id/m4399_ope_id_vip_qq_account_container"
+                    layout="@layout/m4399_ope_vip_info_item" />
+
+                <include layout="@layout/m4399_ope_support_divider_h" />
+
+                <include
+                    android:id="@+id/m4399_ope_id_vip_phone_no_container"
+                    layout="@layout/m4399_ope_vip_info_item" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/m4399_ope_perfect_info_prompt"
+                    android:textColor="#aaaaaa"
+                    android:textSize="@dimen/m4399_font_12" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </cn.m4399.operate.extension.index.CornerLinearLayout>
+</RelativeLayout>

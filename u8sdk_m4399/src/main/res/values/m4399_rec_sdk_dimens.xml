@@ -53,8 +53,6 @@
     <dimen name="m4399_rec_label_margin">40dp</dimen>
     <dimen name="m4399_rec_chanel_select_width">385dp</dimen>
     <dimen name="m4399_rec_chanel_select_height">330dp</dimen>
-    <dimen name="m4399_rec_coupon_select_width">385dp</dimen>
-    <dimen name="m4399_rec_coupon_select_height">330dp</dimen>
     <dimen name="m4399_rec_input_tv_size">14sp</dimen>
     <dimen name="m4399_rec_worn_dialog_width">377dp</dimen>
     <dimen name="m4399_rec_card_width">96dp</dimen>

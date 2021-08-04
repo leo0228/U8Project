@@ -23,7 +23,7 @@ import com.game.sdk.listener.OnLogoutListener;
 import com.game.sdk.listener.OnPaymentListener;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONObject;
 

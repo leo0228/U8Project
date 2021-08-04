@@ -18,7 +18,7 @@ import com.muzhiwan.sdk.core.callback.MzwPostGiftCodeCallback;
 import com.muzhiwan.sdk.service.MzwOrder;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import java.util.ArrayList;
 import java.util.List;

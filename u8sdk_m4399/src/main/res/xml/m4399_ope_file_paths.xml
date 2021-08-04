@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
-    <external-path
-        name="external_storage_root"
-        path="/m4399_sdk/locate" />
+    <!-- support-v14 不能使用 external-files-path-->
+    <root-path name="root" path="." />
+
     <cache-path
         name="cache"
-        path="/m4399_sdk/locate" />
+        path="operate/" />
+
+    <external-files-path
+        name="files"
+        path="operate/" />
+
+    <external-path
+        name="external_storage_root"
+        path="/Download" />
 </paths>
 

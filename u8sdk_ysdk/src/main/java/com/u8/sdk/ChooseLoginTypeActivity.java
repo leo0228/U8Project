@@ -59,7 +59,10 @@ public class ChooseLoginTypeActivity extends Activity {
 
 			}
 		});
-		
 	}
 
+	@Override
+	public void onBackPressed() {
+
+	}
 }

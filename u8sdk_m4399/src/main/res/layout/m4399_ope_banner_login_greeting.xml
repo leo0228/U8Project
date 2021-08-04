@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/m4399_ope_login_banner_width"
+    android:layout_height="wrap_content"
+    android:background="@drawable/m4399_ope_banner_bg"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:paddingLeft="12dp"
+    android:paddingTop="10dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="10dp"
+    android:layout_gravity="center_horizontal"
+    android:textColor="@android:color/white" />

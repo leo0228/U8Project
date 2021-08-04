@@ -24,7 +24,7 @@ import com.qihoo.gamecenter.sdk.protocols.ProtocolKeys;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
 import com.u8.sdk.qh360.QihooPayInfo;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;

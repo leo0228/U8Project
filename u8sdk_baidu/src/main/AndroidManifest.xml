@@ -1,202 +1,185 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.u8.sdk">
 
-    <!--安装应用权限-->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
     <!-- ↓↓↓ SDK ↓↓↓ -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.GET_TASKS"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
-    <!--百度pass定位-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-<!--    &lt;!&ndash; 百度PUSH 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 &ndash;&gt;-->
-<!--    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.baidu.bdgamesdk.demo"/>-->
-<!--    &lt;!&ndash; 百度PUSH 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 &ndash;&gt;-->
-<!--    <permission-->
-<!--        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.baidu.bdgamesdk.demo"-->
-<!--        android:protectionLevel="normal"/>-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!--安装应用权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <!-- ↑↑↑ SDK ↑↑↑ -->
-
-    <!-- ↓↓↓ DK SDK ↓↓↓ -->
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
-    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
-    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
-    <!-- ↑↑↑ DK SDK ↑↑↑ -->
 
     <application>
         <!-- ↓↓↓ SDK ↓↓↓ -->
         <!-- 0-百度 1-多酷 2-91 -->
-
         <meta-data
             android:name="BDPlatformType"
-            android:value="0"/>
+            android:value="0" />
         <meta-data
             android:name="BDGameVersion"
-            android:value="4.3.1"/>
+            android:value="4.4.4" />
 
         <activity
             android:name="com.baidu.gamesdk.impl.CallBackActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="true"
-            android:theme="@style/bdp_dialog_style_fullscreen"/>
+            android:theme="@style/bdp_dialog_style_fullscreen" />
         <activity
             android:name="com.baidu.platformsdk.LoginActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:screenOrientation="landscape"
-            android:theme="@style/bdp_dialog_style_fullscreen"/>
+            android:theme="@style/bdp_dialog_style_fullscreen" />
         <activity
             android:name="com.baidu.platformsdk.AssistActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:theme="@style/bdp_dialog_style_fullscreen"/>
+            android:theme="@style/bdp_dialog_style_fullscreen" />
         <activity
             android:name="com.baidu.platformsdk.ConcertActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:theme="@style/bdp_style_transparent"/>
+            android:theme="@style/bdp_style_transparent" />
         <activity
             android:name="com.baidu.platformsdk.BindPhoneActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:theme="@style/bdp_dialog_style_fullscreen"/>
+            android:theme="@style/bdp_dialog_style_fullscreen" />
         <activity
             android:name="com.baidu.platformsdk.CashierDeskActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="false"
             android:theme="@style/bdp_dialog_style_fullscreen"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.baidu.platformsdk.WebActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="false"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.baidu.platformsdk.ModifyPasswordActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:theme="@style/bdp_dialog_style_fullscreen"/>
+            android:theme="@style/bdp_dialog_style_fullscreen" />
         <activity
             android:name="com.baidu.platformsdk.ThirdPartyLoginActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
             android:name="com.baidu.platformsdk.VisitorBindActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:theme="@style/bdp_dialog_style_fullscreen"/>
+            android:theme="@style/bdp_dialog_style_fullscreen" />
         <activity
             android:name="com.baidu.platformsdk.BaiduBeanDetailActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="false"
             android:theme="@style/bdp_dialog_style_fullscreen"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.baidu.platformsdk.OrderDetailActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="false"
             android:theme="@style/bdp_dialog_style_fullscreen"
-            android:windowSoftInputMode="adjustPan"/>
-        <activity
-            android:name="com.baidu.platformsdk.SapiWebActivity"
-            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
-            android:exported="false"
-            android:theme="@style/bdp_dialog_style_fullscreen"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.baidu.platformsdk.SapiWebActivityNew"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="false"
-            android:theme="@style/PassportSdkTheme"
-            android:windowSoftInputMode="adjustPan"/>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.baidu.platformsdk.SapiLoginProxyActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="false"
             android:theme="@style/bdp_dialog_style_fullscreen"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.baidu.platformsdk.wxpay.PayActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="true"
-            android:screenOrientation="landscape"
             android:theme="@style/bdp_dialog_style_fullscreen"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.baidu.platformsdk.wxpay.ProxyActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="true"
             android:screenOrientation="behind"
-            android:theme="@style/bdp_style_transparent"/>
+            android:theme="@style/bdp_style_transparent"></activity>
         <activity
             android:name="com.baidu.platformsdk.wxpay.wxapi.WXPayEntryActivity"
             android:excludeFromRecents="true"
             android:exported="true"
             android:launchMode="singleTop"
-            android:theme="@style/bdp_style_transparent"/>
+            android:theme="@style/bdp_style_transparent"></activity>
         <activity
             android:name="com.baidu.platformsdk.AuthenticateActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="false"
             android:theme="@style/bdp_dialog_style_fullscreen"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.baidu.platformsdk.FloatWindowActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:theme="@style/bdp_dialog_style_fullscreen"/>
+            android:theme="@style/bdp_dialog_style_fullscreen" />
         <activity
             android:name="com.baidu.platformsdk.ErrorDialogActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="false"
             android:theme="@style/bdp_dialog_style_fullscreen"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.duoku.platform.permission.GamePermissionActivity"
-            android:configChanges="orientation|navigation|keyboardHidden|screenSize|keyboard|screenLayout"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:theme="@style/bdp_dialog_style_fullscreen" />
+        <activity
+            android:name="com.duoku.platform.ui.AntiAddictionDialogActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/bdp_dialog_style_fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <service
             android:name="com.baidu.platformsdk.BDPlatformService"
-            android:exported="false"/>
+            android:exported="false" />
 
         <!-- ↓↓↓wx qq auth ↓↓↓-->
         <activity
             android:name="com.baidu.platformsdk.wxpay.AuthActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="true"
-            android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Translucent"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.baidu.platformsdk.wxpay.QQAuthActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="true"
-            android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Translucent"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <!--↑↑↑wx qq auth end↑↑↑ -->
 
         <!-- ↑↑↑ SDK ↑↑↑ -->
@@ -204,32 +187,21 @@
 
         <!-- ↓↓↓ 支付宝插件 ↓↓↓ -->
         <activity
-            android:name="com.alipay.sdk.app.H5PayActivity"
-            android:configChanges="orientation|keyboardHidden|navigation"
-            android:exported="false"
-            android:screenOrientation="behind"/>
-        <activity
-            android:name="com.alipay.sdk.auth.AuthActivity"
-            android:configChanges="orientation|keyboardHidden|navigation"
-            android:exported="false"
-            android:screenOrientation="behind"/>
-        <!-- 需修改<data android:scheme="bdpsdk+packagename" /> -->
-        <activity
             android:name="com.baidu.platformsdk.pay.channel.ali.AliPayActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="behind">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
                     android:host="alipay.app"
                     android:pathPrefix="/result"
-                    android:scheme="bdpsdkcom.baidu.bdgamesdk.demo"/>
+                    android:scheme="bdpsdkcom.baidu.bdgamesdk.demo" />
             </intent-filter>
         </activity>
         <!-- ↑↑↑ 支付宝插件 ↑↑↑ -->
@@ -243,12 +215,12 @@
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:scheme="qwalletcom.baidu.bdgamesdk.demo"/>
+                <data android:scheme="qwalletcom.baidu.bdgamesdk.demo" />
             </intent-filter>
         </activity>
         <!-- ↑↑↑ QQ插件 ↑↑↑ -->
@@ -259,154 +231,36 @@
             android:name="com.duoku.platform.ui.DKContainerActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:launchMode="singleTop"
-            android:theme="@style/dk_styledindicators"/>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+        <activity
+            android:name="com.duoku.platform.ui.DKContainerFloatActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@style/bdp_dialog_style_fullscreen"></activity>
         <!--授权使用的activity-->
         <activity
             android:name="com.baidu.platformsdk.kkauth.KKAuthActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="true"
             android:theme="@style/bdp_style_transparent"
-            android:windowSoftInputMode="adjustPan"/>
-        <!-- push service client -->
-        <receiver android:name="com.duoku.platform.push.MyPushMessageReceiver">
-            <intent-filter>
-
-                <!-- 接收push消息 -->
-                <action android:name="com.baidu.android.pushservice.action.MESSAGE"/>
-                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
-                <action android:name="com.baidu.android.pushservice.action.RECEIVE"/>
-                <action android:name="com.baidu.android.pushservice.action.notification.CLICK"/>
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:name="com.baidu.android.pushservice.PushServiceReceiver"
-            android:process=":bdservice_v1">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-                <action android:name="com.baidu.android.pushservice.action.notification.SHOW"/>
-                <action android:name="com.baidu.android.pushservice.action.media.CLICK"/>
-                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
-                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
-                <action android:name="android.intent.action.USER_PRESENT"/>
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
-                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:name="com.baidu.android.pushservice.RegistrationReceiver"
-            android:process=":bdservice_v1">
-            <intent-filter>
-                <action android:name="com.baidu.android.pushservice.action.METHOD"/>
-                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-
-                <data android:scheme="package"/>
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name="com.baidu.android.pushservice.PushService"
-            android:exported="true"
-            android:process=":bdservice_v1">
-            <intent-filter>
-                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"/>
-            </intent-filter>
-        </service>
-        <service
-            android:name="com.baidu.android.pushservice.CommandService"
-            android:exported="true"/>
-
-        <!-- 适配Android N系统必需的ContentProvider声明，写权限包含应用包名 -->
-        <provider
-            android:name="com.baidu.android.pushservice.PushInfoProvider"
-            android:authorities="com.baidu.bdgamesdk.demo.bdpush"
-            android:exported="true"
-            android:protectionLevel="signature"
-            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.baidu.bdgamesdk.demo"/>
-        <!-- push结束 -->
-
+            android:windowSoftInputMode="adjustPan" />
 
         <!-- 下载管理 -->
         <activity
             android:name="com.duoku.platform.ui.DKDownloadManagerActivity"
             android:exported="false"
             android:launchMode="singleTask"
-            android:theme="@style/dk_styledindicators"/>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
 
-        <service android:name="com.duoku.platform.download.DownloadService"/>
-
-        <receiver
-            android:name="com.duoku.platform.download.DownloadReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
-
-                <data android:scheme="file"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.duoku.platform.download.broadcast.AppMonitorReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_ADDED"/>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
-                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
-
-                <data android:scheme="package"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
-                <action android:name="android.intent.action.MEDIA_UNMOUNTED"/>
-
-                <data android:scheme="file"/>
-            </intent-filter>
-        </receiver>
-
-        <!-- 需修改android:authorities="com.baidu.bdgamesdk.demo"替换com.baidu.bdgamesdk.demo为您自己应用的包名, 如：android:authorities="com.baidu.test" -->
-        <provider
-            android:name="com.duoku.platform.download.DownloadProvider"
-            android:authorities="com.baidu.bdgamesdk.demo"
-            android:exported="false"/>
-        <!-- ↑↑↑ 多酷SDK ↑↑↑ -->
-
+        <!--下载服务-->
+        <service android:name="com.duoku.platform.download.DownloadService" />
 
         <!-- ↓↓↓ mat ↓↓↓ com.baidu.bdgamesdk.demo 需要将包名替换为游戏自己包名 -->
         <provider
             android:name="com.tencent.mid.api.MidProvider"
             android:authorities="com.baidu.bdgamesdk.demo.TENCENT.MID.V3"
-            android:exported="true"/>
+            android:exported="true"></provider>
         <!-- ↑↑↑ mat ↑↑↑ -->
-
-
-        <!-- 4.2.0 start -->
-        <receiver android:name="com.duoku.sdk.download.receiver.NetworkReceiver">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.duoku.sdk.download.receiver.DownloadStateReceiver">
-            <intent-filter>
-                <action android:name="com.download.state.broadcast"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.duoku.sdk.download.receiver.InstallReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_ADDED"/>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-
-                <data android:scheme="package"/>
-            </intent-filter>
-        </receiver>
-        <!-- 4.2.0 end -->
 
         <!-- 需修改android:authorities="com.baidu.bdgamesdk.demo"替换com.baidu.bdgamesdk.demo为您自己应用的包名, 如：android:authorities="com.baidu.test" -->
         <provider
@@ -416,14 +270,13 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/bdp_game_download_paths"/>
+                android:resource="@xml/bdp_game_download_paths" />
         </provider>
-
 
         <!-- 4.3.0 cloud -->
         <service
             android:name="com.baidu.operationsdk.BDGameService"
-            android:exported="true"/>
+            android:exported="true" />
 
     </application>
 </manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SPB" parent="android:Widget.Material.ProgressBar.Horizontal" />
+
+    <style name="m4399.Operate.UserCenterDialog.Theme" parent="m4399.Operate.Theme.Dialog.Fullscreen">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/m4399_ope_transparent</item>
+        <item name="android:navigationBarColor">@color/m4399_ope_transparent</item>
+    </style>
+</resources>

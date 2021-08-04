@@ -34,7 +34,7 @@ import com.nearme.game.sdk.common.util.AppUtil;
 import com.nearme.platform.opensdk.pay.PayResponse;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;

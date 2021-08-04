@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/m4399_ope_banner_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="18dp"
+    android:paddingTop="10dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/m4399_ope_has_already_screenshot"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@id/m4399_ope_id_banner_action_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/m4399_ope_screenshot_click_share"
+            android:textColor="@color/m4399_color_accent"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="17dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_never_disturb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m4399_ope_no_warn_anymore"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+        <View
+            android:id="@+id/m4399_ope_id_divider_h"
+            android:layout_width="0.5dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@id/m4399_ope_id_banner_action_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/m4399_action_close"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

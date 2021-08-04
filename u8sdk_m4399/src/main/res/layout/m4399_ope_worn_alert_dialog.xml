@@ -9,10 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="20dp"
         android:paddingLeft="24dp"
+        android:paddingTop="20dp"
         android:paddingRight="24dp"
-        android:paddingTop="20dp">
+        android:paddingBottom="20dp">
 
 
         <TextView
@@ -65,9 +65,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:onClick="goPhoneCall"
                 android:text="@string/m4399_rec_hotline_dianxin"
-                android:textColor="@color/m4399_rec_color_yellow"
+                android:textColor="@color/m4399_ope_color_primary"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>

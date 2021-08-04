@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/m4399_ope_coupon_select_width"
+    android:layout_height="@dimen/m4399_ope_coupon_select_height"
+    android:background="@drawable/m4399_ope_shape_dialog_select_coupon_bg"
+    tools:ignore="all">
+
+    <RelativeLayout
+        android:id="@+id/m4399_ope_id_rl_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@drawable/m4399_ope_shape_dialog_coupon_nav_bg">
+
+        <ImageView
+            android:id="@+id/m4399_ope_id_iv_back"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/m4399_ope_support_nav_icon_bg"
+            android:src="@drawable/m4399_rec_coupon_close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/m4399_ope_coupon_title"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/m4399_ope_id_iv_update"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/m4399_ope_support_nav_icon_bg"
+            android:src="@drawable/m4399_rec_coupon_update" />
+
+        <View
+            style="@style/m4399PerfectLine"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/m4399_ope_id_rl_navigation"
+        android:scrollbarSize="5dip"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+        android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/m4399_ope_id_ll_use"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/m4399_ope_coupon_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/m4399_ope_coupon_dont_use_now"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/m4399_ope_id_iv_use"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="18dp"
+                    android:src="@drawable/m4399_rec_coupon_unchosed" />
+            </LinearLayout>
+
+            <cn.m4399.operate.coupon.ListView4ScrollView
+                android:id="@+id/m4399_ope_id_lv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="#E0E0E0"
+                android:dividerHeight="8dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/m4399_ope_id_ll_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/m4399_ope_id_iv_empty"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/m4399_rec_no_coupon" />
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/m4399_ope_coupon_empty"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/m4399_ope_id_ll_empty_get_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/m4399_ope_coupon_get_coupon"
+                android:textColor="@color/m4399_ope_color_primary"
+                android:textSize="@dimen/m4399_ope_coupon_more_tv_size" />
+
+            <ImageView
+                android:layout_width="@dimen/m4399_ope_coupon_arrow_width"
+                android:layout_height="@dimen/m4399_ope_coupon_arrow_height"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/m4399_rec_coupon_right_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

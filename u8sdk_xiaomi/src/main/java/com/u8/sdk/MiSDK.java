@@ -27,7 +27,7 @@ import com.xiaomi.gamecenter.sdk.OnRealNameVerifyProcessListener;
 import com.xiaomi.gamecenter.sdk.RoleData;
 import com.xiaomi.gamecenter.sdk.entry.MiAccountInfo;
 import com.xiaomi.gamecenter.sdk.entry.MiBuyInfo;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONObject;
 

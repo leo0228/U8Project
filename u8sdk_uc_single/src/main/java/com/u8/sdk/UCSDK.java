@@ -7,7 +7,7 @@ import android.text.TextUtils;
 
 import com.tendcloud.tenddata.TDGAProfile;
 import com.u8.sdk.log.Log;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import java.util.HashMap;
 import java.util.Map;

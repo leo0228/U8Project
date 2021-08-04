@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/m4399_id_tv_negative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/m4399_ope_support_dialog_btn_negative_bg"
+    android:gravity="center"
+    android:textColor="#666666"
+    android:textSize="@dimen/m4399_font_16"
+    tools:layout_height="45dp"
+    tools:layout_width="152dp"
+    tools:text="@string/m4399_action_close" />

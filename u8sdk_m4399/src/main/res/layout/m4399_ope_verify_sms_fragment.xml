@@ -1,119 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/m4399_fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/m4399_ope_verify_common_bg_color">
+    android:background="@color/m4399_ope_color_eeeeee"
+    android:orientation="vertical">
+
+    <include layout="@layout/m4399_ope_support_nav_bar_layout" />
 
     <TextView
-        android:id="@+id/m4399_ope_verify_sms_title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/m4399_ope_verify_sms_height_dimen"
         android:layout_gravity="center"
-        android:background="@color/m4399_ope_verify_common_src_color"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
+        android:background="@android:color/white"
         android:gravity="center_vertical"
-        android:paddingLeft="@dimen/m4399_ope_verify_sms_margin_hori_dimen"
+        android:paddingLeft="@dimen/m4399_activity_spacing_h"
+        android:paddingRight="@dimen/m4399_activity_spacing_h"
         android:text="@string/m4399_ope_verify_sms_fragment_title"
-        android:textColor="@color/m4399_ope_verify_sms_title_color"
-        android:textSize="@dimen/m4399_ope_verify_sms_common_font_size" />
+        android:textColor="@color/m4399_ope_color_ffa92d"
+        android:textSize="@dimen/m4399_font_16" />
 
 
     <LinearLayout
-        android:id="@+id/m4399_sms_verify_phone_number_frame"
-        style="@style/m4399_sms_verify_editor_frame"
-        android:layout_below="@id/m4399_ope_verify_sms_title"
-        android:layout_marginTop="@dimen/m4399_ope_verify_sms_title_offset_dimen"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/m4399_spacing_8"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/m4399_activity_spacing_h"
+        android:paddingRight="@dimen/m4399_activity_spacing_h">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/m4399_ope_verify_sms_margin_hori_dimen"
             android:gravity="center"
             android:text="@string/m4399_ope_verify_sms_phone_number_text"
-            android:textColor="@color/m4399_ope_verify_sms_label_color"
-            android:textSize="@dimen/m4399_ope_verify_sms_common_font_size" />
+            android:textColor="@color/m4399_ope_color_333333"
+            android:textSize="@dimen/m4399_font_16" />
 
         <EditText
             android:id="@+id/m4399_sms_verify_phone_number"
             style="@style/m4399_sms_verify_editor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/m4399_ope_verify_sms_hori_offset_dimen"
+            android:layout_marginLeft="30dp"
             android:hint="@string/m4399_ope_verify_sms_phone_number_hint" />
     </LinearLayout>
 
+    <include layout="@layout/m4399_ope_support_divider_h" />
 
     <RelativeLayout
-        android:id="@+id/m4399_sms_verify_code_frame"
-        style="@style/m4399_sms_verify_editor_frame"
-        android:layout_below="@id/m4399_sms_verify_phone_number_frame"
-        android:layout_marginTop="@dimen/m4399_ope_verify_border_line_dimen">
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/m4399_activity_spacing_h"
+        android:paddingRight="@dimen/m4399_activity_spacing_h">
 
         <TextView
             android:id="@+id/m4399_ope_verify_sms_code_label"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/m4399_ope_verify_sms_margin_hori_dimen"
             android:gravity="center"
             android:text="@string/m4399_ope_verify_sms_sms_code_text"
-            android:textColor="@color/m4399_ope_verify_sms_label_color"
-            android:textSize="@dimen/m4399_ope_verify_sms_common_font_size" />
-
-
-        <Button
-            android:id="@+id/m4399_sms_verify_code_btn"
-            android:layout_width="@dimen/m4399_ope_verify_code_btn_width_dimen"
-            android:layout_height="@dimen/m4399_ope_verify_code_btn_height_dimen"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/m4399_ope_verify_sms_margin_hori_dimen"
-            android:background="@drawable/m4399_ope_verify_sms_code_corner_selector"
-            android:gravity="center"
-            android:text="@string/m4399_ope_verify_sms_get_code_text"
-            android:textColor="@color/m4399_ope_verify_sms_code_color"
-            android:textSize="@dimen/m4399_ope_verify_code_btn_font_size_dimen" />
-
-        <TextView
-            android:id="@+id/m4399_sms_verify_down_timer_text"
-            android:layout_width="@dimen/m4399_ope_verify_code_btn_width_dimen"
-            android:layout_height="@dimen/m4399_ope_verify_code_btn_height_dimen"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/m4399_ope_verify_sms_margin_hori_dimen"
-            android:background="@drawable/m4399_ope_verify_sms_code_corner_disable_bg"
-            android:gravity="center"
-            android:text="@string/m4399_ope_verify_sms_down_timer_text"
-            android:textColor="@color/m4399_ope_verify_sms_code_disable_color"
-            android:textSize="@dimen/m4399_ope_verify_code_btn_font_size_dimen"
-            android:visibility="gone" />
+            android:textColor="@color/m4399_ope_color_333333"
+            android:textSize="@dimen/m4399_font_16" />
 
         <EditText
             android:id="@+id/m4399_sms_verify_sms_code"
             style="@style/m4399_sms_verify_editor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/m4399_ope_verify_sms_hori_offset_dimen"
-            android:layout_marginRight="@dimen/m4399_ope_verify_editor_code_offset_dimen"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="115dp"
             android:layout_toRightOf="@id/m4399_ope_verify_sms_code_label"
             android:hint="@string/m4399_ope_verify_sms_code_hint" />
 
+        <Button
+            android:id="@+id/m4399_sms_verify_code_btn"
+            android:layout_width="@dimen/m4399_ope_verify_code_btn_width_dimen"
+            android:layout_height="@dimen/m4399_ope_verify_code_btn_height_dimen"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/m4399_ope_verify_sms_margin_hori_dimen"
+            android:background="@drawable/m4399_ope_ripple_border_radius_outline"
+            android:gravity="center"
+            android:text="@string/m4399_ope_verify_sms_get_code_text"
+            android:textColor="@color/m4399_ope_color_primary"
+            android:textSize="@dimen/m4399_font_14" />
+
+        <TextView
+            android:id="@+id/m4399_sms_verify_down_timer_text"
+            android:layout_width="@dimen/m4399_ope_verify_code_btn_width_dimen"
+            android:layout_height="@dimen/m4399_ope_verify_code_btn_height_dimen"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/m4399_ope_verify_sms_margin_hori_dimen"
+            android:background="@drawable/m4399_ope_verify_sms_code_corner_disable_bg"
+            android:gravity="center"
+            android:text="@string/m4399_ope_verify_sms_down_timer_text"
+            android:textColor="#8054ba3d"
+            android:textSize="@dimen/m4399_font_14"
+            android:visibility="gone" />
+
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" />
 
     <Button
         android:id="@+id/m4399_ope_sms_verify_confirm_btn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/m4399_ope_verify_sms_height_dimen"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:layout_marginLeft="@dimen/m4399_ope_verify_sms_margin_hori_dimen"
-        android:layout_marginRight="@dimen/m4399_ope_verify_sms_margin_hori_dimen"
-        android:layout_marginBottom="@dimen/m4399_ope_verify_confirm_offset_dimen"
-        android:background="@drawable/m4399_ope_bind_button_now_bg"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/m4399_activity_spacing_h"
+        android:layout_marginRight="@dimen/m4399_activity_spacing_h"
+        android:layout_marginBottom="@dimen/m4399_activity_spacing_v"
+        android:background="@drawable/m4399_ope_ripple_border_rectangle_green"
         android:enabled="false"
         android:text="@string/m4399_ope_verify_sms_confirm_text"
         android:textColor="@color/m4399_rec_color_white"
-        android:textSize="@dimen/m4399_ope_verify_sms_common_font_size" />
+        android:textSize="@dimen/m4399_font_16" />
 
-</RelativeLayout>
+</LinearLayout>

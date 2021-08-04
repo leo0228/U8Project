@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@id/ct_account_dialog_layout"
-    android:layout_width="@dimen/m4399_ope_verify_dialog_width_dimen"
+    android:layout_width="@dimen/m4399_ope_dialog_width_304"
     android:layout_height="wrap_content"
     android:background="@drawable/ct_account_dialog_conner_bg"
     android:orientation="vertical">
@@ -24,7 +24,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/m4399_ope_verify_dialog_buttons_height_dimen">
+        android:layout_height="45dp">
 
         <Button
             android:id="@id/ct_account_dialog_cancel"

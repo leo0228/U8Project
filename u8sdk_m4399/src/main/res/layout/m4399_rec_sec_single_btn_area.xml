@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="@dimen/m4399_rec_sum_btns_eara_height"
-    android:background="@color/m4399_rec_color_white">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <cn.m4399.recharge.ui.widget.TimedEnabledButton
+    <cn.m4399.operate.recharge.ui.widget.TimedEnabledButton
         android:id="@+id/goto_pay"
         style="?android:attr/buttonStyle"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/m4399_rec_right_btn_bg"
+        android:layout_height="@dimen/m4399_rec_sum_btns_eara_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/m4399_ope_drawable_view_bg_green_bounded"
         android:text="@string/m4399_rec_confirm_pay"
         android:textColor="@color/m4399_rec_color_white"
         android:textSize="18sp" />

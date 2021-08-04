@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/m4399_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/m4399_ope_color_eeeeee">
+
+    <include layout="@layout/m4399_ope_support_nav_bar_layout" />
+
+    <cn.m4399.operate.account.verify.ClickVerifyLayout
+        android:id="@+id/click_captcha_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+</FrameLayout>

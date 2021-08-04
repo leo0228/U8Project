@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/m4399_ope_id_rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.m4399.operate.extension.index.CornerLinearLayout
+        android:id="@+id/m4399_ope_id_ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/m4399_ope_shape_dialog_personal_radius"
+        android:orientation="vertical">
+
+        <include layout="@layout/m4399_ope_extension_top_nav_outside" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f1f1f1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/m4399_ope_id_ll_vip_info"
+                    layout="@layout/m4399_ope_user_center_setting_item" />
+
+                <include
+                    android:id="@+id/m4399_ope_id_vip_info_divider"
+                    layout="@layout/m4399_ope_support_divider_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m4399_spacing_8" />
+
+                <include
+                    android:id="@+id/m4399_ope_id_ll_bind_phone"
+                    layout="@layout/m4399_ope_user_center_setting_item" />
+
+                <include layout="@layout/m4399_ope_support_divider_h" />
+
+                <include
+                    android:id="@+id/assist_center_bind_id_card"
+                    layout="@layout/m4399_ope_user_center_setting_item" />
+
+                <include layout="@layout/m4399_ope_support_divider_h" />
+
+                <include
+                    android:id="@+id/m4399_ope_id_ll_center_pwd"
+                    layout="@layout/m4399_ope_user_center_setting_item" />
+
+                <include
+                    layout="@layout/m4399_ope_support_divider_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m4399_spacing_8" />
+
+                <include
+                    android:id="@+id/m4399_ope_id_ll_logout_account"
+                    layout="@layout/m4399_ope_user_center_setting_item" />
+
+                <TextView
+                    android:id="@+id/m4399_ope_id_tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/m4399_ope_color_bbbbbb"
+                    android:textSize="@dimen/m4399_font_12" />
+
+            </LinearLayout>
+        </ScrollView>
+    </cn.m4399.operate.extension.index.CornerLinearLayout>
+
+</RelativeLayout>

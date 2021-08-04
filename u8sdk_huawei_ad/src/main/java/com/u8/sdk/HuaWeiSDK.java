@@ -3,6 +3,8 @@ package com.u8.sdk;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
@@ -14,6 +16,7 @@ import com.huawei.hmf.tasks.OnFailureListener;
 import com.huawei.hmf.tasks.OnSuccessListener;
 import com.huawei.hmf.tasks.Task;
 import com.huawei.hms.common.ApiException;
+import com.huawei.hms.framework.common.NetworkUtil;
 import com.huawei.hms.jos.AppUpdateClient;
 import com.huawei.hms.jos.JosApps;
 import com.huawei.hms.jos.JosAppsClient;
@@ -37,7 +40,7 @@ import com.huawei.updatesdk.service.appmgr.bean.ApkUpgradeInfo;
 import com.huawei.updatesdk.service.otaupdate.CheckUpdateCallBack;
 import com.huawei.updatesdk.service.otaupdate.UpdateKey;
 import com.tendcloud.tenddata.TDGAProfile;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -67,6 +70,7 @@ public class HuaWeiSDK {
     private AccountAuthService authService;
 
     private String transactionId = "";
+    private Timer timer = null;
 
     private RewardAdLoader rewardAdLoader;
     private RewardAdListener mRewardAdListener;
@@ -123,33 +127,22 @@ public class HuaWeiSDK {
         updateClient.checkAppUpdate(activity, new UpdateCallBack());
 
         U8SDK.getInstance().setActivityCallback(new ActivityCallbackAdapter() {
-
             @Override
-            public void onStart() {
-                super.onStart();
-
-                submitPlayerBeginEvent();
-            }
-
             public void onResume() {
-                super.onResume();
 
                 Games.getBuoyClient(activity).showFloatWindow();
-            }
-
-            public void onPause() {
-                super.onPause();
-
-                Games.getBuoyClient(activity).hideFloatWindow();
+                //当玩家登录游戏或将游戏从后台切到游戏前台时,游戏定期
+                getPlayerExtraInfo();
             }
 
             @Override
-            public void onStop() {
-                super.onStop();
+            public void onPause() {
 
+                Games.getBuoyClient(activity).hideFloatWindow();
+                //当玩家退出游戏、从前台切到后台或游戏异常退出（进程终止、手机重启等）时
                 submitPlayerEndEvent();
-            }
 
+            }
 
             @Override
             public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -329,7 +322,8 @@ public class HuaWeiSDK {
                     e.printStackTrace();
                 }
 
-                submitPlayerBeginEvent();
+                //当玩家登录游戏或将游戏从后台切到游戏前台时,查询玩家是否成年
+                getPlayerExtraInfo();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -360,8 +354,18 @@ public class HuaWeiSDK {
                 try {
                     JSONObject data = new JSONObject(jsonRequest);
                     transactionId = data.optString("transactionId");
+
                     //每15分钟查询玩家附加信息
-                    timeCheck();
+                    if (timer == null) {
+                        timer = new Timer();
+                        TimerTask task = new TimerTask() {
+                            @Override
+                            public void run() {
+                                getPlayerExtraInfo();
+                            }
+                        };
+                        timer.schedule(task, 15 * 60 * 1000);
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -371,9 +375,17 @@ public class HuaWeiSDK {
             @Override
             public void onFailure(Exception e) {
                 if (e instanceof ApiException) {
-                    //7022表示该用户为成年用户或未实名，不支持实名时长统计功能。
-                    //7013未登录华为帐号。 请先调用华为帐号授权接口，引导用户完成帐号授权。
-                    Log.e(TAG, "submitPlayerBeginEvent failed, code: " + ((ApiException) e).getStatusCode());
+                    int rtnCode = ((ApiException) e).getStatusCode();
+                    Log.e(TAG, "submitPlayerBeginEvent failed, code: " + rtnCode);
+                    //返回7022时，表示该玩家已经成年或者未实名认证，此时不需要上报进入游戏事件
+                    if (rtnCode == 7022) {
+                        i("The player is an adult or has not been authenticated by real name");
+                        return;
+                    }
+                    //返回7002且当前网络正常，或者直接返回7006，均表示该帐号未在中国大陆注册，请直接放通，无需防沉迷监控
+                    if ((rtnCode == 7002 && NetworkUtil.isNetworkAvailable(activity)) || rtnCode == 7006) {
+                        i("Allow the player to enter the game without checking the remaining time");
+                    }
                 }
             }
         });
@@ -407,17 +419,32 @@ public class HuaWeiSDK {
      */
     private void getPlayerExtraInfo() {
         if (playersClient == null) return;
-        if (transactionId == null || transactionId.equals("")) return;
 
-        Task<PlayerExtraInfo> task = playersClient.getPlayerExtraInfo(transactionId);
+        Task<PlayerExtraInfo> task;
+        if (transactionId == null || transactionId.equals("")) {
+            task = playersClient.getPlayerExtraInfo(null);
+        } else {
+            task = playersClient.getPlayerExtraInfo(transactionId);
+        }
+
         task.addOnSuccessListener(new OnSuccessListener<PlayerExtraInfo>() {
             @Override
             public void onSuccess(PlayerExtraInfo extra) {
                 if (extra != null) {
                     i("IsRealName: " + extra.getIsRealName() + ", IsAdult: " + extra.getIsAdult()
                             + ", PlayerId: " + extra.getPlayerId() + ", PlayerDuration: " + extra.getPlayerDuration());
-                    if (!extra.getIsAdult()) {//未成年
 
+                    if (extra.getIsRealName()) {//已经实名
+                        if (!extra.getIsAdult()) {//未成年
+                            //未成年玩家当天最新的累计游戏时长>=90(1.5小时),
+                            if (extra.getPlayerDuration() >= 90) {
+                                createTipDialog("您好，当天累计游戏时长已达到，请退出游戏", "好的");
+                                return;
+                            }
+
+                            //未成年,上报玩家进入游戏事件
+                            submitPlayerBeginEvent();
+                        }
                     }
                 } else {
                     Log.e(TAG, "Player extra info is empty. ");
@@ -427,7 +454,17 @@ public class HuaWeiSDK {
             @Override
             public void onFailure(Exception e) {
                 if (e instanceof ApiException) {
-                    Log.e(TAG, "getPlayerExtraInfo failed, code: " + ((ApiException) e).getStatusCode());
+                    int rtnCode = ((ApiException) e).getStatusCode();
+                    Log.e(TAG, "getPlayerExtraInfo failed, code: " + rtnCode);
+                    //返回7023时，表示接口调用过于频繁，需要将接口调用间隔修改为15分钟。
+                    if (rtnCode == 7023) {
+                        i("It is recommended to check every 15 minutes.");
+                        return;
+                    }
+                    //返回7002且网络正常，或者直接返回7006，表示未查询到玩家附加信息，可以直接放通处理。
+                    if ((rtnCode == 7002 && NetworkUtil.isNetworkAvailable(activity)) || rtnCode == 7006) {
+                        i("No additional user information was found and allow the player to enter the game");
+                    }
                 }
             }
         });
@@ -455,6 +492,20 @@ public class HuaWeiSDK {
         });
     }
 
+    private void createTipDialog(String message, String tip) {
+        new AlertDialog.Builder(activity).setMessage(message)
+                .setCancelable(false)
+                .setPositiveButton(tip, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        activity.finish();
+                        System.exit(0);
+                    }
+                })
+                .create().show();
+    }
+
     public void submitGameData(UserExtraData extraData) {
         switch (extraData.getDataType()) {
             case UserExtraData.TYPE_ENTER_GAME:
@@ -478,7 +529,7 @@ public class HuaWeiSDK {
         profile.setProfileName(extraData.getRoleName());
     }
 
-    private void upgrade(UserExtraData extraData){
+    private void upgrade(UserExtraData extraData) {
         TDGAProfile profile = TDGAProfile.setProfile(extraData.getRoleID());
         //玩家升级时，做如下调用
         profile.setLevel(Integer.parseInt(extraData.getRoleLevel()));
@@ -506,17 +557,6 @@ public class HuaWeiSDK {
                 }
             }
         });
-    }
-
-    private void timeCheck() {
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
-            @Override
-            public void run() {
-                getPlayerExtraInfo();
-            }
-        };
-        timer.schedule(task, 15 * 60 * 1000);
     }
 
     private void i(String log) {

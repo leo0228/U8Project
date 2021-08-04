@@ -177,7 +177,7 @@
                     android:maxLength="11"
                     android:paddingLeft="10dip"
                     android:textColor="#111111"
-                    android:textSize="14sp"></EditText>
+                    android:textSize="14sp" />
 
 
                 <Button

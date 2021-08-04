@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/m4399_component_tv_message"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fadeScrollbars="false"
+    android:lineSpacingExtra="4dp"
+    android:maxHeight="@dimen/m4399_dialog_max_content_height"
+    android:scrollbarSize="4dp"
+    android:scrollbarStyle="outsideOverlay"
+    android:scrollbarThumbVertical="@drawable/m4399_ope_support_scroll_bar_bg"
+    android:scrollbars="vertical"
+    android:textColor="#666666"
+    android:textSize="@dimen/m4399_font_14"
+    tools:text="@string/m4399_webview_ssl_error_message" />

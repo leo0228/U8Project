@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/m4399.UserCenter.Entry">
+
+    <TextView
+        android:id="@+id/m4399_ope_id_user_center_setting"
+        style="@style/m4399.Text.H3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/m4399_ope_usercenter_nav_title" />
+
+    <TextView
+        android:id="@+id/m4399_ope_id_user_setting_prompt"
+        style="@style/m4399.Text.Prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:visibility="gone"
+        tools:text="@string/m4399_ope_assist_click_upd" />
+
+    <View
+        android:id="@+id/m4399_ope_id_user_arrow"
+        android:layout_width="8dp"
+        android:layout_height="15dp"
+        android:background="@drawable/m4399_ope_usercenter_right_arrow" />
+</LinearLayout>

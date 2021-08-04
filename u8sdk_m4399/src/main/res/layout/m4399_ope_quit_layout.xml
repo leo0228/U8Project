@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/m4399_ope_drawable_view_bg_grey_bounded"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="@dimen/m4399_ope_quit_item_padding">
+
+    <include
+        android:id="@+id/m4399_ope_quit_divider_h"
+        layout="@layout/m4399_ope_support_divider_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/m4399_ope_quit_item_padding">
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_quit_ic"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/m4399_ope_quit_circle_label_bg"
+            android:gravity="center"
+            android:text="@string/m4399_ope_index_game_circle"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/m4399_ope_id_tv_quit_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/m4399_ope_quit_circle_description"
+            android:textColor="@color/m4399_ope_color_666666"
+            android:textSize="@dimen/m4399_font_14" />
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:src="@drawable/m4399_ope_usercenter_right_arrow"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

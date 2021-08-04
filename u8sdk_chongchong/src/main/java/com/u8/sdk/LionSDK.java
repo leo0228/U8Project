@@ -17,7 +17,7 @@ import com.lion.ccsdk.SdkUser;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
 import com.u8.sdk.lion.GoodInfo;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;

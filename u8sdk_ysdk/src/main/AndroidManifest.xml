@@ -1,26 +1,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.u8.sdk">
 
-    <!-- TODO GAME SDK接入必须权限模块 START -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-
-    <!-- TODO GAME SDK Midas接入配置 设置屏幕兼容声明 START -->
+    <!-- 网络请求 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获取设备WIFI连接状态 ，非必要，但建议保留-->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 检测网络状态 ，非必要，但建议保留 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 读取日志 ，非必要，但建议保留 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- Midas需要，向SD卡写入文件，非必要权限  -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 获取机型信息和运营商信息，非必要权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application>
 
@@ -34,17 +27,17 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
-        <!-- TODO GAME SDK接入YSDK登陆接入配置 START -->
-        <activity
-            android:name="com.tencent.ysdk.module.realName.impl.RegisterRealNameActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
-        <!-- TODO GAME SDK接入YSDK登陆接入配置 END -->
+        <!-- TODO GAME SDK接入YSDK初始化配置 START -->
+        <meta-data
+            android:name="MAIN_ACTIVITY"
+            android:value="游戏的主Activity完整路径" />
+        <!-- TODO GAME SDK接入YSDK初始化配置 END -->
+
         <!-- TODO GAME SDK QQ接入配置 START -->
         <activity
             android:name="com.tencent.tauth.AuthActivity"
@@ -52,10 +45,10 @@
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!--<data android:scheme="tencent1107228546" />-->
+
+                <data android:scheme="tencent1107228546" />
                 <!-- TODO GAME 这里为游戏QQ登录的配置，游戏需要修改为自己手Q的appid -->
             </intent-filter>
         </activity>
@@ -68,7 +61,7 @@
 
         <!-- TODO GAME SDK 微信接入配置 START -->
         <activity
-            android:name="com.u8.sdk.wxapi.WXEntryActivity"
+            android:name="com.tencent.ysdk.module.user.impl.wx.YSDKWXEntryActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="true"
@@ -80,15 +73,37 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <!--<data android:scheme="wxbed3a0e52f2cac9c" />-->
+                <data android:scheme="wxbed3a0e52f2cac9c" />
                 <!-- TODO GAME 这里为游戏微信登录的配置，游戏需要修改为自己的微信appid -->
             </intent-filter>
         </activity>
-        <!-- TODO GAME SDK 微信接入配置 END -->
+
+        <activity-alias
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.tencent.ysdk.module.user.impl.wx.YSDKWXEntryActivity" />
         <!-- TODO GAME 1.4.1之后版本支持微信扫码登录，低于此版本升级的YSDK务必增加此处Activity用于二维码展示 -->
         <activity
             android:name="com.tencent.ysdk.module.user.impl.wx.qrcode.QRActivity"
             android:launchMode="singleInstance" />
+        <!-- TODO GAME SDK 微信接入配置 END -->
+
+        <!-- TODO GAME SDK接入免登录接入配置 START -->
+        <activity
+            android:name="com.tencent.ysdk.module.user.impl.freelogin.FreeLoginInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <!-- TODO GAME 这里为解析外部传入的登录信息，为云设备或者沙盒游戏宿主所调用,这里tencentysdk1104936059中tencentysdk的后缀是QQ_APP_ID -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencentysdk1104936059" />
+            </intent-filter>
+        </activity>
+        <!--TODO GAME SDK接入YSDK登陆接入配置 END -->
 
         <!-- TODO GAME SDK Midas接入配置 START -->
         <activity
@@ -108,7 +123,6 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -121,20 +135,24 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <!-- TODO GAME SDK Midas接入配置 END -->
+
         <!--省流量更新SDK的下载服务须注册-->
         <service
             android:name="com.tencent.tmdownloader.TMAssistantDownloadService"
             android:exported="false"
-            android:process=":TMAssistantDownloadSDKService"/>
+            android:process=":TMAssistantDownloadSDKService" />
 
-        <provider
-            android:name="com.tencent.ysdk.framework.web.YYBInstallFileProvider"
-            android:authorities="com.tencent.tmgp.游戏实际包名.installfileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/com_tencent_ysdk_fileprovider_path" />
-        </provider>
+        <!-- TODO 鉴权SDK 接入配置 START -->
+        <activity
+            android:name="com.tencent.qqdownloader.pay.QQDownloaderEntryActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="YSDK_AUTH_KEY"
+            android:value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsKX4kg6T32qn8uHc6j9AwMeQzpUW3hh6o8WiBJi9wlx0pWWRLoqdQuhoUPGpfrdVyt/iEnlvF4fmCkk82bJxXv4x2QRqR4tq3Li5YODzk/xLlQsa3F9nPb+iadqdQJfm6n53ts3uxkApl3gMURuw8SfoFuzuB3mpYHFO+DXQ7BSU2N/+Sdjb6xuOPWHrk9kXSo+h2VTkCwYcpEVC505T0MoA4PtX3GwsO7+lSJrRwuwzXi0eBi5evV57g9WhNnsZLfHTYqC43EGfbj0+/rNXQgz2AfJ78y5jW0am2WMBaO4Sao/acYHu/e+PSqr+fvolmbB1cFLCkCFnF6jBMuk8AQIDAQAB" />
+        <meta-data
+            android:name="YSDK_AUTH_KEY_VERSION"
+            android:value="0" />
+        <!-- TODO 鉴权SDK 接入配置 END -->
     </application>
 </manifest>

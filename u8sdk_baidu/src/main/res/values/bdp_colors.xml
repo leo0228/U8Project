@@ -17,6 +17,7 @@
     <color name="bdp_red">#ffff5555</color>
     <color name="bdp_rice_white">#fff4f4f4</color>
     <color name="bdp_lighter_gray">#ffe9e9e9</color>
+    <color name="bdp_color_4A90E2">#4A90E2</color>
 
     <!-- paycenter -->
     <color name="bdp_bg">#ffffff</color>

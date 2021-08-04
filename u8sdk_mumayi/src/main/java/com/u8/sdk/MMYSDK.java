@@ -17,7 +17,7 @@ import com.mumayi.paymentmain.ui.pay.MMYInstance;
 import com.mumayi.paymentmain.util.PaymentConstants;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;

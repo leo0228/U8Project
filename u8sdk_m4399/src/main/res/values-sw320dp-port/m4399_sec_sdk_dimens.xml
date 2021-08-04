@@ -24,5 +24,6 @@
     <dimen name="m4399_rec_dialog_width">300dp</dimen>
     <dimen name="m4399_rec_dialog_spacing">7dp</dimen>
     <dimen name="m4399_rec_record_entry_offset">36dp</dimen>
+    <dimen name="m4399_ope_login_banner_width">280dp</dimen>
 
 </resources>

@@ -9,23 +9,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-
         <TextView
             style="@style/m4399RecLabelTv"
-            android:text="@string/m4399_rec_amount_payment"
-
-            />
+            android:text="@string/m4399_rec_amount_payment" />
 
         <TextView
             android:id="@+id/sum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/m4399_rec_color_yellow"
+            android:textColor="@color/m4399_ope_color_primary"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -91,7 +88,7 @@
 
     </LinearLayout>
 
-    <cn.m4399.recharge.ui.widget.DashLineView
+    <cn.m4399.operate.recharge.ui.widget.DashLineView
         android:layout_width="match_parent"
         android:layout_height="0.5dp" />
 </LinearLayout>

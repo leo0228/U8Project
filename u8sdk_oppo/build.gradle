@@ -1,17 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
     }
 
     buildTypes {
@@ -27,7 +24,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(':u8sdk2')
-    implementation project(':prompt')
+    implementation project(':common')
     implementation(name:'gamesdk-20200610',ext:'aar')
     implementation(name:'mobad_normal_pub_365_2020_07_30',ext:'aar')
 
@@ -35,5 +32,4 @@ dependencies {
     implementation 'com.squareup.wire:wire-runtime:2.2.0'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.18'
 
-    implementation files('libs/SaaS_GameAnalytics_Android_SDK_V4.0.61.jar')
 }

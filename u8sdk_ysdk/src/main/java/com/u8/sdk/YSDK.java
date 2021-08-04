@@ -40,7 +40,7 @@ import com.tendcloud.tenddata.TDGAVirtualCurrency;
 import com.u8.sdk.utils.EncryptUtils;
 import com.u8.sdk.utils.ResourceHelper;
 import com.u8.sdk.utils.U8HttpUtils;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -87,13 +87,10 @@ public class YSDK {
         if (instance == null) {
             instance = new YSDK();
         }
-
         return instance;
     }
 
-
     private void parseSDKParams(SDKParams params) {
-
         fixedPay = params.getBoolean("WG_FIXEDPAY");
         coinIconName = params.getString("WG_COIN_ICON_NAME");
         multiServers = params.getBoolean("WG_MULTI_SERVERS");
@@ -131,7 +128,6 @@ public class YSDK {
                     Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(activity, needPermissions, 0);
             }
-
         }
 
         U8SDK.getInstance().setActivityCallback(new ActivityCallbackAdapter() {
@@ -149,6 +145,8 @@ public class YSDK {
             @Override
             public void onResume() {
                 YSDKApi.onResume(activity);
+                // TODO GAME 展示调式界面悬浮球，上线前需要关闭
+//                YSDKApi.showDebugIcon(activity);
             }
 
             @Override
@@ -210,7 +208,6 @@ public class YSDK {
     public void switchLogin() {
         YSDKApi.switchUser(true);
     }
-
 
     public void login() {
         if (!SDKTools.isNetworkAvailable(activity)) {
@@ -283,7 +280,6 @@ public class YSDK {
                 break;
         }
     }
-
 
     private String openId;
     private String openKey;
@@ -708,7 +704,6 @@ public class YSDK {
                 }
 
             } catch (JSONException e) {
-                // TODO Auto-generated catch block
                 U8SDK.getInstance().onResult(U8Code.CODE_PAY_FAIL, e.getMessage());
                 e.printStackTrace();
             }

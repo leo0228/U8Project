@@ -10,11 +10,12 @@
 
     <!-- 标题 -->
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/auth_h5_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical" >
+        android:gravity="center_vertical"
+       >
 
         <ImageView
             android:layout_width="45dip"
@@ -22,38 +23,44 @@
             android:contentDescription="@string/bdp_image"
             android:scaleType="center"
             android:src="@drawable/bdp_icon_back_selector"
-            android:visibility="invisible" />
+            android:visibility="gone" />
 
-        <View
-            android:layout_width="0dip"
-            android:layout_height="1dip"
-            android:layout_weight="1" />
+<!--        <View-->
+<!--            android:layout_width="0dip"-->
+<!--            android:layout_height="1dip"-->
+<!--            android:layout_weight="1" />-->
         <!-- 实名认证 -->
+            <TextView
+                android:id="@+id/tv_authenticate_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dip"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="#ff222222"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dip"
-            android:drawablePadding="6dip"
-            android:gravity="center"
-            android:text="@string/bdp_account_authenticate_title"
-            android:textColor="#ff222222"
-            android:textSize="18sp" />
-
-        <View
-            android:layout_width="0dip"
-            android:layout_height="1dip"
-            android:layout_weight="1" />
+<!--            android:text="@string/bdp_account_authenticate_title"
+-->
+<!--        <View-->
+<!--            android:layout_width="0dip"-->
+<!--            android:layout_height="1dip"-->
+<!--            android:layout_weight="1" />-->
         <!-- 关闭按钮 -->
 
         <ImageView
+            android:layout_alignParentRight="true"
             android:id="@+id/imgClose"
             android:layout_width="45dip"
             android:layout_height="45dip"
             android:contentDescription="@string/bdp_image"
             android:scaleType="centerInside"
             android:src="@drawable/bdp_icon_close_selector" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <FrameLayout
         android:layout_width="match_parent"

@@ -25,7 +25,7 @@ import com.vivo.unionsdk.open.VivoPayInfo;
 import com.vivo.unionsdk.open.VivoRealNameInfoCallback;
 import com.vivo.unionsdk.open.VivoRoleInfo;
 import com.vivo.unionsdk.open.VivoUnionSDK;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;

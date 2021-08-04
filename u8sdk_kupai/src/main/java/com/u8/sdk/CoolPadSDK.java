@@ -42,7 +42,7 @@ import com.yulong.android.paysdk.base.IPayResult;
 import com.yulong.android.paysdk.base.common.CoolPayResult;
 import com.yulong.android.paysdk.base.common.CoolYunAccessInfo;
 import com.yulong.android.paysdk.base.common.PayInfo;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;

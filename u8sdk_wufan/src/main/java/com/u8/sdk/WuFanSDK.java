@@ -12,8 +12,7 @@ import com.papa91.pay.pa.business.PaayArg;
 import com.papa91.pay.pa.dto.LogoutResult;
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
-import com.zjtx.prompt.PromptDialog;
-
+import com.u8.common.PromptDialog;
 import android.app.Activity;
 import android.util.Log;
 

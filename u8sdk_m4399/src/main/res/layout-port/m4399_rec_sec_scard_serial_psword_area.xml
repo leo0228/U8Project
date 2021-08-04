@@ -13,7 +13,7 @@
         style="@style/m4399RecInputAreaStyle"
         android:hint="@string/m4399_rec_input_card_serial"
         android:imeOptions="actionNext"
-        android:textCursorDrawable="@null"></EditText>
+        android:textCursorDrawable="@null" />
 
     <EditText
         android:id="@+id/passwd"

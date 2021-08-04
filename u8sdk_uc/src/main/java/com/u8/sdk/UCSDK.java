@@ -8,9 +8,10 @@ import android.widget.Toast;
 
 import com.tendcloud.tenddata.TDGAProfile;
 import com.tendcloud.tenddata.TDGAVirtualCurrency;
+import com.u8.common.PromptDialog;
 import com.u8.sdk.log.Log;
 import com.u8.sdk.verify.UToken;
-import com.zjtx.prompt.PromptDialog;
+
 
 import java.util.HashMap;
 import java.util.Map;

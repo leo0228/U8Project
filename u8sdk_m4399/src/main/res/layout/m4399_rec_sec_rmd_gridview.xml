@@ -16,11 +16,11 @@
 
         />
 
-    <cn.m4399.recharge.ui.widget.ExpandableGridView
+    <cn.m4399.operate.recharge.ui.widget.ExpandableGridView
         android:id="@+id/rmd_gridview"
         style="@style/m4399RecRmdGridviewStyle">
 
-    </cn.m4399.recharge.ui.widget.ExpandableGridView>
+    </cn.m4399.operate.recharge.ui.widget.ExpandableGridView>
 
 
 </LinearLayout>

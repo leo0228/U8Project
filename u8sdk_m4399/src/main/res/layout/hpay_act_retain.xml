@@ -10,10 +10,10 @@
         android:id="@+id/hpay_tv_rt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dip"
         android:layout_marginLeft="16dip"
-        android:layout_marginRight="16dip"
         android:layout_marginTop="10dip"
+        android:layout_marginRight="16dip"
+        android:layout_marginBottom="10dip"
         android:textColor="@color/hpay_title_color"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -62,12 +62,10 @@
             android:background="@drawable/m4399_ope_vip_button_bg_right"
             android:gravity="center"
             android:orientation="horizontal"
-            android:textColor="@color/m4399_rec_color_yellow"
+            android:textColor="@color/m4399_ope_color_primary"
             android:textSize="16sp" />
 
-
     </LinearLayout>
-
 
 </LinearLayout>
 

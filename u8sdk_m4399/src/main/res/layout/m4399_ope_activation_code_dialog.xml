@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/m4399_ope_dialog_width_304"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/m4399_ope_dialog_bg"
+    android:orientation="vertical"
+    android:paddingBottom="16dp">
+
+    <TextView
+        style="@style/m4399.Dialog.Title"
+        android:text="@string/m4399_ope_activation_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+        <!-- 注意 margin 设置 -->
+        <TextView
+            android:id="@+id/m4399_ope_id_ll_get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/m4399_ope_support_ripple_border_radius_grey"
+            android:drawableEnd="@drawable/m4399_ope_lint_arrow"
+            android:drawableRight="@drawable/m4399_ope_lint_arrow"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/m4399_ope_activation_get"
+            android:textColor="#33bdfc"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:id="@+id/m4399_ope_id_switch_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:background="@drawable/m4399_ope_support_ripple_border_radius_grey"
+            android:text="@string/m4399_ope_account_switch"
+            android:textColor="#33bdfc"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/m4399_ope_id_edt_input_code"
+        style="@style/m4399_Style_Edit_Base"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="@dimen/m4399_dialog_spacing_h"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="@dimen/m4399_dialog_spacing_h"
+        android:hint="@string/m4399_ope_activation_hint"
+        android:textSize="14sp"
+        tools:ignore="all" />
+
+    <TextView
+        android:id="@+id/m4399_ope_id_tv_positive"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="@dimen/m4399_dialog_spacing_h"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/m4399_dialog_spacing_h"
+        android:background="@drawable/m4399_ope_ripple_border_rectangle_green"
+        android:gravity="center"
+        android:text="@string/m4399_ope_activation_sure"
+        android:textColor="@android:color/white" />
+</LinearLayout>

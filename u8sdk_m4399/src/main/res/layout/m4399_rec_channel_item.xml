@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="70dp"
-    android:background="@drawable/m4399_rec_item_press_bg"
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:paddingBottom="15dp"
@@ -10,12 +9,12 @@
     android:paddingRight="18dp"
     android:paddingTop="15dp">
 
-    <ImageView
+    <cn.m4399.operate.support.network.NetworkImageView
         android:id="@+id/item_image"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginRight="15dp"
-        android:src="@drawable/m4399_rec_one_card" />
+        android:src="@drawable/m4399_ope_img_default" />
 
     <LinearLayout
         android:layout_width="0dp"

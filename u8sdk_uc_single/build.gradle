@@ -3,17 +3,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion 26
-
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
     }
 
     buildTypes {
@@ -31,9 +28,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':u8sdk2')
-    implementation project(':prompt')
+    implementation project(':common')
     implementation(name: 'single-sdk-9.2.4.4', ext: 'aar')
     implementation(name: 'ngad-sdk-release-2.7.30', ext: 'aar')
 
-    implementation files('libs/SaaS_GameAnalytics_Android_SDK_V4.0.61.jar')
 }

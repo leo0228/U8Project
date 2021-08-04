@@ -3,7 +3,7 @@
     android:layout_width="278dp"
     android:layout_height="wrap_content"
     android:background="@drawable/bdp_bg_white_round"
-    android:minHeight="165dp" 
+    android:minHeight="165dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -11,15 +11,23 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:minHeight="109dp"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <!-- 结果类型 -->
+        <ImageView
+            android:id="@+id/bdp_img_banner_pay_result"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/bdp_image"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/txt_type"
-            android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:text="@string/bdp_paycenter_pay_result_notify_submit"
             android:textColor="#333333"
             android:textSize="18sp" />
@@ -30,8 +38,8 @@
             android:id="@+id/txt_tip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="@string/bdp_paycenter_pay_result_notify_fail_cancel_tip"
@@ -48,15 +56,15 @@
             android:gravity="center_horizontal"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:visibility="gone"
             android:textColor="#ff333333"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <View
             android:layout_width="match_parent"

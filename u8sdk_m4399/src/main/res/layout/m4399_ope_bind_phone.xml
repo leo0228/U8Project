@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/m4399_ope_page_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/m4399_ope_bind_padding_top">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/m4399_ope_bind_padding_top"
+        android:paddingLeft="@dimen/m4399_ope_bind_padding_left"
+        android:paddingRight="@dimen/m4399_ope_bind_padding_left"
+        android:text="@string/m4399_ope_bind_phone_title"
+        android:textColor="@color/m4399_ope_bind_title_black"
+        android:textSize="@dimen/m4399_ope_bind_title_font_size" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m4399_ope_bind_input_button_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/m4399_ope_bind_padding_left"
+        android:paddingRight="@dimen/m4399_ope_bind_padding_left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/m4399_ope_bind_phone_number"
+            android:textColor="@color/m4399_ope_bind_label_gray"
+            android:textSize="@dimen/m4399_ope_bind_label_font_size" />
+
+        <EditText
+            android:id="@+id/m4399_ope_id_edt_phone"
+            style="@style/m4399BindPhoneEditStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/m4399_ope_bind_phone_number_hint"
+            android:inputType="phone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m4399_ope_bind_input_button_height"
+        android:layout_marginTop="@dimen/m4399_ope_bind_phone_input_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/m4399_ope_bind_padding_left"
+        android:paddingRight="@dimen/m4399_ope_bind_padding_left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/m4399_ope_bind_phone_test_code"
+            android:textColor="@color/m4399_ope_bind_label_gray"
+            android:textSize="@dimen/m4399_ope_bind_label_font_size" />
+
+        <EditText
+            android:id="@+id/m4399_ope_id_edt_verify_code"
+            style="@style/m4399BindPhoneEditStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/m4399_ope_bind_phone_test_code_hint" />
+
+        <cn.m4399.operate.account.bindphone.VerityCodeView
+            android:id="@+id/m4399_ope_id_vcv_verify_code"
+            android:layout_width="@dimen/m4399_ope_bind_img_width"
+            android:layout_height="@dimen/m4399_ope_bind_input_button_height"
+            android:layout_marginLeft="@dimen/m4399_ope_bind_input_margin_left"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m4399_ope_bind_input_button_height"
+        android:layout_marginTop="@dimen/m4399_ope_bind_phone_input_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/m4399_ope_bind_padding_left"
+        android:paddingRight="@dimen/m4399_ope_bind_padding_left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/m4399_ope_bind_phone_sms_code"
+            android:textColor="@color/m4399_ope_bind_label_gray"
+            android:textSize="@dimen/m4399_ope_bind_label_font_size" />
+
+        <EditText
+            android:id="@+id/m4399_ope_id_edt_sms_code"
+            style="@style/m4399BindPhoneEditStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/m4399_ope_bind_phone_sms_code_hint" />
+
+        <cn.m4399.operate.account.bindphone.BindPhoneButton
+            android:id="@+id/m4399_ope_id_bpb_msg_code"
+            android:layout_width="@dimen/m4399_ope_bind_img_width"
+            android:layout_height="@dimen/m4399_ope_bind_input_button_height"
+            android:layout_marginLeft="@dimen/m4399_ope_bind_input_margin_left"
+            android:background="@drawable/m4399_ope_bind_button_bg"
+            android:text="@string/m4399_ope_bind_phone_sms_send"
+            android:textColor="@color/m4399_ope_bind_label_gray"
+            android:textSize="@dimen/m4399_ope_bind_label_font_size" />
+
+    </LinearLayout>
+
+    <include layout="@layout/m4399_ope_support_dialog_couple_actions" />
+</LinearLayout>

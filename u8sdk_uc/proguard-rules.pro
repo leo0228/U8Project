@@ -25,7 +25,7 @@
 -ignorewarnings
 
 # for eclipse接入？
-#-libraryjars './libs/classes.jar'
+#-libraryjars './libs/support-v4-26.1.0.jar'
 
 -dontskipnonpubliclibraryclassmembers
 -dontshrink

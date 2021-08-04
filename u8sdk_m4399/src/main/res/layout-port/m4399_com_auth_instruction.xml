@@ -2,13 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
-    <cn.m4399.operate.ui.widget.NavigationBarView
-        android:id="@+id/usercenter_navigation_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <include layout="@layout/m4399_ope_support_nav_bar_layout"/>
 
     <ScrollView
         android:layout_width="match_parent"

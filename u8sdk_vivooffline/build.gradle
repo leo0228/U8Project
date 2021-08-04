@@ -1,17 +1,16 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    ndkVersion "21.3.6528147"
+    ndkVersion rootProject.ndkVersion
+
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 17
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
     }
 
     buildTypes {
@@ -32,9 +31,8 @@ repositories{
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':u8sdk2')
-    implementation project(':prompt')
+    implementation project(':common')
     implementation 'com.squareup.picasso:picasso:2.5.2'
     compileOnly files('mylibs\\open_ad_4.4.2.4_68986d5t.jar')
 
-    implementation files('libs/SaaS_GameAnalytics_Android_SDK_V4.0.61.jar')
 }

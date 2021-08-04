@@ -13,7 +13,7 @@ import com.nj9you.sdk.listener.OnUserLogoutListener;
 import com.nj9you.sdk.listener.PayCallback;
 import com.nj9you.sdk.talkingdata.TalkingdataSDK;
 import com.tendcloud.tenddata.TDGAProfile;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;

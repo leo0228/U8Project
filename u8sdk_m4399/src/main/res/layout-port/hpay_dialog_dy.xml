@@ -10,7 +10,7 @@
         android:id="@+id/hpay_content"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -31,7 +31,7 @@
         <ImageView
             android:layout_width="1dip"
             android:layout_height="fill_parent"
-            android:background="@color/hpay_line_color"></ImageView>
+            android:background="@color/hpay_line_color" />
 
         <Button
             android:id="@+id/hpay_positiveButton"

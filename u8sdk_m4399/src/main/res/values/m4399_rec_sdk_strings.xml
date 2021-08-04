@@ -29,7 +29,6 @@
     <string name="m4399_rec_hotline_qq">800801500</string>
     <string name="m4399_rec_try_other_payment">其他充值方式</string>
     <string name="m4399_rec_return">其他充值方式</string>
-    <string name="m4399_rec_cfm_return">返回</string>
     <string name="m4399_rec_previous_step">上一步</string>
     <string name="m4399_rec_one_yuan_coupon">1 Yuan Coupon</string>
 
@@ -156,7 +155,7 @@
     <string name="m4399_rec_sms_cfm_title">订单支付</string>
 
     <!-- For pay result fragment or tips -->
-    <string name="m4399_rec_pay_wait">等待充值</string>
+    <string name="m4399_rec_pay_wait">查询订单状态</string>
     <string name="m4399_rec_pay_failed_tips">充值失败</string>
     <string name="m4399_rec_card_error_tips">温馨提示：请重新尝试充值或联系客服咨询</string>
     <string name="m4399_rec_card_delay_tips">温馨提示：若未及时到账，请重新尝试充值或联系客服咨询</string>
@@ -246,45 +245,18 @@
     <string name="m4399_rec_wx_pay_failed_miss_protocol">获取微信支付链接失败，无法启动微信</string>
     <string name="m4399_rec_wx_pay_failed_warmtips">若打不开充值界面，微信可能未正常登陆，请尝试在最新微信客户端手动登录后再尝试。</string>
 
-    <!-- For iab -->
-    <string name="m4399_rec_sdk_version">2.6.0.0</string>
-    <string name="m4399_rec_iab_apk_not_installed">您未安装最新的4399安全支付组件，无法使用支付功能</string>
-    <string name="m4399_rec_iab_check_version">正在检测支付组件版本</string>
-    <string name="m4399_rec_iab_apk_version_outdate">您安装的4399安全支付组件版本过低，请升至最新版本</string>
-    <string name="m4399_rec_iab_upgrade_error">%s, 请使用其他支付方式</string>
-    <string name="m4399_rec_iab_storage_error">手机上没有合适的存储位置</string>
-    <string name="m4399_rec_iab_recreate_error">创建下载临时文件失败</string>
-    <string name="m4399_rec_iab_network_error">网络异常</string>
-    <string name="m4399_rec_iab_support_error">暂不支持此充值方式</string>
-    <string name="m4399_rec_iab_no_remote_service">检测不到支付服务</string>
-    <string name="m4399_rec_iab_bind_service_error">不能绑定支付服务</string>
-    <string name="m4399_rec_iab_remote_ipc_error">远程通信出错，请尝试重新支付</string>
-    <string name="m4399_rec_iab_install_title">安装4399安全支付组件</string>
-    <string name="m4399_rec_iab_upgrade_title">升级4399安全支付组件</string>
-    <string name="m4399_rec_iab_error_title">更新4399安全支付出错</string>
-    <string name="m4399_rec_iab_download_message">正在更新4399安全支付组件......</string>
-    <string name="m4399_rec_iab_download_percentage">（%d%%）</string>
-    <string name="m4399_rec_iab_cancel_upgrade">取消</string>
-    <string name="m4399_rec_iab_intall_now">立即安装</string>
-    <string name="m4399_rec_iab_upgrade_now">立即升级</string>
-    <string name="m4399_rec_iab_close_dialog">关闭</string>
-    <string name="m4399_rec_iab_retry_download">重试</string>
-    <string name="m4399_rec_iab_validate_error">充值结果校验失败</string>
-
     <string name="m4399_rec_corporation_name">四三九九网络股份有限公司</string>
-
 
     <string name="m4399_rationale_failed_title">授权失败</string>
     <string name="m4399_rationale_and_request_title">授权申请</string>
     <string name="m4399_rationale_deny_anyway">关闭</string>
-    <string name="m4399_rationale_goto_request">再次授权</string>
+    <string name="m4399_rationale_goto_request">前往授权</string>
     <string name="m4399_rationale_deny_and_quit_game">退出游戏</string>
     <string name="m4399_rationale_refer_auth_instruction">查看授权方法</string>
     <string name="m4399_rationale_call_phone">授予“电话”权限才能拨打客服热线</string>
     <string name="m4399_rationale_sms_pay">“短信”授权失败，无法使用短信付费功能</string>
-    <string name="m4399_rationale_phone_permission">需要您授予“电话”的权限。仅用于识别您的设备身份。未授权游戏将无法正常运行。</string>
-    <string name="m4399_rationale_storage_permission">需要您授予“存储空间”的权限。用于下载和更新当前游戏。未授权将无法自动更新。</string>
     <string name="m4399_rationale_storage_permission_for_config">需要您授予“存储空间”的权限。用于读取存储在应用外地配置信息。</string>
+    <string name="m4399_rationale_storage_permission_for_screen">需要您授予“存储空间”的权限。用于读取存储图片信息。</string>
     <string name="m4399_rationale_sms_permission">需要您授予“短信”权限。用于使用短信的充值扣费。未授权将无法使用短信充值功能。</string>
     <string name="m4399_rationale_app_name">《%s》</string>
 
@@ -316,7 +288,6 @@
     <string name="m4399_rec_coupon_to_select">选择优惠券</string>
     <string name="m4399_rec_coupou_off_formatter">%d元</string>
     <string name="m4399_rec_coupon_info_formatter">%d元优惠券</string>
-    <string name="m4399_rec_coupon_trans_info">(已为您转换为%s)</string>
     <string name="m4399_rec_coupon_no_amount">无可用优惠券</string>
     <string name="m4399_rec_coupon_query_exception">网络请求异常，查询优惠券失败</string>
     <string name="m4399_rec_coupon_consume_exception">网络请求异常，使用优惠券失败</string>
@@ -348,8 +319,9 @@
     <string name="m4399_rec_help_title">帮助</string>
     <string name="m4399_rec_main_title">充值</string>
 
-    <string name="m4399_rec_coupon_number">有%s张可用优惠券</string>
-    <string name="m4399_rec_coupon_money_chosed">%s元优惠券</string>
+    <string name="m4399_rec_coupon_number">有%d张可用优惠券</string>
+    <string name="m4399_rec_coupon_choose_change">%1$d元优惠券(已为您转换为%2$s)</string>
+    <string name="m4399_rec_coupon_choose">%d元优惠券</string>
     <string name="m4399_rec_origin_money">原价%s元</string>
     <string name="m4399_rec_choose_channel_title">选择充值方式</string>
     <string name="m4399_rec_in_maintained">维护中</string>

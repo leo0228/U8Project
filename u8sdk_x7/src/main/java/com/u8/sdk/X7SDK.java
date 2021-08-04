@@ -16,7 +16,7 @@ import com.smwl.smsdk.app.SMPlatformManager;
 import com.smwl.smsdk.bean.PayInfo;
 import com.smwl.smsdk.bean.SMUserInfo;
 import com.tendcloud.tenddata.TDGAProfile;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 public class X7SDK {
     private String TAG = "xiao7sdk";

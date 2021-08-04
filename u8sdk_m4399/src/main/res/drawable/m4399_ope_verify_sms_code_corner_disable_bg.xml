@@ -3,6 +3,6 @@
     <solid android:color="@color/m4399_ope_verify_sms_code_pressed_color" />
     <stroke
         android:width="@dimen/m4399_ope_verify_border_line_dimen"
-        android:color="@color/m4399_ope_verify_sms_code_disable_color" />
-    <corners android:radius="@dimen/m4399_ope_verify_sms_code_radius_dimen" />
+        android:color="#8054ba3d" />
+    <corners android:radius="2dp" />
 </shape>

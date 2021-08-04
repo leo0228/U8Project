@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/verify_content"
+    android:layout_width="@dimen/m4399_ope_dialog_width_304"
+    android:layout_height="wrap_content"
+    android:background="@drawable/m4399_ope_block_captcha_bg"
+    android:paddingBottom="@dimen/m4399_spacing_16">
+
+    <TextView
+        android:id="@+id/seek_captcha_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/m4399_spacing_16"
+        android:text="@string/m4399_ope_account_abnormal"
+        android:textColor="@color/m4399_ope_color_333333"
+        android:textSize="@dimen/m4399_font_16" />
+
+    <FrameLayout
+        android:id="@+id/seek_captcha_refresh"
+        android:layout_width="49dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <cn.m4399.operate.account.verify.LoadingView
+            android:id="@+id/seek_captcha_refresh_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/m4399_ope_support_nav_icon_bg"
+            android:padding="@dimen/m4399_spacing_16"
+            android:src="@drawable/m4399_ope_captcha_refresh" />
+
+        <TextView
+            android:id="@+id/seek_captcha_refresh_countdown"
+            android:layout_width="17dp"
+            android:layout_height="@dimen/m4399_spacing_14"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/m4399_ope_color_999999"
+            android:textSize="@dimen/m4399_font_12"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <cn.m4399.operate.account.verify.ClickVerifyView
+        android:id="@+id/click_captcha_view"
+        android:layout_width="272dp"
+        android:layout_height="153dp"
+        android:layout_below="@id/seek_captcha_title"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/click_captcha_loading_view"
+        android:layout_width="272dp"
+        android:layout_height="153dp"
+        android:layout_below="@id/seek_captcha_title"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/m4399_ope_captcha_loading_bg"
+        android:gravity="center"
+        android:text="@string/m4399_ope_verify_code_loading"
+        android:textColor="@color/m4399_ope_color_999999"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/click_captcha_bar"
+        android:layout_width="272dp"
+        android:layout_height="@dimen/m4399_spacing_18"
+        android:layout_below="@id/click_captcha_view"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/m4399_spacing_16"
+        android:background="@drawable/m4399_ope_click_catpcha_text_bar_bg"
+        android:gravity="center"
+        android:textSize="@dimen/m4399_font_12" />
+
+</RelativeLayout>

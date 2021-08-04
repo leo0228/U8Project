@@ -16,7 +16,7 @@ import com.yyh.sdk.CPInfo;
 import com.yyh.sdk.LoginCallback;
 import com.yyh.sdk.PayResultCallback;
 import com.yyh.sdk.YYHSDKAPI;
-import com.zjtx.prompt.PromptDialog;
+import com.u8.common.PromptDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;

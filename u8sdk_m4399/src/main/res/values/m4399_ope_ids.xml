@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Banner -->
+    <item name="m4399_ope_id_banner_action_positive" type="id" />
+    <item name="m4399_ope_id_banner_action_negative" type="id" />
+</resources>

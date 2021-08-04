@@ -23,14 +23,14 @@
     <string name="dk_welcom_join">欢迎加入百度游戏！</string>
     <string name="dk_btn_string_check_network">检查网络</string>
     <string name="dk_init_error">初始化失败</string>
-
+    <string name="dk_error_next">下一条</string>
     <!-- 3.1 -->
     <string name="dk_float_view_title">百度游戏</string>
     <string name="dk_actionnotice_link">立即查看</string>
     <!-- 3.6 -->
     <string name="dk_user_back_text">退出游戏</string>
     <string name="dk_user_back_hot">热门游戏</string>
-    <string name="dk_user_back_cancel">取消</string>
+    <string name="dk_user_back_cancel">继续游戏</string>
     <string name="dk_user_back_middle">/</string>
     <string name="dk_user_back_exit">确认退出</string>
     <string name="dk_user_back_exit_content">确定要退出游戏吗？</string>
@@ -150,6 +150,7 @@
     <string name="dk_assistant_down_error">下载文件解析错误</string>
     <string name="dk_assistant_down_fail">下载文件失败</string>
     <string name="dk_update_hint_version">V0.0.0</string>
+    <string name="app_name">Progressbar</string>
     <string name="dk_downloading">下载中 %1$d %%</string>
     <string name="dk_open">打开</string>
     <string name="dk_download">立即升级</string>
@@ -165,5 +166,6 @@
     <string name="dk_update_continue">更新</string>
     <string name="dk_update_string_pkg_size">包体大小:</string>
     <string name="dk_cloud_game_change_account_hint">请更换百度APP内的账号并重新进入游戏</string>
+    <string name="dk_actionnotice_no_prompt">今天不再显示</string>
 
 </resources>

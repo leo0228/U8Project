@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape>
+            <corners android:bottomLeftRadius="@dimen/m4399_dialog_radius" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:bottomLeftRadius="@dimen/m4399_dialog_radius" />
+            <solid android:color="@color/m4399_color_ripple_grey" />
+        </shape>
+    </item>
+</selector>

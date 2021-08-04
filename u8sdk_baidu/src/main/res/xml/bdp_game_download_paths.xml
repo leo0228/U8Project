@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<paths >
-
+<paths>
     <external-path
         name="bdp_game_download"
+        path="." />
+    <files-path
+        name="bdp_game_files"
         path="." />
 </paths>

@@ -1,45 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- 初始化 -->
+    <string name="m4399_ope_init_config_error">获取游戏失败，退出游戏</string>
+    <string name="m4399_ope_init_account_kickoff_fmt">%1$s（%2$s秒）</string>
 
-    <!--  -->
-    <string name="m4399_ope_prompt_debug_mode">请注意： 这是Debug状态 SDK，游戏发布时请务必关闭Debug开关！</string>
-    <string name="m4399_ope_prompt_sdk_version">4399运营SDK-</string>
-    <string name="m4399_opre_prompt_permision_miss">检查到您缺少权限：%s，请到AndroidManifext.xml中设置</string>
-    <string name="m4399_ope_prompt_know_and_close">我知道了</string>
-    <string name="m4399_ope_load_webview_error">打开网页出错</string>
-    <string name="m4399_ope_download_gamecenter_tips">您还没有下载安装游戏盒，不能进入活动页面。正在为您下载，请稍候</string>
+    <!-- 帐号 -->
+    <string name="m4399_ope_account_url_error">获取可用登录链接失败</string>
+    <string name="m4399_ope_account_login">帐号登录</string>
+    <string name="m4399_ope_account_switch">切换帐号</string>
+    <!-- 网页登录二次验证 -->
+    <string name="m4399_ope_verify_dialog_title">帐号验证</string>
+    <string name="m4399_ope_verify_code_loading">验证码加载中…</string>
+    <string name="m4399_ope_verify_seek_tip">拖动滑块,完成上方拼图</string>
+    <string name="m4399_ope_verify_sms_phone_number_text">手机号</string>
+    <string name="m4399_ope_verify_sms_sms_code_text">验证码</string>
+    <string name="m4399_ope_verify_sms_fragment_title">当前帐号异常,请进行短信验证</string>
+    <string name="m4399_ope_verify_sms_phone_number_hint">请输入手机号</string>
+    <string name="m4399_ope_verify_sms_code_hint">请输入验证码</string>
+    <string name="m4399_ope_verify_sms_get_code_text">获取验证码</string>
+    <string name="m4399_ope_verify_sms_confirm_text">确定</string>
+    <string name="m4399_ope_verify_sms_cancel_text">取消</string>
+    <string name="m4399_ope_verify_sms_down_timer_text">%ds</string>
+    <string name="m4399_ope_verify_sms_phone_number_err_text">手机号格式错误</string>
+    <string name="m4399_ope_verify_sms_code_err_text">验证码错误</string>
+    <string name="m4399_ope_verify_network_err_text">当前网络不给力，请检查您的网络</string>
+    <string name="m4399_ope_verify_loading_text">加载中</string>
+    <string name="m4399_ope_verify_loading_fail_text">加载失败</string>
+    <string name="m4399_ope_verify_success">验证成功!</string>
+    <string name="m4399_ope_verify_failed">认证失败</string>
+    <string name="m4399_ope_verify_cancelled">取消认证，本次登录无效</string>
+    <string name="m4399_ope_verify_click_captcha_text">请顺序点击【%s】</string>
+
+    <!-- 游戏盒支持 -->
+    <string name="m4399_ope_game_box_start_error">启动游戏盒失败，请更新游戏盒版本之后重试</string>
+
+
+    <!-- upgrade -->
+    <!-- upgrade.check-->
+    <string name="m4399_ope_upd_check_error">检查更新失败</string>
+    <string name="m4399_ope_upd_check_error_customized_disabled">自动更新已开启，不能进行手动更新</string>
+    <string name="m4399_ope_upd_check_source_error">获取当前安装包信息失败</string>
+    <string name="m4399_ope_upd_check_state">计算更新包大小</string>
+    <!-- upgrade.download -->
+    <string name="m4399_ope_upd_fmt_apk_size">大小：%s</string>
+    <string name="m4399_ope_upd_fmt_patch_size">大小：%1$s %2$s</string>
+    <string name="m4399_ope_upd_time">时间：%s</string>
+    <string name="m4399_ope_upd_title">游戏更新 v%s版</string>
+    <string name="m4399_ope_upd_now">立即更新</string>
+    <string name="m4399_ope_upd_action_download">立即下载</string>
+    <string name="m4399_ope_upd_action_next_time">下次再说</string>
+    <string name="m4399_ope_upd_retry_exceed">重试次数过多，请检查网络或退出游戏重试</string>
+    <!-- upgrade.merge-->
+    <string name="m4399_ope_upd_state_merge">正在合并安装包</string>
+    <string name="m4399_ope_upd_error_merge_io">合并失败，文件操作异常</string>
+    <string name="m4399_ope_upd_error_file_access">合并失败，文件不存在</string>
+    <string name="m4399_ope_upd_error_merge_xdelta3">合并失败，后台合并出错</string>
+    <!-- upgrade.install-->
+    <string name="m4399_ope_upd_install_state_preparing">安装准备中</string>
+    <string name="m4399_ope_upd_install_title">安装新版本 v%s</string>
+    <string name="m4399_ope_upd_fmt_apk_size_downloaded">大小：%s（下载完成）</string>
+    <string name="m4399_ope_upd_fmt_downloaded">（下载完成）</string>
+    <string name="m4399_ope_upd_install_now">立即安装</string>
+    <string name="m4399_ope_upd_error_launch_apk_installer">安装本地apk失败，打开系统安装页面异常</string>
+    <string name="m4399_ope_upd_error_no_file">安装失败，没有下载好的文件</string>
+    <string name="m4399_ope_upd_force_hint">再次点击，退出游戏</string>
+
+    <!-- For check and update apk -->
+    <string name="m4399_ope_sdk_update_success">更新成功</string>
+    <string name="m4399_ope_update_result_no_update">无更新内容</string>
+    <string name="m4399_ope_update_result_user_canclled">用户取消更新</string>
+    <string name="m4399_ope_update_result_update_now">立即更新</string>
+    <string name="m4399_ope_update_result_download_success">下载APK成功</string>
+    <string name="m4399_ope_update_result_check_error">由于未知原因导致检查版本失败</string>
+    <string name="m4399_ope_update_result_download_error">由于未知原因导致下载失败</string>
+
+    <string name="m4399_ope_update_quit_game">退出游戏</string>
+    <string name="m4399_ope_stay_at_game">继续游戏</string>
+
+
+    <string name="m4399_ope_prompt_sdk_name">4399运营SDK</string>
     <!-- For user center -->
     <string name="m4399_ope_usercenter_youbi_pre_label">游币</string>
     <string name="m4399_ope_usercenter_youbi_unit">枚</string>
     <string name="m4399_ope_usercenter_nav_title">个人中心</string>
-    <string name="m4399_ope_usercenter_swith_user">切换账号</string>
-    <string name="m4399_ope_usercenter_switch_user_warnning_msg">多账号切换功能，由4399游戏盒提供支持，请先安装4399游戏盒？</string>
     <string name="m4399_ope_usercenter_back_to_game">回到游戏</string>
     <string name="m4399_ope_usercenter_action_bind_phone">绑定手机</string>
     <string name="m4399_ope_usercenter_action_bind_phone_success">手机号码已绑定成功</string>
     <string name="m4399_ope_usercenter_action_bind_phone_sub_title">未绑定，绑定后更安全</string>
-    <string name="m4399_ope_usercenter_action_unenable_qq_warning">QQ帐号无法使用此功能</string>
-    <string name="m4399_ope_usercenter_action_unenable_sina_weibo_warning">新浪微博帐号无法使用此功能</string>
-    <string name="m4399_ope_usercenter_action_unenable_unknow_account_warning">第三方授权登录无法使用此功能</string>
-    <string name="m4399_ope_usercenter_action_bind_phone_exist">您已经绑定过手机</string>
     <string name="m4399_ope_usercenter_action_change_pwd">修改密码</string>
     <string name="m4399_ope_usercenter_change_pwd_warnning_msg">密码已修改成功，请重新登录游戏。</string>
     <string name="m4399_ope_usercenter_action_logout">注销</string>
-    <string name="m4399_ope_usercenter_action_show_popwindow">显示浮球</string>
     <string name="m4399_ope_usercenter_logout_warnning_msg">注销后将清除帐号登陆信息，你确定要注销吗？</string>
-    <string name="m4399_ope_have_no_sms">没有检测到SMS卡，不能发送短信</string>
     <string name="m4399_ope_usercenter_information_center">消息中心</string>
-    <string name="m4399_ope_usercenter_coupon_center">优惠券</string>
-    <string name="m4399_ope_usercenter_coupon_tip">领减%s券</string>
-    <string name="m4399_ope_usercenter_complains_center">投诉&amp;问题咨询</string>
     <string name="m4399_ope_usercenter_download_tips">下载已开始，可在通知栏查看进度</string>
     <string name="m4399_ope_usercenter_download_error_no_storage">Sd卡暂时不可用，无法下载</string>
-    <string name="m4399_ope_usercenter_download_dest_tip">下载完成后请到Sd卡的Download目录下查找文件</string>
+    <string name="m4399_ope_init_failure_dialog_title">网络异常导致初始化失败，是否重试？</string>
 
     <!-- For login and account switcher activity -->
-    <string name="m4399_ope_usercenter_timeout_warning">操作超时，请重试。</string>
-    <string name="m4399_ope_usercenter_access_token_expired">登录状态已过期，请重新登录后再尝试.</string>
-    <string name="m4399_ope_login_title">账号登录</string>
     <string name="m4399_ope_close">关闭</string>
     <string name="m4399_ope_confirm">确认</string>
     <string name="m4399_ope_cancel">取消</string>
@@ -50,59 +107,22 @@
     <string name="m4399_ope_switch_user_failed_error_known">由于未知原因导致登录失败，请检查网络状况</string>
     <string name="m4399_ope_error_known">当前网络环境差，请检查网络连接状况</string>
     <string name="m4399_ope_error_unlogin">登录信息已过期，请重新登录后再尝试</string>
-    <string name="m4399_ope_usercenter_username_label">ID:</string>
     <string name="m4399_ope_retry">重试</string>
-    <string name="m4399_ope_loading_page">加载中，请稍候 </string>
+    <string name="m4399_ope_loading">加载中…</string>
 
     <!-- For login and logout -->
     <string name="m4399_ope_checking_error_not_inited">SDK还没有初始化完成不能进行登录操作</string>
-    <string name="m4399_ope_checking_login_state">正在检查登录状态，请稍候</string>
-    <string name="m4399_ope_fetching_login_url">正在获取登录链接，请稍候</string>
     <string name="m4399_ope_no_network">网络异常,不能正常访问服务器</string>
     <string name="m4399_ope_login_success">登录成功</string>
     <string name="m4399_ope_sdk_login_failed_unable_access_oauth2">不能取得认证</string>
-    <string name="m4399_ope_login_error_key">游戏不存在，请检查游戏Game Key</string>
     <string name="m4399_ope_login_already_login">当前帐号已在登录状态</string>
     <string name="m4399_ope_login_failed_user_cancelled">用户取消登录</string>
     <string name="m4399_ope_login_failed_one_key">一键登录失败，请尝试其他登录方式</string>
     <string name="m4399_ope_login_failed_error_known">由于未知原因导致登录失败，请检查网络状况</string>
     <string name="m4399_ope_logout_success">注销成功</string>
     <string name="m4399_ope_logout_failed">获取用户信息错误</string>
+    <string name="m4399_ope_main_dialog_title">4399小游戏</string>
 
-    <!-- For check and update apk -->
-    <string name="m4399_ope_check_error">检查更新失败</string>
-    <string name="m4399_ope_result_code">错误码： %1$d</string>
-    <string name="m4399_ope_result_msg">错误信息： %1$s</string>
-    <string name="m4399_ope_check_storage_error">没有足够可用的存储空间</string>
-    <string name="m4399_ope_check_md5_error">检查当前包信息出错</string>
-    <string name="m4399_ope_update_now">立即更新</string>
-    <string name="m4399_ope_install_now">立即安装</string>
-    <string name="m4399_ope_dialog_update_title">游戏更新（%s版)</string>
-    <string name="m4399_ope_dialog_install_title">安装新版本（%s版)</string>
-    <string name="m4399_ope_dialog_downloding_msg">游戏升级中，请耐心等待&#8230;</string>
-    <string name="m4399_ope_dialog_prepare_apk">下载已完成，安装准备中</string>
-    <string name="m4399_ope_dialog_size_label">大小：</string>
-    <string name="m4399_ope_dialog_update_time">时间：%s</string>
-    <string name="m4399_ope_action_cancel">取消</string>
-    <string name="m4399_ope_action_next_time">下次再说</string>
-    <string name="m4399_ope_sdk_update_success">更新成功</string>
-    <string name="m4399_ope_update_result_no_update">无更新内容</string>
-    <string name="m4399_ope_update_result_user_canclled">用户取消更新</string>
-    <string name="m4399_ope_update_result_update_now">立即更新</string>
-    <string name="m4399_ope_update_result_download_success">下载APK成功</string>
-    <string name="m4399_ope_update_result_network_error">检查更新失败，建议关闭游戏检查网络后重新尝试</string>
-    <string name="m4399_ope_update_result_check_error">由于未知原因导致检查版本失败</string>
-    <string name="m4399_ope_update_result_download_error">由于未知原因导致下载失败</string>
-    <string name="m4399_ope_retry_too_many_times">重试次数过多，请检查网络是否通畅</string>
-    <string name="m4399_ope_update_force_hint">再次点击，退出游戏</string>
-    <string name="m4399_ope_update_invlid_check">已经打开自动更新开关，手动更新无效，通知运营关闭此开关才可生效</string>
-    <string name="m4399_ope_update_quit_game">退出游戏</string>
-    <string name="m4399_ope_update_retry_check">重新检查</string>
-    <string name="m4399_ope_update_quit_game_title">你要退出游戏吗？</string>
-    <string name="m4399_ope_stay_at_game">继续游戏</string>
-    <string name="m4399_ope_stay_msg">享受更多精彩游戏内容</string>
-    <string name="m4399_ope_network_error_when_downloading">网络不太对劲，换个试试吧或等下再更新</string>
-    <string name="m4399_ope_install_abnormal_apk">糟糕，检查到安装包有错，请您重新尝试</string>
     <string name="m4399_ope_gmae_have_no_forumn">此游戏还没有游戏圈</string>
 
     <!-- For pre-pay -->
@@ -113,10 +133,10 @@
     <string name="m4399_ope_pay_failed_mark_length_error">mark长度不能超过32位</string>
     <string name="m4399_ope_pay_failed_mark_char_error">mark包含了不支持的字符: </string>
     <string name="m4399_ope_pay_failed_unknown_error">由于未知原因导致充值失败，请检查网络和是否已经登录成功</string>
+    <string name="m4399_ope_pay_channel_other">其它</string>
     <string name="m4399_ope_sdk_unknown_circumstance">未知情况</string>
 
     <!-- 弹窗界面 -->
-    <string name="m4399_ope_pop_circle">游戏圈</string>
     <string name="m4399_ope_pop_user">账 户</string>
     <string name="m4399_ope_pop_hide">隐 藏</string>
     <string name="m4399_ope_pop_raiders">攻 略</string>
@@ -127,8 +147,6 @@
     <string name="m4399_ope_pop_go_gamecircle">前往游戏圈</string>
     <string name="m4399_ope_pop_quit_game">退出游戏</string>
     <string name="m4399_ope_pop_close_warning">浮球已关闭，下次启动游戏时将重启弹窗</string>
-    <string name="m4399_ope_pop_account_center_action">cn.m4399.sdk.action.USER_CENTER</string>
-    <string name="m4399_ope_pop_unsupportable_action">不支持此打开协议，请检查服务端配置</string>
 
     <!-- 弹窗内容 的第一手资料、最及时的礼包攻略？快来下载4399游戏盒，这一切唾手可得！ -->
     <string name="m4399_ope_pop_title_download_gbox">下载游戏盒</string>
@@ -136,16 +154,18 @@
     <string name="m4399_ope_pop_game_circle_msg">游戏圈是%1$s玩家的聚集地，在这里你能遇到游戏高手，解答各种问题！快来下载游戏盒加入吧～</string>
     <string name="m4399_ope_pop_gift_bag_msg">%1$s的最新礼包一网打尽，各种好礼送不停。快来下载游戏盒，加入礼包土豪行列吧～</string>
     <string name="m4399_ope_pop_user_raiders_msg">%1$s的最新攻略一网打尽，各种游戏视频助你过关斩将！快下载游戏盒，加入成为游戏高手吧~</string>
-    <string name="m4399_ope_pop_user_center_msg">小号很多咋办？快来使用游戏盒的切换账号功能！多账号管理轻松搞定，让您在%1$s中胜人一头！</string>
+    <string name="m4399_ope_pop_user_center_msg">小号很多咋办？快来使用游戏盒的切换帐号功能！多帐号管理轻松搞定，让您在%1$s中胜人一头！</string>
     <string name="m4399_ope_pop_website_msg">想了解%1$s的官方最新动态？快来下载游戏盒。权威、可靠、不错过任何精彩活动，4399品质保证！</string>
-    <string name="m4399_ope_pop_quit_with_gamebox_msg">4399游戏圈是热门的游戏论坛社区，礼包攻略应有尽有，惊喜不断，快点来看～</string>
     <string name="m4399_ope_pop_quit_without_gamebox_msg">%1$s的第一手资料、最及时的礼包攻略？快来下载4399游戏盒，这一切唾手可得！</string>
+    <string name="m4399_ope_quit_empty_title">新游</string>
+    <string name="m4399_ope_quit_empty_description">下载游戏盒，看看其他玩家在玩啥</string>
+    <string name="m4399_ope_quit_empty_open_description">开启游戏盒，看看其他玩家在玩啥</string>
 
 
     <!-- 身份验证，绑定手机，激活码-->
     <string name="m4399_ope_bind_id_title">身份证信息认证</string>
     <string name="m4399_ope_bind_id_series">身份证号</string>
-    <string name="m4399_ope_bind_id_relogin">切换账号</string>
+    <string name="m4399_ope_bind_id_relogin">切换帐号</string>
     <string name="m4399_ope_bind_id_msg_end">(仅自己可见)</string>
 
     <string name="m4399_ope_id_dialog_msg">根据国家相关法律规定，认证身份信息后才可进行游戏</string>
@@ -156,7 +176,7 @@
     <string name="m4399_ope_bind_id_card_max">最多能输入18位号码</string>
     <string name="m4399_ope_bind_id_real_name_max">最多能输入15个汉字</string>
 
-    <string name="m4399_ope_bind_sure">立即认证</string>
+    <string name="m4399_ope_bind_phone_positive">立即绑定</string>
     <string name="m4399_ope_bind_realname_port">姓名\u3000\u3000</string>
     <string name="m4399_ope_bind_realname">姓名</string>
     <string name="m4399_ope_bind_realname_hint">请输入你的姓名</string>
@@ -176,9 +196,9 @@
     <string name="m4399_ope_bind_phone_wrong_length">手机号长度不符合要求~</string>
     <string name="m4399_ope_bind_phone_no_null_code">验证码不能为空~</string>
     <string name="m4399_ope_activation_sure">确定</string>
-    <string name="m4399_ope_activation_title">输入激活码才能玩游戏哦~</string>
+    <string name="m4399_ope_activation_title">激活后才能玩游戏哦~</string>
     <string name="m4399_ope_activation_get">领取激活码</string>
-    <string name="m4399_ope_activation_hint">请输入礼包激活码</string>
+    <string name="m4399_ope_activation_hint">请输入激活码</string>
     <string name="m4399_ope_id_bind_failure">认证失败，请检查网络重试</string>
     <string name="m4399_ope_get_pic_code_failure">获取验证码失败，请检查网络</string>
     <string name="m4399_ope_get_sms_code_failure">获取短信验证码失败，请检查网络</string>
@@ -220,13 +240,14 @@
     <string name="m4399_ope_network_view_proxy_exception">代理连接失败，请重新设置您的网络，然后关闭重试~</string>
 
     <!-- vip and perfect info  -->
-    <string name="m4399_ope_perfect_info_nickname">昵称　　</string>
-    <string name="m4399_ope_perfect_info_realname">真实姓名</string>
+    <string name="m4399_ope_perfect_info_nickname">昵称</string>
+    <string name="m4399_ope_vip_fmt_display_nick">%1$s（%2$s）</string>
+    <string name="m4399_ope_perfect_info_realname">姓名</string>
     <string name="m4399_ope_perfect_info_realname_hint">请输入真实姓名</string>
-    <string name="m4399_ope_perfect_info_birthday">生日　　</string>
-    <string name="m4399_ope_perfect_info_birthday_hint">请选择生日日期</string>
-    <string name="m4399_ope_perfect_info_qq">QQ号码　</string>
-    <string name="m4399_ope_perfect_info_phone">手机号码</string>
+    <string name="m4399_ope_perfect_info_birthday">生日</string>
+    <string name="m4399_ope_perfect_info_birthday_hint">选择生日日期</string>
+    <string name="m4399_ope_perfect_info_qq">&#8201;Q&#8201;Q&#8201;</string>
+    <string name="m4399_ope_perfect_info_phone">手机</string>
     <string name="m4399_ope_perfect_info_qq_hint">输入真实的QQ号码</string>
     <string name="m4399_ope_perfect_info_phone_hint">输入真实的手机号码</string>
     <string name="m4399_ope_perfect_info_submit">提交</string>
@@ -240,6 +261,9 @@
     <string name="m4399_ope_perfect_info_birthday_length_wrong">生日不能为空~</string>
     <string name="m4399_ope_perfect_info_nothing_to_submit">您未修改任何信息~</string>
     <string name="m4399_ope_perfect_info_submit_success">提交成功~</string>
+    <string name="m4399_ope_perfect_info_version">SDK当前版本：V%s</string>
+    <string name="m4399_ope_perfect_info_prompt">您的个人资料我们将保密，不会泄露，请放心填写</string>
+
     <string name="m4399_ope_vip_qq">QQ %1$s</string>
     <string name="m4399_ope_vip_qq_name">专属客服 %1$s</string>
     <string name="m4399_ope_vip_qq_client">专属客服</string>
@@ -256,6 +280,7 @@
     <string name="m4399_ope_no_submit">不提交</string>
     <string name="m4399_ope_opening_qq">正在启动QQ,请稍后...</string>
     <string name="m4399_ope_no_client_qq">当前无客服QQ</string>
+    <string name="m4399_ope_constraint_chinese_name">真实姓名仅能为汉字、英文及单引号</string>
 
     <string name="m4399_ope_usercenter_client_content">有问题，找专属客服</string>
     <string name="m4399_ope_usercenter_no_bind">未绑定，绑定后更安全</string>
@@ -267,7 +292,7 @@
     <string name="m4399_ope_warning_coupon_money_range">充值金额满%s元可用</string>
     <string name="m4399_ope_warning_coupon_game_range">当前游戏不可用</string>
     <string name="m4399_ope_coupon_select_no">暂无可用优惠券</string>
-    <string name="m4399_ope_coupon_no">暂无优惠券</string>
+    <string name="m4399_ope_coupon_empty">暂无优惠券</string>
     <string name="m4399_ope_yuan">元</string>
     <string name="m4399_ope_coupon_how_to_get">如何获取优惠券</string>
     <string name="m4399_ope_coupon_get_more">领取更多优惠券</string>
@@ -278,15 +303,13 @@
     <string name="m4399_ope_coupon_normal">优惠券可用，请前往充值使用</string>
     <string name="m4399_ope_coupon_potential">该充值方式不支持当前金额，无法使用</string>
     <string name="m4399_ope_coupon_upd_suc">刷新成功~</string>
-    <string name="m4399_ope_coupon_valid_date">有效期至%s</string>
-    <string name="m4399_ope_coupon_use_condition">单笔充值满%s元可使用</string>
-    <string name="m4399_ope_coupon_date_format">yyyy年MM月dd日</string>
-    <string name="m4399_ope_coupon_date_year_split">年</string>
     <string name="m4399_ope_coupon_network_failure">网络异常，请刷新重试</string>
     <string name="m4399_ope_coupon_network_abnormal">网络异常，无法跳转，请检查网络</string>
     <string name="m4399_ope_coupon_channel_not_match">当前充值方式不支持当前金额，无法使用</string>
     <string name="m4399_ope_coupon_item_tip_locked">被使用后30分钟内，无法再次使用</string>
-    <string name="m4399_ope_coupon_consumption_amount">单笔充值满%d元可用</string>
+    <string name="m4399_ope_coupon_title">优惠券</string>
+    <string name="m4399_ope_coupon_receive">立即领取</string>
+    <string name="m4399_ope_coupon_tip">该优惠券需前往4399游戏盒领取，请先下载4399游戏盒</string>
 
     <!-- 悬浮球弹窗 -->
     <string name="m4399_ope_pop_close_prompt">打扰游戏？拖动关闭吧</string>
@@ -297,7 +320,7 @@
     <string name="m4399_ope_pop_clock_prompt_content">锁定后不影响操作，再次长按可解锁</string>
     <string name="m4399_ope_pop_msg_prompt">您有新消息，请注意查收哦！</string>
     <string name="m4399_ope_pop_delay_prompt">您有新的优惠券，%s分钟后可领取</string>
-    <string name="m4399_ope_pop_delay_prompt_righnow">您有新的优惠券，请前往领取</string>
+    <string name="m4399_ope_delay_coupon_receive">您有新的优惠券，请前往领取</string>
     <string name="m4399_ope_pop_next">下一条(%s)</string>
     <string name="m4399_ope_pop_click_look">点击查看</string>
     <string name="m4399_ope_pop_lock_touch_prompt">悬浮球已锁定，长按解锁</string>
@@ -309,6 +332,7 @@
     <string name="m4399_ope_setting_id_bind">身份证认证</string>
     <string name="m4399_ope_setting_has_checked">已认证</string>
     <string name="m4399_ope_setting_click_upd">已认证，点击修改</string>
+    <string name="m4399_ope_assist_click_upd">点击修改</string>
     <string name="m4399_ope_setting_click_perfect">点击完善</string>
     <string name="m4399_ope_index_gift">礼包</string>
     <string name="m4399_ope_index_website">官网</string>
@@ -344,7 +368,6 @@
     <string name="m4399_ope_screenshot_failure">截屏失败，请重试~</string>
     <string name="m4399_ope_screenshot_share">截图分享</string>
     <string name="m4399_ope_share_channel_label">官方</string>
-    <string name="m4399_ope_screenshot_ing">正在处理...</string>
     <string name="m4399_ope_ssl_error">SSL证书错误</string>
     <string name="m4399_ope_ssl_error_code">当前网页SSL证书异常，是否继续打开？</string>
     <string name="m4399_ope_continue">继续</string>
@@ -365,8 +388,6 @@
     <string name="m4399_ope_quit_gift_description">游戏礼包免费领，福利满天飞</string>
     <string name="m4399_ope_warn_install_qq">请先安装QQ</string>
     <string name="m4399_ope_game_contact_phone_transfer">转</string>
-    <string name="m4399_ope_game_contact_phone_un_forwarding">客服电话：%1$s</string>
-    <string name="m4399_ope_contact_qq">%1$s客服QQ：%2$s</string>
     <string name="m4399_ope_please_choose_contact_way">若遇到游戏内相关问题，请在服务时间段与我们反馈咨询。其它问题请在“我要反馈”中咨询。</string>
     <string name="m4399_ope_service_duration">(客服服务时间：9:00~21:00)</string>
     <string name="m4399_ope_dialing_immediately">立即拨打</string>
@@ -379,48 +400,28 @@
     <string name="m4399_ope_use_word">去领取</string>
     <string name="m4399_ope_empty_no_inited">参数为空，请先初始化</string>
 
-    <!-- 登录验证 -->
-    <string name="m4399_ope_verify_sms_phone_number_text">手机号</string>
-    <string name="m4399_ope_verify_sms_sms_code_text">验证码</string>
-    <string name="m4399_ope_verify_sms_fragment_title">当前账号异常,请进行短信验证</string>
-    <string name="m4399_ope_verify_sms_phone_number_hint">请输入手机号</string>
-    <string name="m4399_ope_verify_sms_code_hint">请输入验证码</string>
-    <string name="m4399_ope_verify_sms_get_code_text">获取验证码</string>
-    <string name="m4399_ope_verify_sms_confirm_text">确定</string>
-    <string name="m4399_ope_verify_sms_cancel_text">取消</string>
-    <string name="m4399_ope_verify_sms_down_timer_text">%ds</string>
-    <string name="m4399_ope_verify_sms_phone_number_err_text">手机号格式错误</string>
-    <string name="m4399_ope_verify_sms_code_err_text">验证码错误</string>
-    <string name="m4399_ope_verify_network_err_text">当前网络不给力，请检查您的网络</string>
-    <string name="m4399_ope_verify_loading_text">加载中</string>
-    <string name="m4399_ope_verify_loading_fail_text">加载失败</string>
-    <string name="m4399_ope_verify_phone_and_sms_error_text">手机号或验证码不正确</string>
-    <string name="m4399_ope_verify_click_captcha_text">请顺序点击【%s】</string>
-
-    <string name="m4399_ope_get_right_now">立即领取</string>
     <string name="m4399_ope_index_recommend">荐</string>
     <string name="m4399_ope_index_more">更多</string>
     <string name="m4399_ope_setting_test">测试环境</string>
     <string name="m4399_ope_setting_product">正式环境</string>
     <string name="m4399_ope_quit_title">游戏玩累了？看看游戏资讯吧，更有游戏礼包等你领取~</string>
-    <string name="m4399_ope_account_abnormal">当前账号异常,请进行验证</string>
-    <string name="m4399_ope_validate_code_loading">验证码加载中…</string>
-    <string name="m4399_ope_validate_tip">拖动滑块,完成上方拼图</string>
+    <string name="m4399_ope_account_abnormal">当前帐号异常,请进行验证</string>
+
 
     <string name="m4399_ope_remain_time_check_detail">查看详情</string>
     <string name="m4399_ope_web_error_title">找不到网页</string>
     <string name="m4399_ope_name_auth_save_tip">为了安全，您的原身份信息已隐藏</string>
     <string name="m4399_ope_name_auth_name_hint">请输入新的姓名</string>
     <string name="m4399_ope_name_auth_id_hint">请输入新的身份证号码</string>
-    <string name="m4399_ope_name_auth_warn">配置异常，请重新登录</string>
+    <string name="m4399_ope_name_auth_warn">您已经实名认证过了~</string>
 
     <string name="m4399_ope_sync_user_tip">关闭将无法自动同步您的认证信息，确认关闭吗？</string>
 
-    <string name="m4399_ope_quick_auth_title">4399账号登录</string>
+    <string name="m4399_ope_quick_auth_title">4399帐号登录</string>
     <string name="m4399_ope_quick_auth_other_phone">其它手机号登录</string>
     <string name="m4399_ope_quick_auth_login_text">登录</string>
     <string name="m4399_ope_quick_auth_before_login_text">上次登录</string>
-    <string name="m4399_ope_quick_auth_choice_tip">该号码下绑定%s个账号，请选择一个登录</string>
+    <string name="m4399_ope_quick_auth_choice_tip">该号码下绑定%s个帐号，请选择一个登录</string>
     <string name="m4399_ope_quick_auth_and">和</string>
     <string name="m4399_ope_quick_auth_agreement">《4399用户协议》</string>
 
@@ -440,11 +441,14 @@
     <string name="m4399_ope_coupon_dialog_get_success">领取成功，可在充值时使用</string>
     <string name="m4399_ope_announcement_dialog_not_tip">本期不再提示</string>
     <string name="m4399_ope_coupon_pay_success_can_use">充值满%s元可用</string>
-    <string name="m4399_ope_coupon_expire_time">有效期至</string>
+    <string name="m4399_ope_coupon_expire_time">有效期至%s</string>
 
     <!--pay success result-->
     <string name="m4399_ope_message_pay_success_condition">满%s元可用</string>
     <string name="m4399_ope_message_pay_success_period">有效期至 %s</string>
     <string name="m4399_ope_action_pay_success_get_coupon_success">已领取，下次充值可用</string>
     <string name="m4399_ope_message_pay_success_get_coupon_success">领取成功，可在充值时使用</string>
+
+    <string name="m4399_ope_box_down_msg_ask">为了您更好的体验，该操作需在游戏盒内进行，是否进行下载？</string>
+    <string name="m4399_ope_tip">温馨提示</string>
 </resources>

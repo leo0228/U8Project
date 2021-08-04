@@ -4,7 +4,7 @@
     <string name="ct_account_auth_privacy_text">《天翼账号服务与隐私协议》</string>
     <string name="ct_account_brand_text">天翼账号提供认证服务</string>
 
-        <!-- Mobile Network Service provider configuration-->
+    <!-- Mobile Network Service provider configuration-->
     <string name="m4399_login_sp_mobile">移动</string>
     <string name="m4399_login_privacy_protocol_mobile">https://wap.cmpassport.com/resources/html/contract.html</string>
     <string name="m4399_login_sp_unicom">联通</string>
@@ -45,7 +45,7 @@
     <string name="unicom_message_80200">关闭界面，取消登录</string>
     <string name="unicom_message_80201">切换其他登录方式</string>
     <string name="unicom_label_service_provider">联通账号提供认证服务</string>
-    <string name="unicom_link_privacy_name">《联通账号服务与隐私协议》</string>
+    <string name="unicom_link_privacy_name">《联通统一认证服务条款》</string>
 
     <string name="al_formatter_privacy_prompt">登录即同意%s</string>
     <string name="al_two_formatter_privacy_prompt">登录即同意%1$s和%2$s</string>

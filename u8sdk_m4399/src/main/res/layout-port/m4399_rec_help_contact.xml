@@ -4,10 +4,10 @@
     android:layout_height="wrap_content"
     android:background="@color/m4399_rec_color_white"
     android:orientation="vertical"
-    android:paddingBottom="8dp"
     android:paddingLeft="12dp"
+    android:paddingTop="8dp"
     android:paddingRight="12dp"
-    android:paddingTop="8dp">
+    android:paddingBottom="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,10 +28,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:paddingBottom="12dp"
             android:paddingTop="12dp"
+            android:paddingBottom="12dp"
             android:text="@string/m4399_rec_hotline_4399_trans"
-            android:textColor="#fe9515"
+            android:textColor="@color/m4399_ope_color_primary"
             android:textSize="15sp" />
 
 
@@ -61,10 +61,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:paddingBottom="12dp"
             android:paddingTop="12dp"
+            android:paddingBottom="12dp"
             android:text="@string/m4399_rec_hotline_qq"
-            android:textColor="#fe9515"
+            android:textColor="@color/m4399_ope_color_primary"
             android:textSize="15sp" />
 
 

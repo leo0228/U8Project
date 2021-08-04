@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/m4399_ope_name_auth_dialog_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <cn.m4399.operate.aga.anti.AlignTextView
+        android:id="@+id/m4399_ope_id_atv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23.5dp"
+        android:layout_marginTop="25.5dp"
+        android:layout_marginBottom="16.5dp" />
+
+    <ScrollView
+        android:id="@+id/m4399_ope_id_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m4399_ope_dialog_height_addiction"
+        android:layout_marginLeft="25.5dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/m4399_ope_addiction_auth_shape"
+        android:fadeScrollbars="false"
+        android:paddingRight="2dp"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@drawable/m4399_ope_scroll_bar_thumb"
+        android:scrollbarTrackVertical="@drawable/m4399_ope_scroll_bar_track">
+
+        <cn.m4399.operate.aga.anti.AlignTextView
+            android:id="@+id/m4399_ope_id_atv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+    <include layout="@layout/m4399_ope_aga_addiction_auth_identity" />
+
+    <include layout="@layout/m4399_ope_support_dialog_couple_actions" />
+
+</LinearLayout>

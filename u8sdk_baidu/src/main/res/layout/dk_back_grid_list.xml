@@ -6,15 +6,15 @@
 
     <com.duoku.platform.download.widget.XCRoundRectImageView
         android:id="@+id/dk_back_iv"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/dk_download_nothing_icon" />
 
     <TextView
         android:id="@+id/dk_back_tv"
-        android:layout_width="64dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dk_back_iv"
         android:layout_centerHorizontal="true"
@@ -25,14 +25,15 @@
 
     <Button
         android:id="@+id/dk_back_btn_install"
-        android:layout_width="56dp"
+        android:layout_width="50dp"
         android:layout_height="24dp"
         android:layout_below="@+id/dk_back_tv"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_marginTop="7dp"
         android:background="@drawable/dk_dialog_back_install"
-        android:padding="3dp"
+        android:padding="2dp"
         android:textColor="#ffffff"
-        android:textSize="11sp" />
+        android:textSize="13sp" />
 
 </RelativeLayout>

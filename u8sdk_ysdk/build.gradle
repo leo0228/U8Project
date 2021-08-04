@@ -1,17 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
     }
 
     buildTypes {
@@ -26,8 +23,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':u8sdk2')
-    implementation project(':prompt')
-    implementation(name: 'YSDK_Android_1.5.15_277122e', ext: 'aar')
+    implementation project(':common')
+    implementation(name: 'YSDK_Android_1.7.6_0c47cb8', ext: 'aar')
 
-    implementation files('libs/SaaS_GameAnalytics_Android_SDK_V4.0.61.jar')
 }

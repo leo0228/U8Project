@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/m4399_ope_banner_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="18dp"
+    android:paddingTop="10dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/m4399_ope_delay_coupon_receive"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@id/m4399_ope_id_banner_action_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/m4399_ope_coupon_receive"
+            android:textColor="@color/m4399_ope_color_ffa92d"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/m4399_ope_id_banner_action_negative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="17dp"
+        android:gravity="center_vertical"
+        android:text="@string/m4399_ope_close"
+        android:textColor="@android:color/white"
+        android:textSize="13sp" />
+
+</LinearLayout>
